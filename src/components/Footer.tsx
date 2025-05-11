@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Linkedin, Mail, Butterfly } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +12,6 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-muted-foreground">
               &copy; {currentYear} Dr. Alisa M. Loosen. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Starting July 2025: Yale Department of Psychiatry
             </p>
           </div>
           <div className="flex space-x-6">
@@ -53,7 +50,10 @@ const Footer = () => {
               className="text-muted-foreground hover:text-rust transition-colors"
               aria-label="Bluesky"
             >
-              <Butterfly className="w-5 h-5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <path d="M10.636 4.636a1 1 0 0 1 1.414 0l3.95 3.95a1 1 0 0 1 0 1.414L13.414 12l2.586 2.586a1 1 0 0 1 0 1.414L12.05 19.95a1 1 0 0 1-1.414 0L7.05 16.364a1 1 0 0 1 0-1.414L9.636 12 7.05 9.414a1 1 0 0 1 0-1.414l3.586-3.364Z" />
+                <path d="M14.05 8.636a1 1 0 0 1 1.414 0l3.95 3.95a1 1 0 0 1 0 1.414L16.828 16l2.586 2.586a1 1 0 0 1 0 1.414l-3.586 3.95a1 1 0 0 1-1.414 0l-3.585-3.586a1 1 0 0 1 0-1.414L13.414 16l-2.586-2.586a1 1 0 0 1 0-1.414l3.222-3.364Z" />
+              </svg>
             </a>
           </div>
         </div>

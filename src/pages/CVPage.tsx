@@ -38,6 +38,15 @@ const CVPage = () => {
 
   const positionsData = [
     {
+      period: "07/2025 – Future",
+      location: "New Haven, USA",
+      title: "Faculty",
+      organization: "Yale Department of Psychiatry, Yale University",
+      details: [
+        "Starting July 2025"
+      ],
+    },
+    {
       period: "06/2023 – Present",
       location: "New York City, USA",
       title: "Postdoctoral Researcher",
@@ -161,8 +170,8 @@ const CVPage = () => {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <a href="mailto:alisa.loosen@mssm.edu" className="hover:text-rust transition-colors">
-            alisa.loosen@mssm.edu
+          <a href="mailto:alisa.loosen@yale.edu" className="hover:text-rust transition-colors">
+            alisa.loosen@yale.edu
           </a>
           <span className="mx-2">|</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
