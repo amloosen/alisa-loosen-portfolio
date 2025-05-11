@@ -8,7 +8,7 @@ import {
   Brain, 
   FileText, 
   Globe, 
-  Phone, 
+  Smartphone, 
   Cog, 
   MessageSquare
 } from "lucide-react";
@@ -104,7 +104,7 @@ const AboutPage = () => {
           
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
             <div className="flex items-center gap-3 mb-3">
-              <Phone className="text-rust h-6 w-6" />
+              <Smartphone className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Digital Assessment</h3>
             </div>
             <p>
