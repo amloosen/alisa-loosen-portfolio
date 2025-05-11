@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import ProfileImage from "@/components/ProfileImage";
@@ -7,7 +8,7 @@ import {
   Brain, 
   FileText, 
   Globe, 
-  Zap, 
+  Computer, 
   Cog, 
   MessageSquare
 } from "lucide-react";
@@ -103,7 +104,7 @@ const AboutPage = () => {
           
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
             <div className="flex items-center gap-3 mb-3">
-              <Zap className="text-rust h-6 w-6" />
+              <Computer className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Digital Assessment</h3>
             </div>
             <p>
