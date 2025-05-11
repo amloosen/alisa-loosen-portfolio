@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import ProfileImage from "@/components/ProfileImage";
@@ -9,7 +8,7 @@ import {
   FileText, 
   Globe, 
   Zap, 
-  FlaskConical, 
+  Cog, 
   MessageSquare
 } from "lucide-react";
 
@@ -94,7 +93,7 @@ const AboutPage = () => {
           
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
             <div className="flex items-center gap-3 mb-3">
-              <FlaskConical className="text-rust h-6 w-6" />
+              <Cog className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Computational Methods</h3>
             </div>
             <p>
