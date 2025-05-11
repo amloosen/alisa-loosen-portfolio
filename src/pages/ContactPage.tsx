@@ -93,8 +93,8 @@ const ContactPage = () => {
                   </span>
                   <div>
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Email</h4>
-                    <a href="mailto:alisa.loosen@mssm.edu" className="text-blue hover:text-rust transition-colors">
-                      alisa.loosen@mssm.edu
+                    <a href="mailto:alisa.loosen@yale.edu" className="text-blue hover:text-rust transition-colors">
+                      alisa.loosen@yale.edu
                     </a>
                   </div>
                 </div>
