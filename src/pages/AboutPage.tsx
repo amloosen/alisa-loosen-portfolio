@@ -149,7 +149,7 @@ const AboutPage = () => {
           >
             <h3 className="text-xl font-medium mb-2">OCD and the Brain</h3>
             <p className="text-muted-foreground">
-              A public engagement project in collaboration with adolescents living with OCD and their parents to develop OCD-related communication tools.
+              A collaborative public engagement project focused on the neuroscience of OCD. Working alongside adolescents with OCD and their parents, we developed communication tools designed to clearly convey how the disorder relates to brain function.
             </p>
           </a>
         </div>
