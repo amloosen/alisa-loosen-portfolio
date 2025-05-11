@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -18,13 +17,13 @@ const Navbar = () => {
   }, []);
 
   const mainNavItems = [
-    { name: "About", path: "/", color: "rust" },
-    { name: "Projects", path: "/projects", color: "blue" },
-    { name: "Contact", path: "/contact", color: "sage" },
+    { name: "About", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
   ];
   
   const secondaryNavItems = [
-    { name: "CV", path: "/cv", color: "sand" },
+    { name: "CV", path: "/cv" },
   ];
 
   return (
@@ -38,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="text-rust hover:text-rust/80 transition-colors">
           <motion.h1 
-            className="font-serif text-xl md:text-2xl font-medium bg-gradient-to-r from-rust to-blue bg-clip-text text-transparent"
+            className="font-serif text-xl md:text-2xl font-medium"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -59,7 +58,7 @@ const Navbar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `navigation-link hover:text-${item.color} ${isActive ? `active text-${item.color}` : ""}`
+                  `navigation-link ${isActive ? "active" : ""}`
                 }
                 end={item.path === "/"}
               >
@@ -79,7 +78,7 @@ const Navbar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `navigation-link text-muted-foreground text-sm hover:text-${item.color} ${isActive ? `active text-${item.color}` : ""}`
+                  `navigation-link text-muted-foreground text-sm ${isActive ? "active" : ""}`
                 }
               >
                 {item.name}
@@ -122,7 +121,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.nav
-          className="md:hidden bg-gradient-to-b from-cream/95 to-sage/20 backdrop-blur-md"
+          className="md:hidden bg-cream/95 backdrop-blur-md"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -133,7 +132,7 @@ const Navbar = () => {
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) =>
-                  `navigation-link text-lg py-2 ${isActive ? `active text-${item.color}` : ""} hover:text-${item.color}`
+                  `navigation-link text-lg py-2 ${isActive ? "active" : ""}`
                 }
                 onClick={() => setIsMobileMenuOpen(false)}
                 end={item.path === "/"}
@@ -148,7 +147,7 @@ const Navbar = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `navigation-link text-muted-foreground py-2 ${isActive ? `active text-${item.color}` : ""} hover:text-${item.color}`
+                    `navigation-link text-muted-foreground py-2 ${isActive ? "active" : ""}`
                   }
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

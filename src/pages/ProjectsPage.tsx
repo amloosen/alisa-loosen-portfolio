@@ -8,52 +8,37 @@ const ProjectsPage = () => {
     {
       title: "Rule-shifting and Uncertainty in OCD",
       status: "In Preparation",
-      journal: "",
-      year: "",
       authors: "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Pittenger*, C., Hauser, T.U*.",
       description: "Investigating how patients with OCD adapt to changing rules and handle uncertainty compared to healthy controls.",
       tags: ["Computational Modeling", "OCD", "Decision-making"],
-      color: "rust"
     },
     {
       title: "Revisiting the role of computational neuroimaging in the era of integrative neuroscience",
-      status: "",
-      journal: "Neuropsychopharmacology",
-      year: "2024",
+      status: "Invited Review (2024)",
       authors: "Loosen, A.M.*, Kato, A.*, Gu, X.",
       description: "Review paper for Neuropsychopharmacology (Nature Publishing Group) on computational neuroimaging approaches.",
       tags: ["Computational Psychiatry", "Neuroimaging", "Review"],
-      color: "blue"
     },
     {
       title: "Obsessive-compulsive Symptoms and Information Seeking During the COVID-19 Pandemic",
-      status: "",
-      journal: "JAMA Psychiatry",
-      year: "2021",
+      status: "Published (2021)",
       authors: "Loosen, A. M., Skvortsova, V., & Hauser, T. U.",
       description: "Examined how individuals with obsessive-compulsive symptoms sought information during the COVID-19 pandemic.",
       tags: ["OCD", "Information Seeking", "COVID-19"],
-      color: "sage"
     },
     {
       title: "Towards a computational psychiatry of juvenile obsessive-compulsive disorder",
-      status: "",
-      journal: "Neuroscience & Biobehavioral Reviews",
-      year: "2020",
+      status: "Published (2020)",
       authors: "Loosen, A.M. & Hauser, T.U.",
       description: "Review paper in Neuroscience & Biobehavioral Reviews on computational approaches to juvenile OCD.",
       tags: ["Computational Psychiatry", "Juvenile OCD", "Review"],
-      color: "sand"
     },
     {
       title: "Confidence drives a neural confirmation bias",
-      status: "",
-      journal: "Nature Communications",
-      year: "2020",
+      status: "Published (2020)",
       authors: "Rollwage, M., Loosen, A.M., Hauser, T.U., Moran, R., Dolan, R.J. & Fleming, S.M.",
       description: "Investigation of how confidence affects information processing, published in Nature Communications.",
       tags: ["Confirmation Bias", "Confidence", "Neuroscience"],
-      color: "olive"
     },
   ];
 
@@ -72,28 +57,6 @@ const ProjectsPage = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const getCardClass = (color) => {
-    switch(color) {
-      case 'rust': return 'card-rust';
-      case 'blue': return 'card-blue';
-      case 'sage': return 'card-sage';
-      case 'sand': return 'card-sand';
-      case 'olive': return 'card-olive';
-      default: return 'card-sage';
-    }
-  };
-
-  const getTagClass = (color) => {
-    switch(color) {
-      case 'rust': return 'bg-rust/20 text-rust';
-      case 'blue': return 'bg-blue/20 text-blue';
-      case 'sage': return 'bg-sage/20 text-sage';
-      case 'sand': return 'bg-sand/20 text-sand';
-      case 'olive': return 'bg-olive/20 text-olive';
-      default: return 'bg-blue/10 text-blue';
-    }
-  };
-
   return (
     <motion.div
       initial="hidden"
@@ -103,7 +66,7 @@ const ProjectsPage = () => {
     >
       <motion.div variants={item} className="mb-8">
         <SectionTitle>Research Projects</SectionTitle>
-        <p className="text-lg mb-8 p-4 bg-blue/10 rounded-lg border-l-4 border-blue">
+        <p className="text-lg mb-8">
           My research focuses on computational approaches to understanding psychiatric disorders,
           particularly obsessive-compulsive disorder (OCD), with a focus on decision-making,
           uncertainty processing, and learning mechanisms.
@@ -113,13 +76,12 @@ const ProjectsPage = () => {
       <motion.div variants={container} className="grid gap-6">
         {projects.map((project, index) => (
           <motion.div key={index} variants={item}>
-            <Card className={`overflow-hidden hover:shadow-md transition-shadow duration-300 border-0 ${getCardClass(project.color)} colorful-card`}>
-              <CardHeader className="pb-2">
+            <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage">
+              <CardHeader className="bg-gradient-to-r from-sage/10 to-blue/5 pb-2">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <CardTitle className={`text-xl text-${project.color}`}>{project.title}</CardTitle>
-                  <span className={`text-sm font-medium px-3 py-1 rounded bg-${project.color}/20 text-${project.color} inline-block`}>
-                    {project.status ? project.status : 
-                      project.journal && project.year ? `${project.journal} (${project.year})` : ''}
+                  <CardTitle className="text-xl text-rust">{project.title}</CardTitle>
+                  <span className="text-sm font-medium px-3 py-1 rounded bg-sage/20 text-sage-800 inline-block">
+                    {project.status}
                   </span>
                 </div>
               </CardHeader>
@@ -130,7 +92,7 @@ const ProjectsPage = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`text-xs px-2 py-1 rounded-full ${getTagClass(project.color)}`}
+                      className="text-xs px-2 py-1 rounded-full bg-blue/10 text-blue"
                     >
                       {tag}
                     </span>
