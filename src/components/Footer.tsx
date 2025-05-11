@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Linkedin, Mail, Butterfly } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -50,7 +50,10 @@ const Footer = () => {
               className="text-muted-foreground hover:text-rust transition-colors"
               aria-label="Bluesky"
             >
-              <Butterfly className="w-5 h-5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <path d="M14.5 8.5c1.5-1.5 3.2.5 1.7 2-1.4 1.5.3 3.2 1.8 1.7 1.5-1.4 3 .4 1.7 1.7-1.3 1.3-2.8 2.7-4.2 4.1-1.3 1.3-3.2-.4-1.9-1.7 1.4-1.3-.3-3.1-1.7-1.7-1.5 1.4-3.1-.3-1.7-1.7l4.3-4.4Z"/>
+                <path d="M18 2c-1.5 1.4-5.9 6-7.8 8.3-1.9 2.3-3.8 4.7-5.1 5.2-1.3.4-2.4-.5-2.1-1.7.4-1.3 1.2-3 2.5-3.5 1.3-.4.8-2.2-.4-1.8-1.2.4-2.4.8-3.6 1.8C.2 12.3.2 14.8 1 15.6c.9.8 2.6 1.8 5.1-.1 2.5-1.8 5.4-6.2 7.1-7.6 1.7-1.4 2.9-2.6 4.2-2.5 1.3 0 2 .9 1.9 1.9 0 .9-.9 2.3-2.3 2.3-1.4 0-1.2-1.9 0-1.9C18.4 7.7 18 9.1 18 9.9v1.8c0 .9 1 .7 1.7 0 .7-.7 1.5-2.1 1.3-3.8-.2-1.7-2-2.9-3.9-2.1-1.6.6-3.1 2.9-3.1 2.9"/>
+              </svg>
             </a>
           </div>
         </div>
