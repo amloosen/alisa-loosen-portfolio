@@ -44,9 +44,9 @@ const Footer = () => {
             <span>•</span>
             <NavLink to="/projects" className="hover:text-rust transition-colors">Projects</NavLink>
             <span>•</span>
-            <NavLink to="/blog" className="hover:text-rust transition-colors">Blog</NavLink>
-            <span>•</span>
             <NavLink to="/contact" className="hover:text-rust transition-colors">Contact</NavLink>
+            <span>•</span>
+            <NavLink to="/cv" className="hover:text-rust transition-colors">CV</NavLink>
           </nav>
         </div>
       </div>
