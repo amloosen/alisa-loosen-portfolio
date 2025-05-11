@@ -43,7 +43,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-cream to-sage/10;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -96,6 +96,58 @@
   .fade-in {
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
+  }
+
+  .colored-section {
+    @apply relative overflow-hidden;
+  }
+
+  .colored-section::before {
+    @apply content-[''] absolute inset-0 opacity-10 -z-10;
+  }
+
+  .rust-bg {
+    @apply bg-rust/10 border-l-4 border-rust;
+  }
+
+  .blue-bg {
+    @apply bg-blue/10 border-l-4 border-blue;
+  }
+
+  .sage-bg {
+    @apply bg-sage/15 border-l-4 border-sage;
+  }
+
+  .sand-bg {
+    @apply bg-sand/15 border-l-4 border-sand;
+  }
+
+  .olive-bg {
+    @apply bg-olive/10 border-l-4 border-olive;
+  }
+
+  .colorful-card {
+    @apply border-0 shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+
+  .card-rust {
+    @apply bg-gradient-to-br from-white to-rust/10 border-t-4 border-rust;
+  }
+  
+  .card-blue {
+    @apply bg-gradient-to-br from-white to-blue/10 border-t-4 border-blue;
+  }
+  
+  .card-sage {
+    @apply bg-gradient-to-br from-white to-sage/20 border-t-4 border-sage;
+  }
+  
+  .card-sand {
+    @apply bg-gradient-to-br from-white to-sand/20 border-t-4 border-sand;
+  }
+  
+  .card-olive {
+    @apply bg-gradient-to-br from-white to-olive/15 border-t-4 border-olive;
   }
 }
 

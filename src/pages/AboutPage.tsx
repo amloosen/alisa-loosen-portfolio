@@ -40,10 +40,10 @@ const AboutPage = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
           <ProfileImage size="lg" />
           <div>
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-4 text-rust">
+            <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-4 bg-gradient-to-r from-rust to-olive bg-clip-text text-transparent">
               Alisa M. Loosen, PhD
             </h1>
-            <p className="text-xl text-muted-foreground mb-4">
+            <p className="text-xl text-blue mb-4">
               Researcher & Computational Scientist
             </p>
             <div className="flex items-center text-muted-foreground">
@@ -56,7 +56,7 @@ const AboutPage = () => {
             </div>
 
             <div className="mt-4 flex gap-3">
-              <Button asChild variant="outline" className="flex gap-2">
+              <Button asChild variant="outline" className="flex gap-2 border-blue hover:bg-blue/10 hover:text-blue">
                 <Link to="/cv">
                   <FileText className="w-4 h-4" />
                   View CV
@@ -73,7 +73,7 @@ const AboutPage = () => {
         </div>
         
         <div className="prose max-w-none">
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 p-4 bg-sage/10 rounded-lg border-l-4 border-sage">
             I am a researcher & computational scientist investigating cognition and mental health with neuroscientific, computational and digital tools! I combine cognitive neuroscience, computational psychiatry, and real-world applications to create fun, gamified cognitive tasks and symptom assessments that enable us to research the general public and specific patient groups.
           </p>
         </div>
@@ -82,40 +82,40 @@ const AboutPage = () => {
       <motion.div variants={item} className="mb-12">
         <SectionTitle>Research Focus</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="card-rust colorful-card p-6 rounded-lg">
             <div className="flex items-center gap-3 mb-3">
               <Brain className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Cognitive Neuroscience</h3>
+              <h3 className="text-xl font-medium text-rust">Cognitive Neuroscience</h3>
             </div>
             <p>
               Investigating how the brain processes uncertainty and makes decisions, especially in the context of psychiatric conditions like obsessive-compulsive disorder (OCD).
             </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="card-blue colorful-card p-6 rounded-lg">
             <div className="flex items-center gap-3 mb-3">
-              <Cog className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Computational Methods</h3>
+              <Cog className="text-blue h-6 w-6" />
+              <h3 className="text-xl font-medium text-blue">Computational Methods</h3>
             </div>
             <p>
               Developing reinforcement learning and Bayesian models to understand cognitive processes and analyze complex neuroscientific data.
             </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="card-sage colorful-card p-6 rounded-lg">
             <div className="flex items-center gap-3 mb-3">
-              <Smartphone className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Digital Assessment</h3>
+              <Smartphone className="text-sage h-6 w-6" />
+              <h3 className="text-xl font-medium text-sage">Digital Assessment</h3>
             </div>
             <p>
               Designing and implementing digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
             </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="card-sand colorful-card p-6 rounded-lg">
             <div className="flex items-center gap-3 mb-3">
-              <Globe className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Real-World Impact</h3>
+              <Globe className="text-sand h-6 w-6" />
+              <h3 className="text-xl font-medium text-sand">Real-World Impact</h3>
             </div>
             <p>
               From clinical samples to large-scale public datasets, turning research into accessible tools, including tracking psychiatric symptoms during global events like COVID-19.
@@ -134,9 +134,9 @@ const AboutPage = () => {
             href="https://www.neurocpu.org/spice" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-5 bg-sage/10 rounded-lg hover:bg-sage/20 transition-all transform hover:-translate-y-1 duration-300"
+            className="block p-5 bg-gradient-to-br from-white to-blue/10 border-l-4 border-blue rounded-lg hover:shadow-md transition-all transform hover:-translate-y-1 duration-300"
           >
-            <h3 className="text-xl font-medium mb-2">SPICE Summer Program in Computational Education</h3>
+            <h3 className="text-xl font-medium mb-2 text-blue">SPICE Summer Program in Computational Education</h3>
             <p className="text-muted-foreground">
               The NYC-based Summer Program in Computational Psychiatry Education immerses high-school and college students in cutting-edge basic and clinical research through direct collaboration with Icahn Mount Sinai scientists.
             </p>
@@ -146,9 +146,9 @@ const AboutPage = () => {
             href="https://ocdandthebrain.com/en" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-5 bg-sage/10 rounded-lg hover:bg-sage/20 transition-all transform hover:-translate-y-1 duration-300"
+            className="block p-5 bg-gradient-to-br from-white to-olive/10 border-l-4 border-olive rounded-lg hover:shadow-md transition-all transform hover:-translate-y-1 duration-300"
           >
-            <h3 className="text-xl font-medium mb-2">OCD and the Brain</h3>
+            <h3 className="text-xl font-medium mb-2 text-olive">OCD and the Brain</h3>
             <p className="text-muted-foreground">
               A collaborative public engagement project focused on the neuroscience of OCD. Working alongside adolescents with OCD and their parents, we developed communication tools designed to clearly convey how the disorder relates to brain function.
             </p>
