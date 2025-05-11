@@ -8,6 +8,8 @@ const ProjectsPage = () => {
     {
       title: "Rule-shifting and Uncertainty in OCD",
       status: "In Preparation",
+      journal: "",
+      year: "",
       authors: "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Pittenger*, C., Hauser, T.U*.",
       description: "Investigating how patients with OCD adapt to changing rules and handle uncertainty compared to healthy controls.",
       tags: ["Computational Modeling", "OCD", "Decision-making"],
@@ -15,7 +17,9 @@ const ProjectsPage = () => {
     },
     {
       title: "Revisiting the role of computational neuroimaging in the era of integrative neuroscience",
-      status: "Invited Review (2024)",
+      status: "",
+      journal: "Neuropsychopharmacology",
+      year: "2024",
       authors: "Loosen, A.M.*, Kato, A.*, Gu, X.",
       description: "Review paper for Neuropsychopharmacology (Nature Publishing Group) on computational neuroimaging approaches.",
       tags: ["Computational Psychiatry", "Neuroimaging", "Review"],
@@ -23,7 +27,9 @@ const ProjectsPage = () => {
     },
     {
       title: "Obsessive-compulsive Symptoms and Information Seeking During the COVID-19 Pandemic",
-      status: "Published (2021)",
+      status: "",
+      journal: "JAMA Psychiatry",
+      year: "2021",
       authors: "Loosen, A. M., Skvortsova, V., & Hauser, T. U.",
       description: "Examined how individuals with obsessive-compulsive symptoms sought information during the COVID-19 pandemic.",
       tags: ["OCD", "Information Seeking", "COVID-19"],
@@ -31,7 +37,9 @@ const ProjectsPage = () => {
     },
     {
       title: "Towards a computational psychiatry of juvenile obsessive-compulsive disorder",
-      status: "Published (2020)",
+      status: "",
+      journal: "Neuroscience & Biobehavioral Reviews",
+      year: "2020",
       authors: "Loosen, A.M. & Hauser, T.U.",
       description: "Review paper in Neuroscience & Biobehavioral Reviews on computational approaches to juvenile OCD.",
       tags: ["Computational Psychiatry", "Juvenile OCD", "Review"],
@@ -39,7 +47,9 @@ const ProjectsPage = () => {
     },
     {
       title: "Confidence drives a neural confirmation bias",
-      status: "Published (2020)",
+      status: "",
+      journal: "Nature Communications",
+      year: "2020",
       authors: "Rollwage, M., Loosen, A.M., Hauser, T.U., Moran, R., Dolan, R.J. & Fleming, S.M.",
       description: "Investigation of how confidence affects information processing, published in Nature Communications.",
       tags: ["Confirmation Bias", "Confidence", "Neuroscience"],
@@ -108,7 +118,8 @@ const ProjectsPage = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <CardTitle className={`text-xl text-${project.color}`}>{project.title}</CardTitle>
                   <span className={`text-sm font-medium px-3 py-1 rounded bg-${project.color}/20 text-${project.color} inline-block`}>
-                    {project.status}
+                    {project.status ? project.status : 
+                      project.journal && project.year ? `${project.journal} (${project.year})` : ''}
                   </span>
                 </div>
               </CardHeader>
