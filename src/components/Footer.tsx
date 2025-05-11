@@ -53,7 +53,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/f28fda96-5e15-407e-b119-3086e6491746.png" 
                 alt="Bluesky" 
-                className="w-5 h-5" 
+                className="w-5 h-5 filter brightness-0 opacity-60 hover:brightness-100 hover:opacity-100 transition-all" 
               />
             </a>
           </div>
