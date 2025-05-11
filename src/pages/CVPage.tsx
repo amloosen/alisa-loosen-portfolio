@@ -138,7 +138,7 @@ const CVPage = () => {
     },
     {
       category: "Languages",
-      skills: "German (native), English (full professional proficiency), French (elementary proficiency)"
+      skills: "German (native), English (full professional proficiency)"
     }
   ];
 
