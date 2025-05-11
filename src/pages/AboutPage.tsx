@@ -74,7 +74,7 @@ const AboutPage = () => {
         
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            I'm a researcher & computational scientist investigating cognition and mental health with neuroscientific, computational and digital tools! I combine cognitive neuroscience, computational psychiatry, and real-world applications to create fun, gamified cognitive tasks and symptom assessments that enable us to research the general public and specific patient groups.
+            I am a researcher & computational scientist investigating cognition and mental health with neuroscientific, computational and digital tools! I combine cognitive neuroscience, computational psychiatry, and real-world applications to create fun, gamified cognitive tasks and symptom assessments that enable us to research the general public and specific patient groups.
           </p>
         </div>
       </motion.div>
@@ -127,7 +127,7 @@ const AboutPage = () => {
       <motion.div variants={item}>
         <SectionTitle>Outreach & Science Communication</SectionTitle>
         <p className="mb-6 text-lg">
-          I believe science should be fun and accessible! I'm passionate about demystifying neuroscientific and mental health research and empowering people with information.
+          I believe science should be fun and accessible! I am passionate about demystifying neuroscientific and mental health research and empowering people with information.
         </p>
         <div className="space-y-4">
           <a 
