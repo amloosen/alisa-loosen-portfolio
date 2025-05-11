@@ -137,7 +137,7 @@ const AboutPage = () => {
           >
             <h3 className="text-xl font-medium mb-2">SPICE Summer Program in Computational Education</h3>
             <p className="text-muted-foreground">
-              Providing early computational training for students from groups underrepresented in STEM.
+              A NYC-based summer programme, providing computational training and hands-on research experience to students from groups underrepresented in STEM.
             </p>
           </a>
           
