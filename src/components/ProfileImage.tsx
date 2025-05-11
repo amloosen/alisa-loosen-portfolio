@@ -23,7 +23,7 @@ const ProfileImage = ({ size = "md", className = "" }: ProfileImageProps) => {
       className={`${className}`}
     >
       <Avatar className={`${sizeClasses[size]} rounded-full border-4 border-sage/30`}>
-        <AvatarImage src="/profile-image.jpg" alt="Alisa M. Loosen" />
+        <AvatarImage src="/lovable-uploads/7bc31a5e-d1c5-4601-a6aa-fa0490edad61.png" alt="Alisa M. Loosen" />
         <AvatarFallback className="bg-sand/30 text-rust font-serif">
           A.L.
         </AvatarFallback>
