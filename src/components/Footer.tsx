@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Linkedin, Mail, Bird } from "lucide-react";
+import { Linkedin, Mail, Butterfly } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,7 +53,7 @@ const Footer = () => {
               className="text-muted-foreground hover:text-rust transition-colors"
               aria-label="Bluesky"
             >
-              <Bird className="w-5 h-5" />
+              <Butterfly className="w-5 h-5" />
             </a>
           </div>
         </div>
