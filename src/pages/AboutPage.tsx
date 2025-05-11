@@ -137,7 +137,7 @@ const AboutPage = () => {
           >
             <h3 className="text-xl font-medium mb-2">SPICE Summer Program in Computational Education</h3>
             <p className="text-muted-foreground">
-              The Summer Program in Computational Psychiatry Education enables high-school and college students to collaborate with Icahn Mount Sinai researchers on cutting-edge basic and clinical studies.
+              The NYC-based Summer Program in Computational Psychiatry Education immerses high-school and college students in cutting-edge basic and clinical research through direct collaboration with Icahn Mount Sinai scientists.
             </p>
           </a>
           
