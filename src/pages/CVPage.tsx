@@ -40,7 +40,7 @@ const CVPage = () => {
     {
       period: "07/2025 – Future",
       location: "New Haven, USA",
-      title: "Faculty",
+      title: "Research Fellow",
       organization: "Yale Department of Psychiatry, Yale University",
       details: [
         "Starting July 2025"
