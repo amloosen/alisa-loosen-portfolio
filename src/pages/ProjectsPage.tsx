@@ -27,7 +27,7 @@ const ProjectsPage = () => {
       title: "Consistency within change: Evaluating the psychometric properties of a widely used predictive-inference task.",
       journal: "Behavior Research Methods",
       year: "2024",
-      authors: "Loosen, A.M., Seow, T.X.F.,Hauser, T.U*.",
+      authors: "Loosen, A.M., Seow, T.X.F., Hauser, T.U.",
       description: "Investigation of the psychometric properties of measures of a widely-used predictive-inference paradigm.",
       tags: ["Bayes-Optimal Learner", "Psychometric Qualities", "Test-retest Reliability", "Internal Consistency"],
       link: "https://link.springer.com/article/10.3758/s13428-024-02427-y",
