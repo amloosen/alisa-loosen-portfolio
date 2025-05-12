@@ -62,10 +62,10 @@ const AboutPage = () => {
                 </Link>
               </Button>
               <Button asChild variant="default" className="flex gap-2 bg-rust hover:bg-rust/80">
-                <a href="mailto:alisa.loosen@mssm.edu">
+                <Link to="/contact">
                   <MessageSquare className="w-4 h-4" />
                   Contact Me
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

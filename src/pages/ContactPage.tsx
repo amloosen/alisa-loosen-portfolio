@@ -29,7 +29,7 @@ const ContactPage = () => {
     >
       <motion.div variants={item} className="mb-8">
         <SectionTitle>Contact Me</SectionTitle>
-        <p className="text-lg mb-6">
+        <p className="text-lg font-serif mb-6">
           Feel free to reach out if you have questions about my research, collaboration opportunities, or speaking engagements.
         </p>
       </motion.div>

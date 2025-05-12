@@ -1,13 +1,22 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useForm } from "react-hook-form";
+import { Send, CheckCircle } from "lucide-react";
+import { 
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage
+} from "@/components/ui/form";
 
 export interface FormData {
   name: string;
@@ -18,67 +27,47 @@ export interface FormData {
 
 const ContactForm = ({ variants }: { variants: any }) => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [sendError, setSendError] = useState<string | null>(null);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    // Clear error when user starts typing again
-    if (sendError) setSendError(null);
-  };
+  const form = useForm<FormData>({
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
-    setSendError(null);
     
     try {
-      // Replace these with your actual Email.js service, template, and user IDs
-      // You need to create an account at emailjs.com and set up a service and template
-      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your Service ID
-      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your Template ID
-      const userId = 'YOUR_USER_ID'; // Replace with your User ID
+      // Simulate form submission with a delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        to_email: 'alisa.loosen@yale.edu', // Yale email address
-        subject: formData.subject,
-        message: formData.message,
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, userId);
+      // Log the form data to console
+      console.log("Form data submitted:", formData);
       
+      // Show success toast
       toast({
         title: "Message Sent",
         description: "Thank you for your message. I'll respond as soon as possible.",
       });
       
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      // Clear form and show success state
+      form.reset();
+      setIsSubmitted(true);
+      
+      // Reset success state after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
     } catch (error) {
-      console.error("Error sending email:", error);
-      setSendError("Failed to send message. Please try again later or contact directly via email.");
+      console.error("Error sending message:", error);
       toast({
         title: "Error",
-        description: "There was a problem sending your message.",
+        description: "There was a problem sending your message. Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -92,78 +81,112 @@ const ContactForm = ({ variants }: { variants: any }) => {
         <CardContent className="p-6">
           <h3 className="text-xl font-serif font-medium text-rust mb-6">Send a Message</h3>
           
-          {sendError && (
-            <Alert variant="destructive" className="mb-4">
-              <AlertDescription>{sendError}</AlertDescription>
-            </Alert>
+          {isSubmitted ? (
+            <div className="flex flex-col items-center justify-center py-8 text-center">
+              <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
+              <h4 className="text-xl font-medium mb-2">Message Sent!</h4>
+              <p className="text-muted-foreground mb-4">
+                Thank you for reaching out. I'll get back to you as soon as possible.
+              </p>
+              <Button 
+                onClick={() => setIsSubmitted(false)} 
+                variant="outline"
+              >
+                Send Another Message
+              </Button>
+            </div>
+          ) : (
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  rules={{ required: "Name is required" }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-muted-foreground">Name</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="w-full" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  rules={{ 
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address"
+                    }
+                  }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-muted-foreground">Email</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="email" className="w-full" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  rules={{ required: "Subject is required" }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-muted-foreground">Subject</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="w-full" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  rules={{ required: "Message is required" }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-muted-foreground">Message</FormLabel>
+                      <FormControl>
+                        <Textarea {...field} className="w-full min-h-[120px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-rust text-white hover:bg-rust/90"
+                >
+                  {isSubmitting ? (
+                    <>Sending...</>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+                
+                <Alert className="bg-amber-50 border-amber-200 mt-4">
+                  <AlertDescription className="text-amber-700">
+                    Note: This is a demo form. In a real-world scenario, this would send an email to Alisa.
+                  </AlertDescription>
+                </Alert>
+              </form>
+            </Form>
           )}
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-1">
-                Name
-              </label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-1">
-                Email
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-muted-foreground mb-1">
-                Subject
-              </label>
-              <Input
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-1">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full min-h-[120px]"
-              />
-            </div>
-            
-            <Button 
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-rust text-white hover:bg-rust/90"
-            >
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
-          </form>
         </CardContent>
       </Card>
     </motion.div>
