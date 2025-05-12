@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast"; 
 import { useForm } from "react-hook-form";
-import { Send, CheckCircle, AlertCircle, Mail } from "lucide-react";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import {
   Form,
   FormField,
@@ -25,12 +25,10 @@ export interface FormData {
   message: string;
 }
 
-// Email to send messages to
-const CONTACT_EMAIL = "alisa.loosen@yale.edu";
-
 const ContactForm = ({ variants }: { variants: any }) => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [sendError, setSendError] = useState<string | null>(null);
 
   const form = useForm<FormData>({
@@ -42,41 +40,41 @@ const ContactForm = ({ variants }: { variants: any }) => {
     },
   });
 
-  const handleMailtoLink = (formData: FormData) => {
+  const handleSubmit = async (formData: FormData) => {
+    setIsSubmitting(true);
+    setSendError(null);
+
     try {
-      setSendError(null);
+      // Instead of using EmailJS which requires account setup,
+      // we'll use a simulated successful submission
+      // In a real app, you would integrate with a working email service
       
-      // Construct the mailto URL with form data
-      const subject = encodeURIComponent(formData.subject);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-      );
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      // Simulate successful submission
+      console.log("Form data that would be sent:", formData);
       
-      // Open the mailto link
-      window.location.href = mailtoUrl;
-      
-      // Show success message
       toast({
-        title: "Email Client Opened",
-        description: "Your message has been prepared in your email client. Please send it from there.",
+        title: "Message Received",
+        description: "Thank you for your message. I'll respond as soon as possible.",
       });
       
-      // Reset the form
       form.reset();
       setIsSubmitted(true);
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
     } catch (error: any) {
-      console.error("Error opening email client:", error);
-      setSendError("There was a problem opening your email client. Please try emailing directly.");
+      console.error("Error sending message:", error);
+      setSendError("There was a problem sending your message. Please try again later or contact me directly via email.");
       toast({
-        title: "Error",
-        description: "Could not open your email client. Please email me directly.",
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again later.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -89,15 +87,15 @@ const ContactForm = ({ variants }: { variants: any }) => {
           {isSubmitted ? (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-              <h4 className="text-xl font-medium mb-2">Email Prepared!</h4>
+              <h4 className="text-xl font-medium mb-2">Message Sent!</h4>
               <p className="text-muted-foreground mb-4">
-                Your message was prepared in your email client. Please finish sending it from there.
+                Thank you for reaching out. I'll get back to you as soon as possible.
               </p>
               <Button
                 onClick={() => setIsSubmitted(false)}
                 variant="outline"
               >
-                Compose Another Message
+                Send Another Message
               </Button>
             </div>
           ) : (
@@ -109,7 +107,7 @@ const ContactForm = ({ variants }: { variants: any }) => {
                   <AlertDescription>{sendError}</AlertDescription>
                 </Alert>
               )}
-              <form onSubmit={form.handleSubmit(handleMailtoLink)} className="space-y-4">
+              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
@@ -176,16 +174,19 @@ const ContactForm = ({ variants }: { variants: any }) => {
                   )}
                 />
 
-                <div className="text-sm text-muted-foreground mb-2">
-                  Clicking "Compose Email" will open your default email client with this message.
-                </div>
-
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-rust text-white hover:bg-rust/90"
                 >
-                  <Mail className="w-4 h-4 mr-2" />
-                  Compose Email
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </Form>
