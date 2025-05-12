@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast"; // Ensure this path and hook are correct
+import { useToast } from "@/hooks/use-toast"; 
 import { useForm } from "react-hook-form";
 import { Send, CheckCircle } from "lucide-react";
 import emailjs from '@emailjs/browser';
@@ -15,7 +16,7 @@ import {
   FormLabel,
   FormControl,
   FormMessage
-} from "@/components/ui/form"; // Ensure these shadcn/ui components are correctly set up
+} from "@/components/ui/form";
 
 export interface FormData {
   name: string;
@@ -24,20 +25,11 @@ export interface FormData {
   message: string;
 }
 
-// --- Recommended: Use Environment Variables ---
-// Create a .env.local file in your project root:
-// NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_actual_public_key
-// NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_actual_service_id
-// NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_actual_template_id
-
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "iIV5WhE4cXMN0iYL2"; // Fallback to your test key
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_o9lvamy"; // Fallback to your test service ID
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_r2bnexn"; // Fallback to your test template ID
-
-// Optional: Initialize EmailJS once when the app loads if you prefer
-// if (typeof window !== "undefined" && EMAILJS_PUBLIC_KEY) { // Ensure it runs only on the client-side for Next.js
-//   emailjs.init(EMAILJS_PUBLIC_KEY);
-// }
+// Use hardcoded values directly - in a real app these would be environment variables
+// but for this demo we'll use direct values
+const EMAILJS_PUBLIC_KEY = "iIV5WhE4cXMN0iYL2"; 
+const EMAILJS_SERVICE_ID = "service_o9lvamy";
+const EMAILJS_TEMPLATE_ID = "template_r2bnexn";
 
 const ContactForm = ({ variants }: { variants: any }) => {
   const { toast } = useToast();
@@ -51,42 +43,21 @@ const ContactForm = ({ variants }: { variants: any }) => {
       subject: "",
       message: "",
     },
-    // Consider using a resolver for schema validation (e.g., with Zod)
-    // import { zodResolver } from "@hookform/resolvers/zod";
-    // import * as z from "zod";
-    // const formSchema = z.object({ ... });
-    // resolver: zodResolver(formSchema),
   });
 
   const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
 
-    if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
-        console.error("EmailJS environment variables are not set.");
-        toast({
-            title: "Configuration Error",
-            description: "Email sending is not configured correctly. Please contact support.",
-            variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-    }
-
     try {
-      // Initialize EmailJS here or once globally.
-      // If initializing globally, you can remove this line.
+      // Initialize EmailJS with the public key
       emailjs.init(EMAILJS_PUBLIC_KEY);
 
       const templateParams = {
         from_name: formData.name,
-        from_email: formData.email, // This can be used for 'reply_to' in your EmailJS template
+        from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        // **IMPORTANT**: The actual recipient email address (alisa.loosen@yale.edu)
-        // is typically configured in your EmailJS template settings on the EmailJS website,
-        // under the "To Email" field for the template `template_r2bnexn`.
-        // It's NOT usually passed directly here unless your template is specifically designed
-        // to accept a 'to_email' parameter (e.g., {{to_email}} in the template's "To Email" field).
+        // The recipient email is typically configured in the EmailJS template settings
       };
 
       const result = await emailjs.send(
@@ -95,7 +66,7 @@ const ContactForm = ({ variants }: { variants: any }) => {
         templateParams
       );
 
-      console.log("EmailJS send result:", result); // { status: 200, text: "OK" } for success
+      console.log("EmailJS send result:", result);
 
       if (result.status === 200) {
         toast({
@@ -108,9 +79,6 @@ const ContactForm = ({ variants }: { variants: any }) => {
           setIsSubmitted(false);
         }, 5000);
       } else {
-        // This case might not be hit if emailjs.send throws an error for non-200.
-        // The catch block is more likely to handle API errors.
-        console.error("EmailJS returned a non-200 status:", result);
         toast({
           title: "Sending Issue",
           description: `Message could not be sent. Status: ${result.status} - ${result.text}. Please try again.`,
@@ -155,7 +123,7 @@ const ContactForm = ({ variants }: { variants: any }) => {
                 <FormField
                   control={form.control}
                   name="name"
-                  rules={{ required: "Name is required" }} // react-hook-form native validation
+                  rules={{ required: "Name is required" }}
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-muted-foreground">Name</FormLabel>
@@ -221,10 +189,9 @@ const ContactForm = ({ variants }: { variants: any }) => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-rust text-white hover:bg-rust/90" // Ensure 'bg-rust' is defined in your Tailwind config
+                  className="w-full bg-rust text-white hover:bg-rust/90"
                 >
                   {isSubmitting ? (
-                    // You can add a spinner icon here for better UX
                     "Sending..."
                   ) : (
                     <>
