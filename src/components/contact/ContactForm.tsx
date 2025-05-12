@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useForm } from "react-hook-form";
 import { Send, CheckCircle } from "lucide-react";
 import { 
@@ -178,12 +177,6 @@ const ContactForm = ({ variants }: { variants: any }) => {
                     </>
                   )}
                 </Button>
-                
-                <Alert className="bg-amber-50 border-amber-200 mt-4">
-                  <AlertDescription className="text-amber-700">
-                    Note: This is a demo form. In a real-world scenario, this would send an email to Alisa.
-                  </AlertDescription>
-                </Alert>
               </form>
             </Form>
           )}
