@@ -95,7 +95,7 @@ const CVPage = () => {
       title: "Graduate Student Researcher",
       organization: "Wellcome Centre for Human Neuroimaging, UCL",
       details: [
-        "(PI: Prof. Stephen Fleming)",
+        "(PI: Dr. Max Rollwage & Prof. Stephen Fleming)",
         "Ran and analyzed cognitive experiments investigating the influence of confidence on changes of mind using computational models and magnetoencephalography (MEG)",
       ],
     },
