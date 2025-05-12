@@ -85,7 +85,7 @@ const AboutPage = () => {
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
             <div className="flex items-center gap-3 mb-3">
               <Brain className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Cognitive Neuroscience</h3>
+              <h3 className="text-xl font-medium">Cognitive & Computational Neuroscience</h3>
             </div>
             <p>
               Investigating how the brain processes uncertainty and makes decisions, especially in the context of psychiatric conditions like obsessive-compulsive disorder (OCD).
