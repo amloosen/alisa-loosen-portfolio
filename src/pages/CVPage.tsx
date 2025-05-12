@@ -22,8 +22,8 @@ const CVPage = () => {
       institution: "University College London",
       details: [
         "Graduated with distinction",
-        "Supervisors: Dr. Max Rollwage & Prof. Steve Fleming"
-        "Thesis: \"The influence of confidence on post-decision evidence processing and changes of mind\,
+        "Supervisors: Dr. Max Rollwage & Prof. Steve Fleming",
+        "Thesis: \"The influence of confidence on post-decision evidence processing and changes of mind\"",
       ],
     },
     {
