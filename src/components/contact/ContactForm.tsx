@@ -54,7 +54,7 @@ const ContactForm = ({ variants }: { variants: any }) => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
-        to_email: 'alisa.loosen@yale.edu', // Set the recipient to the Yale email address
+        to_email: 'alisa.loosen@yale.edu', // Yale email address
         subject: formData.subject,
         message: formData.message,
       };
