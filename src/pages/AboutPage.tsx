@@ -44,7 +44,7 @@ const AboutPage = () => {
               Alisa M. Loosen, PhD
             </h1>
             <p className="text-xl text-muted-foreground mb-4">
-              Researcher & Computational Scientist
+              Researcher in Computational Psychiatry & Neuroscience
             </p>
             <div className="flex items-center text-muted-foreground">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 mr-2">
