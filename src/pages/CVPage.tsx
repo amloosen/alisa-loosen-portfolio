@@ -340,12 +340,9 @@ const CVPage = () => {
               </div>
             </div>
           ))}
-          <div className="pt-4 flex flex-col sm:flex-row sm:items-start gap-2">
-            <div className="sm:w-1/4"></div>
-            <div className="sm:w-3/4">
-              <h4 className="font-medium mb-2">Reviewed for:</h4>
-              <p className="text-muted-foreground">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
-            </div>
+          <div className="pt-4 border-b border-muted pb-4">
+            <h4 className="font-medium mb-2">Reviewed for:</h4>
+            <p className="text-muted-foreground">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
           </div>
         </div>
       </motion.div>
