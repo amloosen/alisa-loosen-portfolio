@@ -109,25 +109,25 @@ const CVPage = () => {
         "Supported two research teams running experiments using pupillometry investigating the attentional blink",
       ],
     },
-    {
-      period: "08/2016 – 02/2017",
-      location: "Munich & Cologne, DE",
-      title: "Junior Communication Consultant",
-      organization: "Gauly Advisors GmbH and Avantgarde Experts",
-      details: [
-        "Created innovative communication channels and gamification tools for phone-based data collection",
-        "Project manager for different communication and change-management processes",
-      ],
-    },
-    {
-      period: "12/2012 – 05/2013",
-      location: "Munich, DE",
-      title: "Mental Health Counselling Intern",
-      organization: "House for Mother and Child",
-      details: [
-        "Assisted in psychological counselling for women fleeing domestic violence and human trafficking",
-      ],
-    },
+    // {
+    //   period: "08/2016 – 02/2017",
+    //   location: "Munich & Cologne, DE",
+    //   title: "Junior Communication Consultant",
+    //   organization: "Gauly Advisors GmbH and Avantgarde Experts",
+    //   details: [
+    //     "Created innovative communication channels and gamification tools for phone-based data collection",
+    //     "Project manager for different communication and change-management processes",
+    //   ],
+    // },
+    // {
+    //   period: "12/2012 – 05/2013",
+    //   location: "Munich, DE",
+    //   title: "Mental Health Counselling Intern",
+    //   organization: "House for Mother and Child",
+    //   details: [
+    //     "Assisted in psychological counselling for women fleeing domestic violence and human trafficking",
+    //   ],
+    // },
   ];
 
   const awardsData = [
