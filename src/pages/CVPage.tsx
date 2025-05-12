@@ -8,7 +8,7 @@ const CVPage = () => {
     {
       period: "12/2018 – 12/2022",
       location: "London, UK & New Haven, USA",
-      degree: "PhD in Computational Psychiatry & Neuroscience (non-degree)",
+      degree: "PhD in Computational Psychiatry & Neuroscience",
       institution: "University College London (UCL) & Yale School of Medicine, Yale University",
       details: [
         "Supervisors: Prof. Tobias Hauser (primary), Prof. Raymond Dolan (secondary), Prof. Christopher Pittenger (at Yale University)",
@@ -21,9 +21,8 @@ const CVPage = () => {
       degree: "MSc Brain and Mind Sciences",
       institution: "University College London",
       details: [
-        "Supervisors: Dr. Max Rollwage and Prof. Steve Fleming",
         "Graduated with distinction",
-        "Thesis: \"The influence of confidence on post-decision evidence processing and changes of mind\"",
+        "Thesis: \"The influence of confidence on post-decision evidence processing and changes of mind\" (Supervisors: Dr. Max Rollwage and Prof. Steve Fleming)",
       ],
     },
     {
@@ -82,7 +81,7 @@ const CVPage = () => {
     {
       period: "12/2018 – 12/2022",
       location: "London, UK",
-      title: "PhD Researcher",
+      title: "Postgraduate Researcher",
       organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
       details: [
         "(PI: Prof. Tobias Hauser & Prof. Raymond Dolan)",
@@ -201,21 +200,6 @@ const CVPage = () => {
     },
   ];
 
-  const publicationsData = [
-    "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Pittenger*, C., Hauser, T.U*. (in preparation) Rule-shifting and Uncertainty in OCD.",
-    "Loosen, A.M.*, Kato, A.*, Gu, X., (2024) Revisiting the role of computational neuroimaging in the era of integrative neuroscience. Invited Review for Neuropsychopharmacology. Nature Publishing Group",
-    "Loosen, A. M., Skvortsova, V., & Hauser, T. U. (2021). Obsessive-compulsive Symptoms and Information Seeking During the COVID-19 Pandemic. Translational Psychiatry",
-    "Loosen, A.M. & Hauser, T.U. (2020) Towards a computational psychiatry of juvenile obsessive-compulsive disorder. Neuroscience & Biobehavioral Reviews",
-    "Rollwage, M., Loosen, A.M., Hauser, T.U., Moran, R., Dolan, R.J. & Fleming, S.M. (2020) Confidence drives a neural confirmation bias. Nature Communications"
-  ];
-
-  const postersData = [
-    "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Pittenger*, C., Hauser, T.U*. Altered Confidence Adaptation During Set-Shifting in OCD. Annual Meeting of the Society of Biological Psychiatry (SOBP); 04/2023, San Diego (USA).",
-    "Loosen, A.M., Seow, T.X.F., Hauser, T.U. Consistently changing: Evaluating the psychometric properties of the predictive-inference task. Symposium on the computational properties of the prefrontal cortex; 03/2022, University of Oxford (UK).",
-    "Loosen, A.M., Seow, T.X.F., Hauser, T.U. Consistently changing: Evaluating the psychometric properties of the predictive-inference task. The Annual Society for NeuroEconomics meeting; 2021; 09/2021, online.",
-    "Loosen, A.M., Rollwage, M., Fleming, S.M. The influence of subjective confidence on post-decision evidence integration and changes of mind. 19th Queen Square Symposium of the Institute of Neurology UCL; 05/2018; London (UK)."
-  ];
-
   const teachingData = [
     {
       period: "04/2023 - Present",
@@ -226,43 +210,8 @@ const CVPage = () => {
       description: "Lectured Neuroscience & Computational Psychiatry at the Icahn School of Medicine at Mount Sinai for the Summer Program in Computational Education"
     },
     {
-      period: "11/2021 – 02/2022",
-      description: "Supervision of PhD-Rotation Student Sarah Bühler, Institute of Neurology, UCL"
-    },
-    {
-      period: "09/2021 – 02/2023",
-      description: "Supervised and marked statistics and research methods examinations and papers, UCL"
-    },
-    {
       period: "09/2021",
       description: "Collaborative workshop on computational modelling at the Flux 2020 Virtual Congress, Society for Developmental Cognitive Neuroscience"
-    }
-  ];
-
-  const engagementData = [
-    {
-      period: "11/2021 – Present",
-      description: "Public engagement project in collaboration with adolescents living with OCD and their parents to develop OCD-related communication tools (project website: https://ocdandthebrain.com). Funding: Wellcome Trust Research Enrichment Grant"
-    },
-    {
-      period: "03/2021 – 12/2023",
-      description: "Course Representative of the IMPRS COMP2PSYCH PhD program at the International Max Planck Research School on Computational Methods in Psychiatry and Ageing Research"
-    },
-    {
-      period: "09/2018 - 03/2019",
-      description: "Public engagement projects involving art-science collaborations and tablet-based data collection for the Wellcome Trust Centre for Human Neuroimaging"
-    },
-    {
-      period: "09/2017 – 09/2018",
-      description: "Academic representative of the Dual-MSc Brain and Mind Sciences, UCL"
-    },
-    {
-      period: "09/2017 – 08/2018",
-      description: "Queen Square Student Committee member at the Institute of Neurology, UCL"
-    },
-    {
-      period: "09/2014 – 06/2017",
-      description: "Committee chair of the Amnesty International Student Group & Social Erasmus Student Committee Groningen (NL)"
     }
   ];
 
@@ -312,28 +261,7 @@ const CVPage = () => {
       className="max-w-4xl mx-auto"
     >
       <motion.div variants={item} className="mb-8">
-        <h1 className="text-4xl font-serif font-semibold mb-6 text-rust">Curriculum Vitae</h1>
-        <div className="mb-6">
-          <h2 className="text-2xl font-serif mb-2">Alisa M. Loosen, PhD</h2>
-          <p className="text-muted-foreground">Center for Computational Psychiatry, Icahn School of Medicine at Mount Sinai</p>
-          <div className="flex flex-wrap items-center gap-2 text-muted-foreground mt-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <span className="space-x-1">
-              <a href="mailto:alisa.loosen@mssm.edu" className="hover:text-rust transition-colors">alisa.loosen@mssm.edu</a>
-              <span>;</span>
-              <a href="mailto:a.m.loosen@gmail.com" className="hover:text-rust transition-colors">a.m.loosen@gmail.com</a>
-            </span>
-            <span className="mx-2">|</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-            <a href="https://github.com/amloosen" target="_blank" rel="noopener noreferrer" className="hover:text-rust transition-colors">
-              github.com/amloosen
-            </a>
-          </div>
-        </div>
+        <h1 className="text-4xl font-serif font-semibold mb-6 text-rust">Curriculum Vitae <span className="text-lg text-muted-foreground">(Short Version)</span></h1>
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
@@ -418,46 +346,11 @@ const CVPage = () => {
           </div>
         </div>
       </motion.div>
-
-      <motion.div variants={item} className="mb-12">
-        <SectionTitle>Selected Publications & Posters</SectionTitle>
-        <Card>
-          <CardContent className="p-6">
-            <h4 className="font-medium mb-4">Publications</h4>
-            <ul className="space-y-3">
-              {publicationsData.map((pub, index) => (
-                <li key={index} className="text-muted-foreground">{pub}</li>
-              ))}
-            </ul>
-            
-            <h4 className="font-medium mt-8 mb-4">Posters</h4>
-            <ul className="space-y-3">
-              {postersData.map((poster, index) => (
-                <li key={index} className="text-muted-foreground">{poster}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </motion.div>
       
       <motion.div variants={item} className="mb-12">
-        <SectionTitle>Teaching Experience</SectionTitle>
+        <SectionTitle>Selected Teaching Experience</SectionTitle>
         <div className="space-y-4">
           {teachingData.map((item, index) => (
-            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{item.period}</div>
-              <div className="sm:w-3/4">
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-      
-      <motion.div variants={item} className="mb-12">
-        <SectionTitle>Public Engagement & Activities</SectionTitle>
-        <div className="space-y-4">
-          {engagementData.map((item, index) => (
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
               <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{item.period}</div>
               <div className="sm:w-3/4">
