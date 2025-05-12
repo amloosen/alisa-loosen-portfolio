@@ -52,7 +52,7 @@ const CVPage = () => {
       title: "Postdoctoral Researcher",
       organization: "Center for Computational Psychiatry, Icahn School of Medicine at Mount Sinai",
       details: [
-        "(PI: Prof. Xiaosi Gu)",
+        "PI: Prof. Xiaosi Gu",
         "Investigate neurocomputational mechanisms of effort and reward learning",
         "Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling",
       ],
@@ -63,7 +63,7 @@ const CVPage = () => {
       title: "Postdoctoral Researcher",
       organization: "University of Tübingen & Max Planck Institute for Biological Cybernetics",
       details: [
-        "(PI: Prof. Tobias Hauser)",
+        "PI: Prof. Tobias Hauser",
         "Researched neurocomputational mechanisms underlying obsessive-compulsive disorder (OCD)",
         "Methods and data formats: Analyzed patient and control data using Bayesian modeling methods",
       ],
@@ -74,7 +74,7 @@ const CVPage = () => {
       title: "PhD Researcher",
       organization: "Yale OCD Research Clinic, Yale School of Medicine",
       details: [
-        "(PI: Prof. Christopher Pittenger)",
+        "PI: Prof. Christopher Pittenger",
         "Designed, ran and analyzed cognitive studies and conducted clinical assessments of patients with OCD",
       ],
     },
@@ -84,7 +84,7 @@ const CVPage = () => {
       title: "Postgraduate Researcher",
       organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
       details: [
-        "(PI: Prof. Tobias Hauser & Prof. Raymond Dolan)",
+        "PI: Prof. Tobias Hauser",
         "Designed, ran and analyzed large-scale cognitive studies with the general public",
       ],
     },
@@ -94,7 +94,7 @@ const CVPage = () => {
       title: "Graduate Student Researcher",
       organization: "Wellcome Centre for Human Neuroimaging, UCL",
       details: [
-        "(PI: Dr. Max Rollwage & Prof. Stephen Fleming)",
+        "PI: Dr. Max Rollwage & Prof. Stephen Fleming",
         "Ran and analyzed cognitive experiments investigating the influence of confidence on changes of mind using computational models and magnetoencephalography (MEG)",
       ],
     },
@@ -104,7 +104,7 @@ const CVPage = () => {
       title: "Research Intern",
       organization: "University Medical Centre Groningen",
       details: [
-        "(PI: Prof. Sander Martens)",
+        "PI: Prof. Sander Martens",
         "Supported two research teams running experiments using pupillometry investigating the attentional blink",
       ],
     },
