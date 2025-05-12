@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import ProfileImage from "@/components/ProfileImage";
@@ -41,7 +40,7 @@ const AboutPage = () => {
           <ProfileImage size="lg" />
           <div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-4 text-rust">
-              Alisa M. Loosen, PhD
+              Dr. Alisa M. Loosen
             </h1>
             <p className="text-xl text-muted-foreground mb-4">
               Researcher in Computational Psychiatry & Neuroscience

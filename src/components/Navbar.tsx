@@ -42,7 +42,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            Alisa M. Loosen, PhD
+            Dr. Alisa M. Loosen
           </motion.h1>
         </NavLink>
 
