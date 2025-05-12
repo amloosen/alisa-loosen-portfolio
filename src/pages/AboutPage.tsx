@@ -88,7 +88,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Neuroscience</h3>
             </div>
             <p>
-              Investigating how the brain processes uncertainty and makes decisions, especially in the context of psychiatric conditions like obsessive-compulsive disorder (OCD).
+              Investigating how the brain learns, processes uncertainty, and makes decisions, my work combines cognitive and basic neuroscience with patient-centered research. This includes leveraging intracranial recordings and addressing psychiatric conditions such as obsessive-compulsive disorder (OCD).
             </p>
           </div>
           
