@@ -9,7 +9,7 @@ const ProjectsPage = () => {
       title: "Rule-shifting and Uncertainty in OCD",
       journal: "In Preparation",
       year: "",
-      authors: "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Pittenger*, C., & Hauser*, T.U.",
+      authors: "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Moore, A., Bohner, C., Pittenger*, C., & Hauser*, T.U.",
       description: "Investigating how patients with OCD adapt to changing rules and handle uncertainty compared to healthy controls.",
       tags: ["Computational Modeling", "OCD", "Decision-making"],
       link: "",
