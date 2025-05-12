@@ -56,7 +56,7 @@ const ProjectsPage = () => {
       year: "2020",
       authors: "Rollwage, M., Loosen, A.M., Hauser, T.U., Moran, R., Dolan, R.J. & Fleming, S.M.",
       description: "Investigation of how confidence affects information processing.",
-      tags: ["Confirmation Bias", "Confidence", "Neuroscience", "Magnetoencephalography (MEG)", "Support-Vector Machine (SVM"],
+      tags: ["Confirmation Bias", "Confidence", "Neuroscience", "Magnetoencephalography (MEG)", "Support-Vector Machine (SVM)"],
       link: "https://www.nature.com/articles/s41467-020-16278-6",
     },
   ];
