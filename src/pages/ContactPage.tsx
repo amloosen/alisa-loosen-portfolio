@@ -1,12 +1,13 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -17,6 +18,7 @@ const ContactPage = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,26 +28,54 @@ const ContactPage = () => {
       ...prev,
       [name]: value,
     }));
+    // Clear error when user starts typing again
+    if (sendError) setSendError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSendError(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Replace these with your actual Email.js service, template, and user IDs
+      // You need to create an account at emailjs.com and set up a service and template
+      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your Service ID
+      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your Template ID
+      const userId = 'YOUR_USER_ID'; // Replace with your User ID
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
       toast({
         title: "Message Sent",
         description: "Thank you for your message. I'll respond as soon as possible.",
       });
+      
+      // Reset form
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSendError("Failed to send message. Please try again later or contact directly via email.");
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const container = {
@@ -125,6 +155,12 @@ const ContactPage = () => {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-serif font-medium text-rust mb-6">Send a Message</h3>
+              
+              {sendError && (
+                <Alert variant="destructive" className="mb-4">
+                  <AlertDescription>{sendError}</AlertDescription>
+                </Alert>
+              )}
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
