@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { Send, CheckCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 import { 
   Form,
   FormField,
@@ -42,11 +43,28 @@ const ContactForm = ({ variants }: { variants: any }) => {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission with a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Configure EmailJS with your service ID, template ID, and public key
+      const serviceId = 'default_service'; // Replace with your EmailJS service ID
+      const templateId = 'template_default'; // Replace with your EmailJS template ID
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
       
-      // Log the form data to console
-      console.log("Form data submitted:", formData);
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+      
+      console.log("Email sent successfully:", result);
       
       // Show success toast
       toast({
