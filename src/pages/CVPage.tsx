@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
@@ -259,7 +258,7 @@ const CVPage = () => {
       initial="hidden"
       animate="show"
       variants={container}
-      className="max-w-4xl mx-auto"
+      className="max-w-4xl mx-auto font-sans"
     >
       <motion.div variants={item} className="mb-8">
         <h1 className="text-4xl font-serif font-semibold mb-6 text-rust">Curriculum Vitae <span className="text-lg text-muted-foreground">(Short Version)</span></h1>
@@ -318,9 +317,9 @@ const CVPage = () => {
         <SectionTitle>Grants & Awards</SectionTitle>
         <div className="space-y-4">
           {awardsData.map((award, index) => (
-            <div key={index} className="flex flex-col sm:flex-row sm:items-center gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap">{award.period}</div>
-              <div>
+            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
+              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{award.period}</div>
+              <div className="sm:w-3/4">
                 <h4 className="font-medium">{award.title}</h4>
                 {award.details && <p className="text-muted-foreground">{award.details}</p>}
               </div>
@@ -334,16 +333,19 @@ const CVPage = () => {
         <div className="space-y-4">
           {invitedTalksData.map((talk, index) => (
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap">{talk.period}</div>
-              <div>
+              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{talk.period}</div>
+              <div className="sm:w-3/4">
                 <h4 className="font-medium">{talk.title}</h4>
                 <p className="text-muted-foreground">{talk.organization}</p>
               </div>
             </div>
           ))}
-          <div className="pt-4">
-            <h4 className="font-medium mb-2">Reviewed for:</h4>
-            <p className="text-muted-foreground">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
+          <div className="pt-4 flex flex-col sm:flex-row sm:items-start gap-2">
+            <div className="sm:w-1/4"></div>
+            <div className="sm:w-3/4">
+              <h4 className="font-medium mb-2">Reviewed for:</h4>
+              <p className="text-muted-foreground">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
+            </div>
           </div>
         </div>
       </motion.div>
