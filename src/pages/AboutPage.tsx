@@ -98,7 +98,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Computational Methods</h3>
             </div>
             <p>
-              Developing reinforcement learning and Bayesian models to understand cognitive processes and analyze complex neuroscientific data.
+              Developing and applying reinforcement learning and Bayesian models to gain deeper insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
             </p>
           </div>
           
