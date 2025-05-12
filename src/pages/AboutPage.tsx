@@ -94,7 +94,7 @@ const AboutPage = () => {
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
             <div className="flex items-center gap-3 mb-3">
               <Cog className="text-rust h-6 w-6" />
-              <h3 className="text-xl font-medium">Computational Methods</h3>
+              <h3 className="text-xl font-medium">Computational Modeling</h3>
             </div>
             <p>
               Developing and applying reinforcement learning and Bayesian models to gain deeper insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
