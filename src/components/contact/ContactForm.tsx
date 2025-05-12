@@ -43,10 +43,8 @@ const ContactForm = ({ variants }: { variants: any }) => {
     setIsSubmitting(true);
     
     try {
-      // Configure EmailJS with your service ID, template ID, and public key
-      const serviceId = 'default_service'; // Replace with your EmailJS service ID
-      const templateId = 'template_default'; // Replace with your EmailJS template ID
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+      // Initialize EmailJS
+      emailjs.init("iIV5WhE4cXMN0iYL2"); // This is a test public key
       
       // Prepare template parameters
       const templateParams = {
@@ -58,10 +56,9 @@ const ContactForm = ({ variants }: { variants: any }) => {
       
       // Send email using EmailJS
       const result = await emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        publicKey
+        "service_o9lvamy", // Test service ID
+        "template_r2bnexn", // Test template ID
+        templateParams
       );
       
       console.log("Email sent successfully:", result);
