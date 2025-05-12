@@ -9,7 +9,7 @@ const CVPage = () => {
       period: "12/2018 – 12/2022",
       location: "London, UK & New Haven, USA",
       degree: "PhD in Computational Psychiatry & Neuroscience",
-      institution: "University College London (UCL) & Yale School of Medicine, Yale University",
+      institution: "University College London (UCL) & Yale School of Medicine, Yale University (non-degree)",
       details: [
         "Supervisors: Prof. Tobias Hauser (primary), Prof. Raymond Dolan (secondary), Prof. Christopher Pittenger (at Yale University)",
         "Thesis: \"Complex Decision Making & Uncertainty in Obsessive-Compulsive Disorder (OCD)\"",
