@@ -73,7 +73,7 @@ const AboutPage = () => {
         
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            I am a researcher & computational scientist investigating cognition and mental health with neuroscientific, computational and digital tools. I combine cognitive neuroscience, computational psychiatry, and real-world applications to create fun, gamified cognitive tasks and symptom assessments that enable us to research the general public and specific patient groups.
+            I am a researcher investigating cognition and mental health with neuroscientific, computational and digital tools. I combine cognitive neuroscience, computational psychiatry, and real-world applications to create fun, gamified cognitive tasks and symptom assessments that enable us to research the general public and specific patient groups.
           </p>
         </div>
       </motion.div>
