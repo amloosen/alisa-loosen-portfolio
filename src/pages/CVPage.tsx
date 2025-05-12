@@ -7,10 +7,10 @@ const CVPage = () => {
     {
       period: "12/2018 – 12/2022",
       location: "London, UK & New Haven, USA",
-      degree: "PhD in Computational Psychiatry & Neuroscience",
+      degree: "PhD in Computational Psychiatry & Neuroscience (non-degree)",
       institution: "University College London (UCL) & Yale School of Medicine, Yale University",
       details: [
-        "Supervisors: Prof. Tobias Hauser (primary), Prof. Raymond Dolan, Prof. Christopher Pittenger",
+        "Supervisors: Prof. Tobias Hauser (primary), Prof. Raymond Dolan (secondary), Prof. Christopher Pittenger (at Yale University)",
         "Thesis: \"Complex Decision Making & Uncertainty in Obsessive-Compulsive Disorder (OCD)\"",
       ],
     },
@@ -20,6 +20,7 @@ const CVPage = () => {
       degree: "MSc Brain and Mind Sciences",
       institution: "University College London",
       details: [
+        "Supervisors: Dr. Max Rollwage and Prof. Steve Fleming",
         "Graduated with distinction",
         "Thesis: \"The influence of confidence on post-decision evidence processing and changes of mind\"",
       ],
@@ -67,21 +68,21 @@ const CVPage = () => {
       ],
     },
     {
-      period: "12/2018 – 12/2022",
-      location: "London, UK",
-      title: "PhD Researcher",
-      organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
-      details: [
-        "Designed, ran and analyzed large-scale cognitive studies with the general public",
-      ],
-    },
-    {
       period: "10/2021 – 01/2023",
       location: "New Haven, USA",
-      title: "PhD Researcher",
+      title: "Postgraduate Researcher",
       organization: "Yale OCD Research Clinic, Yale School of Medicine",
       details: [
         "Designed, ran and analyzed cognitive studies and conducted clinical assessments of patients with OCD",
+      ],
+    },
+    {
+      period: "12/2018 – 12/2022",
+      location: "London, UK",
+      title: "Postgraduate Researcher",
+      organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
+      details: [
+        "Designed, ran and analyzed large-scale cognitive studies with the general public",
       ],
     },
   ];
