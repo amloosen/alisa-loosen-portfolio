@@ -40,7 +40,7 @@ const AboutPage = () => {
           <ProfileImage size="lg" />
           <div>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-4 text-rust">
-              Dr. Alisa M. Loosen
+              Alisa M. Loosen, PhD
             </h1>
             <p className="text-xl text-muted-foreground mb-4">
               Researcher in Computational Psychiatry & Neuroscience
