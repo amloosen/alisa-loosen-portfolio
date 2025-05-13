@@ -53,7 +53,7 @@ const CVPage = () => {
       organization: "Center for Computational Psychiatry, Icahn School of Medicine at Mount Sinai",
       details: [
         "PI: Prof. Xiaosi Gu",
-        "Investigate neurocomputational mechanisms of effort and reward learning",
+        "Investigating neurocomputational mechanisms of effort and reward learning",
         "Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling",
       ],
     },
