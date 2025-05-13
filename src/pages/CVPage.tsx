@@ -159,7 +159,7 @@ const CVPage = () => {
       period: "12/2018",
       title: "Full PhD Scholarship (COMP2PSYCH)",
       details: "Max-Planck-Society"
-    },,
+    },
     {
       period: "09/2018",
       title: "Travel Award",
@@ -261,7 +261,7 @@ const CVPage = () => {
       className="max-w-4xl mx-auto font-sans"
     >
       <motion.div variants={item} className="mb-8">
-        <h1 className="text-4xl font-serif font-semibold mb-6 text-rust">Curriculum Vitae <span className="text-lg text-muted-foreground">(Short Version)</span></h1>
+        <SectionTitle>Curriculum Vitae <span className="text-lg text-muted-foreground">(Short Version)</span></SectionTitle>
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
