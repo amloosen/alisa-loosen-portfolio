@@ -159,12 +159,7 @@ const CVPage = () => {
       period: "12/2018",
       title: "Full PhD Scholarship (COMP2PSYCH)",
       details: "Max-Planck-Society"
-    },
-    {
-      period: "09/2017",
-      title: "Full MSc Scholarship",
-      details: "German Academic Scholarship Foundation/ Studienstiftung des Deutschen Volkes"
-    },
+    },,
     {
       period: "09/2018",
       title: "Travel Award",
@@ -175,6 +170,11 @@ const CVPage = () => {
       title: "Travel Award",
       details: "Humboldt University of Berlin & Bernstein Computational Centre Berlin"
     },
+    {
+      period: "09/2017",
+      title: "Full MSc Scholarship",
+      details: "German Academic Scholarship Foundation/ Studienstiftung des Deutschen Volkes"
+    }
   ];
 
   const invitedTalksData = [
