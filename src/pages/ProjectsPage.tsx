@@ -51,13 +51,13 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
+    institutions: ["Mount Sinai", "Yale", "Tübingen"],
     renderMedia: function DumbbellIcon() {
       return (
         <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Dumbbell color="#8A382D" size={45} strokeWidth={1.8} />
           </div>
-          <InstLogos institutions={["Mount Sinai", "Yale", "Tübingen"]} />
         </div>
       );
     },
@@ -68,13 +68,13 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
+    institutions: ["Mount Sinai", "Yale", "Tübingen"],
     renderMedia: function BrainIcon() {
       return (
         <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Brain color="#8A382D" size={48} strokeWidth={1.8} />
           </div>
-          <InstLogos institutions={["Mount Sinai", "Yale", "Tübingen"]} />
         </div>
       );
     },
@@ -85,13 +85,13 @@ const ongoingProjects = [
     authors: "Vejlø, M., Loosen, A.M., Hauser, T.U., Gu, X., & Allen, M.",
     description:
       "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
+    institutions: ["Yale", "Tübingen"],
     renderMedia: function NeutralCannabis() {
       return (
         <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Cannabis color="#BAC39D" size={48} strokeWidth={1.8} />
           </div>
-          <InstLogos institutions={["Yale", "Tübingen"]} />
         </div>
       );
     },
@@ -196,7 +196,6 @@ const ProjectsPage = () => (
     {/* Ongoing Projects Section */}
     <motion.div variants={item} className="mb-12">
       <SectionTitle>Ongoing Projects</SectionTitle>
-      {/* Move research focus text right here, under heading */}
       <p className="text-lg mb-8">
         My research focuses on computational approaches to understanding psychiatric disorders,
         particularly obsessive-compulsive disorder (OCD), with a focus on decision-making,
@@ -211,8 +210,8 @@ const ProjectsPage = () => (
             {/* CARD HEADER: mimic research card header layout */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
-                {/* Left: title and authors */}
-                <div className="flex flex-col">
+                {/* Left: title, authors, and logos */}
+                <div className="flex flex-col flex-1 min-w-0">
                   {/* Match research card title font size and class */}
                   <h3 className="text-xl font-serif font-semibold text-blue mb-0 sm:text-xl">
                     {project.title}
@@ -220,6 +219,13 @@ const ProjectsPage = () => (
                   <span className="text-xs text-muted-foreground mt-1">
                     {project.authors}
                   </span>
+                  {/* Logos moved directly below authors */}
+                  <div className="mt-3">
+                    <span className="block text-xs text-muted-foreground mb-1 font-semibold">
+                      Collaboration:
+                    </span>
+                    <InstLogos institutions={project.institutions} />
+                  </div>
                 </div>
                 {/* Right: image/icon/emojis */}
                 <div className="flex flex-col items-end justify-center min-w-[88px]">
