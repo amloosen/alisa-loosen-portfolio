@@ -23,7 +23,7 @@ const projects = [
     description: "Review paper for Neuropsychopharmacology (Nature Publishing Group) on computational neuroimaging approaches.",
     tags: ["Computational Psychiatry", "Neuroimaging", "Review"],
     link: "https://www.nature.com/articles/s41386-024-01946-8",
-    image: "/lovable-uploads/f4d0b0a4-1d4f-4ed7-bdc9-18e00ec64f6f.png"
+    image: "/lovable-uploads/de21c4ef-14ed-4d5c-950f-9c5c8854f68f.png"
   },
   {
     title: "Consistency within change: Evaluating the psychometric properties of a widely used predictive-inference task.",
@@ -53,7 +53,7 @@ const projects = [
     description: "Review paper on computational approaches to juvenile OCD.",
     tags: ["Computational Psychiatry", "Juvenile OCD", "Review"],
     link: "https://www.sciencedirect.com/science/article/abs/pii/S014976342030484X",
-    image: "/lovable-uploads/de21c4ef-14ed-4d5c-950f-9c5c8854f68f.png"
+    image: "/lovable-uploads/f4d0b0a4-1d4f-4ed7-bdc9-18e00ec64f6f.png"
   },
   {
     title: "Confidence drives a neural confirmation bias",
