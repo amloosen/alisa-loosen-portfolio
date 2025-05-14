@@ -1,9 +1,30 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
 
-// List of projects and images as before
+// Ongoing Projects
+const ongoingProjects = [
+  {
+    title:
+      "Unveiling the Interplay of Reward and Effort Learning in Anhedonia and Apathy",
+    authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
+    description:
+      "A multi-dimensional investigation into how anhedonia and apathy modulate reward and effort-based neural learning mechanisms across the psychiatric spectrum.",
+    image:
+      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    title:
+      "Decoding the Neural Dynamics of Reward and Effort Integration in Decision-Making",
+    authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
+    description:
+      "This project seeks to dissect how the brain combines reward expectations with effort costs, uncovering mechanisms underlying motivated behavior.",
+    image:
+      "https://images.unsplash.com/photo-1501286353178-1ec881214838?auto=format&fit=crop&w=400&q=80",
+  },
+];
+
+// Research Projects
 const projects = [
   {
     title: "Rule-shifting and Uncertainty in OCD",
@@ -74,16 +95,16 @@ const getSortValue = (p: typeof projects[0]) => {
   return 0;
 };
 
-const sortedProjects = [...projects].sort((a, b) => getSortValue(b) - getSortValue(a));
+const sortedProjects = [...projects].sort(
+  (a, b) => getSortValue(b) - getSortValue(a)
+);
 
 // Animation variants
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 const item = {
@@ -98,6 +119,42 @@ const ProjectsPage = () => (
     variants={container}
     className="max-w-4xl mx-auto"
   >
+    {/* Ongoing Projects Section */}
+    <motion.div variants={item} className="mb-12">
+      <SectionTitle>Ongoing Projects</SectionTitle>
+      <div className="grid gap-6">
+        {ongoingProjects.map((project, i) => (
+          <Card
+            key={i}
+            className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-blue/20 hover:border-blue bg-white flex flex-col"
+          >
+            <div className="flex flex-col sm:flex-row gap-4 px-4 pt-4 pb-2 sm:px-6 sm:pt-6 sm:pb-2">
+              {/* Text content */}
+              <div className="flex-1 flex flex-col justify-center">
+                <h3 className="text-xl font-serif font-semibold text-blue mb-1">
+                  {project.title}
+                </h3>
+                <span className="text-xs text-muted-foreground mb-2">
+                  {project.authors}
+                </span>
+                <p className="text-base mb-2">{project.description}</p>
+              </div>
+              {/* Image */}
+              <div className="flex-shrink-0 flex flex-col justify-end items-end">
+                <img
+                  src={project.image}
+                  alt="Ongoing Project illustration"
+                  className="object-contain w-32 h-32 max-h-36 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-5"
+                  style={{ maxWidth: "128px" }}
+                />
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </motion.div>
+
+    {/* Research Projects Section */}
     <motion.div variants={item} className="mb-8">
       <SectionTitle>Research Projects</SectionTitle>
       <p className="text-lg mb-8">
@@ -115,8 +172,12 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title and authors */}
                 <div className="flex flex-col">
-                  <h3 className="text-xl font-serif font-semibold text-rust mb-0">{project.title}</h3>
-                  <span className="text-xs text-muted-foreground mt-1">{project.authors}</span>
+                  <h3 className="text-xl font-serif font-semibold text-rust mb-0">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-muted-foreground mt-1">
+                    {project.authors}
+                  </span>
                 </div>
                 {/* Right: journal/year */}
                 <div className="flex flex-col items-end justify-center min-w-[172px]">
@@ -137,9 +198,9 @@ const ProjectsPage = () => (
                 </div>
               </div>
             </div>
-            {/* Card Body: description/tags (left), image (right, lower, with space at bottom) */}
+            {/* Card Body: description/tags (left), image (right, with padded bottom) */}
             <div className="flex flex-row items-stretch justify-between gap-2 pl-0 pr-0 pt-0 bg-white">
-              <div className="flex-1 flex flex-col justify-center pl-4 pt-2 pb-5 sm:pb-7 sm:pt-4 sm:pl-6">
+              <div className="flex-1 flex flex-col justify-center pl-4 pt-2 pb-7 sm:pb-10 sm:pt-4 sm:pl-6">
                 <p className="mb-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -157,11 +218,11 @@ const ProjectsPage = () => (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-4"
+                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-8"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
-                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2 mb-4">
+                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2 mb-8">
                     No image available
                   </div>
                 )}
