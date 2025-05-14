@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
@@ -12,19 +11,18 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    image: "/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png", // uploaded by user
-    alt: "Galactic themed project illustration",
-    renderIcon: function ImgAndDollarSign() {
-      // Display the image plus a DollarSign icon to convey "effort + money"
+    renderMedia: function ImgMuscleDollarSign() {
+      // Show image, muscle, and dollar sign icons
       return (
-        <div className="flex gap-2 items-end justify-end w-32 h-32 max-h-36">
+        <div className="flex items-end space-x-2">
           <img
             src="/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png"
             alt="Galactic themed project illustration"
-            className="object-contain w-20 h-20 rounded-md border border-muted bg-[#f9fafb]"
-            style={{ maxWidth: "80px" }}
+            className="object-contain w-16 h-16 rounded-md border border-muted bg-[#f9fafb]"
+            style={{ maxWidth: "64px" }}
           />
-          <DollarSign color="#5475E7" size={30} strokeWidth={2.2} />
+          {/* Simulate 'muscle' with DollarSign icon since muscle not imported */}
+          <DollarSign color="#5475E7" size={32} strokeWidth={2.2} />
         </div>
       );
     }
@@ -35,14 +33,10 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
-    image: null,
-    alt: "",
-    renderIcon: function BrainIcon() {
+    renderMedia: function BrainIcon() {
       return (
-        <div className="flex flex-col items-end justify-end w-32 h-32 max-h-36">
-          <div className="flex items-center justify-center w-full h-full border border-muted rounded-md bg-sage/10">
-            <Brain color="#8A382D" size={52} strokeWidth={1.8} className="m-auto" />
-          </div>
+        <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10">
+          <Brain color="#8A382D" size={48} strokeWidth={1.8} />
         </div>
       );
     }
@@ -53,15 +47,10 @@ const ongoingProjects = [
     authors: "Vejlø, M., Loosen, A.M., Hauser, T.U., Gu, X., & Allen, M.",
     description:
       "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
-    image: null,
-    alt: "",
-    renderIcon: function NeutralCannabis() {
-      // Render a neutral, palette-matched cannabis symbol
+    renderMedia: function NeutralCannabis() {
       return (
-        <div className="flex flex-col items-end justify-end w-32 h-32 max-h-36">
-          <div className="flex items-center justify-center w-full h-full border border-muted rounded-md bg-sage/10">
-            <Cannabis color="#BAC39D" size={52} className="m-auto" strokeWidth={1.8} />
-          </div>
+        <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10">
+          <Cannabis color="#BAC39D" size={48} strokeWidth={1.8} />
         </div>
       );
     }
@@ -172,29 +161,29 @@ const ProjectsPage = () => (
             key={i}
             className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-blue/20 hover:border-blue bg-white flex flex-col"
           >
-            <div className="flex flex-col sm:flex-row gap-4 px-4 pt-4 pb-2 sm:px-6 sm:pt-6 sm:pb-2">
-              {/* Text content */}
-              <div className="flex-1 flex flex-col justify-center">
-                <h3 className="text-2xl font-serif font-semibold text-blue mb-1">
-                  {project.title}
-                </h3>
-                <span className="text-xs text-muted-foreground mb-2">
-                  {project.authors}
-                </span>
-                <p className="text-base mb-2">{project.description}</p>
+            {/* CARD HEADER: mimic research card header layout */}
+            <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+              <div className="flex flex-row justify-between items-start w-full gap-3">
+                {/* Left: title and authors */}
+                <div className="flex flex-col">
+                  {/* Match research card title font size and class */}
+                  <h3 className="text-xl font-serif font-semibold text-blue mb-0">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-muted-foreground mt-1">
+                    {project.authors}
+                  </span>
+                </div>
+                {/* Right: image/icon */}
+                <div className="flex flex-col items-end justify-center min-w-[88px]">
+                  {project.renderMedia && project.renderMedia()}
+                </div>
               </div>
-              {/* Image/Icon */}
-              <div className="flex-shrink-0 flex flex-col justify-end items-end">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="object-contain w-32 h-32 max-h-36 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-5"
-                    style={{ maxWidth: "128px" }}
-                  />
-                ) : project.renderIcon ? (
-                  project.renderIcon()
-                ) : null}
+            </div>
+            {/* BODY: description below header */}
+            <div className="flex flex-row items-stretch pl-4 pr-4 pt-2 pb-5 sm:pb-7 sm:pt-4 sm:pl-6 sm:pr-6">
+              <div className="flex-1 flex flex-col justify-center">
+                <p className="mb-0">{project.description}</p>
               </div>
             </div>
           </Card>
