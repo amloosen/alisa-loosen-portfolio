@@ -1,35 +1,73 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
+import { Cannabis, MousePointerClick } from "lucide-react";
 
 // Ongoing Projects
 const ongoingProjects = [
   {
     title:
-      "The Unique Roles of Reward- and Effort-Based Learning in Anhedonia and Apathy",
+      "Integrative Dynamics of Reward- and Effort-Based Learning in Relation to Anhedonia and Apathy",
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
-      "A large-scale investigation into how anhedonia and apathy modulate and alter reward and effort-based neural learning mechanisms.",
-    image:
-      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
+      "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
+    image: "/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png", // user provided
+    alt: "Galactic themed project illustration",
+    renderIcon: null
   },
   {
     title:
-      "Decoding the Neural Dynamics of Reward and Effort Integration in Decision-Making",
+      "Decoding Neural Signatures of Reward and Effort Integration during Intracranial EEG in Decision-Making",
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
-      "This project seeks identify unique and independent neural signatures for reward- and effort-based learning, using intracranial recordings in humans.",
-    image:
-      "https://images.unsplash.com/photo-1501286353178-1ec881214838?auto=format&fit=crop&w=400&q=80",
+      "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
+    image: null,
+    alt: "",
+    renderIcon: function EEGIcon() {
+      // Custom SVG EEG headcap with effort/reward badge - placeholder
+      return (
+        <div className="flex flex-col items-end justify-end w-32 h-32 max-h-36">
+          <div className="relative flex justify-center items-center w-full h-full bg-sage/10 border border-muted rounded-md">
+            {/* EEG Headcap */}
+            <svg width="50" height="60" viewBox="0 0 50 60" fill="none" className="absolute left-1/2 -translate-x-1/2 top-3">
+              <ellipse cx="25" cy="20" rx="20" ry="18" fill="#BAC39D" stroke="#8A382D" strokeWidth="2"/>
+              <ellipse cx="25" cy="32" rx="10" ry="5" fill="#CFA182"/>
+              {/* Simulate electrodes */}
+              <circle cx="15" cy="18" r="2" fill="#8A382D"/>
+              <circle cx="35" cy="18" r="2" fill="#8A382D"/>
+              <circle cx="25" cy="12" r="2" fill="#8A382D"/>
+              <circle cx="25" cy="28" r="2" fill="#8A382D"/>
+            </svg>
+            {/* Effort & Reward icons using Lucide */}
+            <MousePointerClick color="#5475E7" className="absolute bottom-3 left-4" size={23} />
+            <svg width="16" height="16" className="absolute bottom-3 right-5">
+              <circle cx="8" cy="8" r="7" fill="#FFD700" stroke="#B06419" strokeWidth="2"/>
+              <text x="8" y="10" textAnchor="middle" fill="#8A382D" fontSize="9" fontWeight="bold">R</text>
+            </svg>
+          </div>
+        </div>
+      );
+    }
   },
   {
     title:
-      "The Effect of Canabis Consumption on Reward- and Effort-Based Learning",
+      "Cannabis Consumption and its Differential Impact on Reward- and Effort-Based Learning",
     authors: "Vejlø, M., Loosen, A.M., Hauser, T.U., Gu, X., & Allen, M.",
     description:
-      "A large-scale general-public investigation looking at the effect canabis consumption has on reward- and effort based learning mechanisms.",
-    image:
-      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
+      "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
+    image: null,
+    alt: "",
+    renderIcon: function NeutralCannabis() {
+      // Render a neutral, palette-matched cannabis symbol
+      return (
+        <div className="flex flex-col items-end justify-end w-32 h-32 max-h-36">
+          <div className="flex items-center justify-center w-full h-full border border-muted rounded-md bg-sage/10">
+            <Cannabis color="#BAC39D" size={52} className="m-auto" strokeWidth={1.8} />
+          </div>
+        </div>
+      );
+    }
   },
 ];
 
@@ -140,7 +178,7 @@ const ProjectsPage = () => (
             <div className="flex flex-col sm:flex-row gap-4 px-4 pt-4 pb-2 sm:px-6 sm:pt-6 sm:pb-2">
               {/* Text content */}
               <div className="flex-1 flex flex-col justify-center">
-                <h3 className="text-xl font-serif font-semibold text-blue mb-1">
+                <h3 className="text-2xl font-serif font-semibold text-blue mb-1">
                   {project.title}
                 </h3>
                 <span className="text-xs text-muted-foreground mb-2">
@@ -148,14 +186,18 @@ const ProjectsPage = () => (
                 </span>
                 <p className="text-base mb-2">{project.description}</p>
               </div>
-              {/* Image */}
+              {/* Image/Icon */}
               <div className="flex-shrink-0 flex flex-col justify-end items-end">
-                <img
-                  src={project.image}
-                  alt="Ongoing Project illustration"
-                  className="object-contain w-32 h-32 max-h-36 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-5"
-                  style={{ maxWidth: "128px" }}
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="object-contain w-32 h-32 max-h-36 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-5"
+                    style={{ maxWidth: "128px" }}
+                  />
+                ) : project.renderIcon ? (
+                  project.renderIcon()
+                ) : null}
               </div>
             </div>
           </Card>
