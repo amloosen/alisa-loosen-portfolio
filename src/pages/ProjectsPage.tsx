@@ -7,7 +7,7 @@ import { Cannabis, Brain, Dumbbell } from "lucide-react";
 const ongoingProjects = [
   {
     title:
-      "Distinc Alterations of Reward- and Effort-Based Learning in Anhedonia versus Apathy",
+      "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia versus Apathy",
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
