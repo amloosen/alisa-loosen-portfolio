@@ -222,7 +222,7 @@ const CVPage = () => {
     },
     {
       category: "Programming",
-      skills: "MATLAB, R, Python, JavaScript, CSS, React, Git"
+      skills: "Python, R, MATLAB, JavaScript, React, Git"
     },
     {
       category: "Human Data",
