@@ -11,18 +11,24 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    renderMedia: function ImgMuscleDollarSign() {
-      // Show image, muscle, and dollar sign icons
+    renderMedia: function MuscleMoneyEmojis() {
+      // Show large muscle and money emojis, visually prominent and horizontally aligned
       return (
-        <div className="flex items-end space-x-2">
-          <img
-            src="/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png"
-            alt="Galactic themed project illustration"
-            className="object-contain w-16 h-16 rounded-md border border-muted bg-[#f9fafb]"
-            style={{ maxWidth: "64px" }}
-          />
-          {/* Simulate 'muscle' with DollarSign icon since muscle not imported */}
-          <DollarSign color="#5475E7" size={32} strokeWidth={2.2} />
+        <div className="flex items-end space-x-2 w-24 h-20 justify-center pr-1">
+          <span
+            aria-label="muscle"
+            className="text-[2.75rem] sm:text-5xl"
+            role="img"
+          >
+            💪
+          </span>
+          <span
+            aria-label="money"
+            className="text-[2.5rem] sm:text-5xl"
+            role="img"
+          >
+            💵
+          </span>
         </div>
       );
     }
@@ -167,14 +173,14 @@ const ProjectsPage = () => (
                 {/* Left: title and authors */}
                 <div className="flex flex-col">
                   {/* Match research card title font size and class */}
-                  <h3 className="text-xl font-serif font-semibold text-blue mb-0">
+                  <h3 className="text-xl font-serif font-semibold text-blue mb-0 sm:text-xl">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
                     {project.authors}
                   </span>
                 </div>
-                {/* Right: image/icon */}
+                {/* Right: image/icon/emojis */}
                 <div className="flex flex-col items-end justify-center min-w-[88px]">
                   {project.renderMedia && project.renderMedia()}
                 </div>
