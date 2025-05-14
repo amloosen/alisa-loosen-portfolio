@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +9,7 @@ const projectImages = [
   "/lovable-uploads/88e2f5b0-ff15-48e7-ac29-988db8aadc57.png", // COVID study
   "/lovable-uploads/6b0dc64a-cac3-4cdf-93b3-fa6c1f07c395.png", // Consistency within change...
   "/lovable-uploads/f4d0b0a4-1d4f-4ed7-bdc9-18e00ec64f6f.png", // Revisiting the role...
+  "/lovable-uploads/fd6e0a68-413e-4958-8915-92f64241617f.png"  // Rule-shifting and Uncertainty in OCD
 ];
 
 const ProjectsPage = () => {
@@ -106,7 +106,7 @@ const ProjectsPage = () => {
           <motion.div key={index} variants={item}>
             <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage">
               <div className="flex flex-col sm:flex-row gap-4 sm:items-stretch">
-                {/* Project image for the first 5 projects if available */}
+                {/* Project image for each project if available */}
                 <div className="sm:w-48 flex-shrink-0 flex justify-center items-start p-4">
                   {index < projectImages.length ? (
                     <img
