@@ -110,11 +110,16 @@ const ProjectsPage = () => (
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
           <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative bg-white flex flex-col">
-            {/* HEADER: Title (left), Journal/Year (right), Authors below journal */}
+            {/* HEADER: Title & Authors (left), Journal/Year (right) */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
-                <h3 className="text-xl font-serif font-semibold text-rust mb-1 sm:mb-0">{project.title}</h3>
-                <div className="flex flex-col sm:items-end">
+              <div className="flex flex-row justify-between items-start w-full gap-3">
+                {/* Left: title and authors */}
+                <div className="flex flex-col">
+                  <h3 className="text-xl font-serif font-semibold text-rust mb-0">{project.title}</h3>
+                  <span className="text-xs text-muted-foreground mt-1">{project.authors}</span>
+                </div>
+                {/* Right: journal/year */}
+                <div className="flex flex-col items-end justify-center min-w-[172px]">
                   {project.link ? (
                     <a
                       href={project.link}
@@ -129,9 +134,6 @@ const ProjectsPage = () => (
                       {project.journal} {project.year && `(${project.year})`}
                     </span>
                   )}
-                  <span className="text-xs text-muted-foreground">
-                    {project.authors}
-                  </span>
                 </div>
               </div>
             </div>
@@ -155,11 +157,11 @@ const ProjectsPage = () => (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-2"
+                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-4"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
-                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2 mb-2">
+                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2 mb-4">
                     No image available
                   </div>
                 )}
