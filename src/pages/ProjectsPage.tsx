@@ -1,8 +1,8 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
-import { Cannabis, MousePointerClick } from "lucide-react";
-import { Brain, Muscle, DollarSign } from "lucide-react";
+import { Cannabis, Brain, DollarSign } from "lucide-react";
 
 // Ongoing Projects
 const ongoingProjects = [
@@ -14,15 +14,17 @@ const ongoingProjects = [
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
     image: "/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png", // uploaded by user
     alt: "Galactic themed project illustration",
-    renderIcon: function MuscleMoneyIcons() {
+    renderIcon: function ImgAndDollarSign() {
+      // Display the image plus a DollarSign icon to convey "effort + money"
       return (
-        <div className="flex gap-1 items-end justify-end w-32 h-32 max-h-36">
-          <div className="flex flex-col items-center w-full h-full border border-muted rounded-md bg-sage/10 pt-3">
-            <div className="flex gap-2 mt-auto mb-2">
-              <Muscle color="#8A382D" size={28} strokeWidth={2.2} />
-              <DollarSign color="#5475E7" size={28} strokeWidth={2.2} />
-            </div>
-          </div>
+        <div className="flex gap-2 items-end justify-end w-32 h-32 max-h-36">
+          <img
+            src="/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png"
+            alt="Galactic themed project illustration"
+            className="object-contain w-20 h-20 rounded-md border border-muted bg-[#f9fafb]"
+            style={{ maxWidth: "80px" }}
+          />
+          <DollarSign color="#5475E7" size={30} strokeWidth={2.2} />
         </div>
       );
     }
