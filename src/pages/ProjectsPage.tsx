@@ -5,6 +5,7 @@ import { Cannabis, Brain, Dumbbell } from "lucide-react";
 
 // Institution logo full paths (keep order consistent with usage):
 const LOGOS = {
+  "Aarhus University": "/lovable-uploads/063a8e35-8ae4-4fd8-8d62-3835544b993f.png",
   "Mount Sinai": "/lovable-uploads/34d9ee11-9d7e-4963-b661-3631da80e50d.png",
   "Yale": "/lovable-uploads/13889375-65af-49c8-87bd-904f7afc799f.png",
   "Tübingen": "/lovable-uploads/7120f1d4-d5ab-478e-bbc1-40247a598f6e.png",
@@ -85,7 +86,7 @@ const ongoingProjects = [
     authors: "Vejlø, M., Loosen, A.M., Hauser, T.U., Gu, X., & Allen, M.",
     description:
       "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
-    institutions: ["Yale", "Tübingen"],
+    institutions: ["Aarhus University", "Yale", "Tübingen"],
     renderMedia: function NeutralCannabis() {
       return (
         <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
