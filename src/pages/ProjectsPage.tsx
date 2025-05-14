@@ -1,20 +1,42 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
 import { Cannabis, Brain, Dumbbell } from "lucide-react";
 
+// Institution logo full paths (keep order consistent with usage):
+const LOGOS = {
+  "Mount Sinai": "/lovable-uploads/34d9ee11-9d7e-4963-b661-3631da80e50d.png",
+  "Yale": "/lovable-uploads/13889375-65af-49c8-87bd-904f7afc799f.png",
+  "Tübingen": "/lovable-uploads/7120f1d4-d5ab-478e-bbc1-40247a598f6e.png",
+};
+
 // Logo placeholder component
 function InstLogos({ institutions }: { institutions: string[] }) {
   return (
-    <div className="flex flex-row gap-1 mt-1">
-      {institutions.map((name, idx) => (
+    <div className="flex flex-row gap-2 mt-2 items-end justify-center">
+      {institutions.map((name) => (
         <div
           key={name}
-          className="px-2 py-0.5 rounded bg-white border border-muted text-xs text-muted-foreground font-semibold shadow-sm flex items-center justify-center"
-          style={{ minWidth: 48, minHeight: 22, textAlign: "center" }}
+          className="bg-white border border-muted rounded-lg shadow-sm flex items-center justify-center"
+          style={{
+            minWidth: 56,
+            minHeight: 40,
+            height: 42,
+            padding: '2px 8px',
+            background: "#fff",
+          }}
         >
-          {name}
+          <img
+            src={LOGOS[name]}
+            alt={name + " logo"}
+            className="object-contain"
+            style={{
+              maxHeight: 36,
+              maxWidth: 90,
+              width: "auto",
+              height: "36px"
+            }}
+          />
         </div>
       ))}
     </div>
@@ -31,7 +53,7 @@ const ongoingProjects = [
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
     renderMedia: function DumbbellIcon() {
       return (
-        <div className="flex flex-col items-center justify-center w-20 h-auto pt-1">
+        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Dumbbell color="#8A382D" size={45} strokeWidth={1.8} />
           </div>
@@ -48,7 +70,7 @@ const ongoingProjects = [
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
     renderMedia: function BrainIcon() {
       return (
-        <div className="flex flex-col items-center justify-center w-20 h-auto pt-1">
+        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Brain color="#8A382D" size={48} strokeWidth={1.8} />
           </div>
@@ -65,7 +87,7 @@ const ongoingProjects = [
       "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
     renderMedia: function NeutralCannabis() {
       return (
-        <div className="flex flex-col items-center justify-center w-20 h-auto pt-1">
+        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Cannabis color="#BAC39D" size={48} strokeWidth={1.8} />
           </div>
