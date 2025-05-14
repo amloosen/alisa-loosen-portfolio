@@ -6,10 +6,10 @@ import { Card } from "@/components/ui/card";
 const ongoingProjects = [
   {
     title:
-      "Unveiling the Interplay of Reward and Effort Learning in Anhedonia and Apathy",
+      "The Unique Roles of Reward- and Effort-Based Learning in Anhedonia and Apathy",
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
-      "A multi-dimensional investigation into how anhedonia and apathy modulate reward and effort-based neural learning mechanisms across the psychiatric spectrum.",
+      "A large-scale investigation into how anhedonia and apathy modulate and alter reward and effort-based neural learning mechanisms.",
     image:
       "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
   },
@@ -18,9 +18,18 @@ const ongoingProjects = [
       "Decoding the Neural Dynamics of Reward and Effort Integration in Decision-Making",
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
-      "This project seeks to dissect how the brain combines reward expectations with effort costs, uncovering mechanisms underlying motivated behavior.",
+      "This project seeks identify unique and independent neural signatures for reward- and effort-based learning, using intracranial recordings in humans.",
     image:
       "https://images.unsplash.com/photo-1501286353178-1ec881214838?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    title:
+      "The Effect of Canabis Consumption on Reward- and Effort-Based Learning",
+    authors: "Vejlø, M., Loosen, A.M., Hauser, T.U., Gu, X., & Allen, M.",
+    description:
+      "A large-scale general-public investigation looking at the effect canabis consumption has on reward- and effort based learning mechanisms.",
+    image:
+      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
   },
 ];
 
