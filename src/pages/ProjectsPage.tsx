@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
-import { Cannabis, Brain, DollarSign, BicepsFlexed } from "lucide-react";
+import { Cannabis, Brain, DollarSign, Weight } from "lucide-react";
 
 // Ongoing Projects
 const ongoingProjects = [
@@ -11,11 +11,14 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    renderMedia: function MuscleIcon() {
-      // Single muscle icon in styled frame matching brain/cannabis
+    renderMedia: function WeightDollarIcons() {
+      // Weight and dollar-sign icons side by side, styled like other icons
       return (
         <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10">
-          <BicepsFlexed color="#8A382D" size={48} strokeWidth={1.8} />
+          <span className="flex flex-row gap-0.5 items-end">
+            <Weight color="#8A382D" size={38} strokeWidth={1.8} />
+            <DollarSign color="#8A382D" size={34} strokeWidth={1.8} />
+          </span>
         </div>
       );
     }
@@ -184,14 +187,18 @@ const ProjectsPage = () => (
       </div>
     </motion.div>
 
-    {/* Research Projects Section */}
+    {/* Move research focus text here, after ongoing projects */}
     <motion.div variants={item} className="mb-8">
-      <SectionTitle>Research Projects</SectionTitle>
       <p className="text-lg mb-8">
         My research focuses on computational approaches to understanding psychiatric disorders,
         particularly obsessive-compulsive disorder (OCD), with a focus on decision-making,
         uncertainty processing, and learning mechanisms.
       </p>
+    </motion.div>
+
+    {/* Research Projects Section */}
+    <motion.div variants={item} className="mb-8">
+      <SectionTitle>Research Projects</SectionTitle>
     </motion.div>
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
