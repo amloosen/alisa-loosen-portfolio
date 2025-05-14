@@ -1,8 +1,8 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
 import { Cannabis, MousePointerClick } from "lucide-react";
+import { Brain, Muscle, DollarSign } from "lucide-react";
 
 // Ongoing Projects
 const ongoingProjects = [
@@ -12,9 +12,20 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    image: "/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png", // user provided
+    image: "/lovable-uploads/dbcfcb80-4094-4c3d-85cc-40d1d13248f6.png", // uploaded by user
     alt: "Galactic themed project illustration",
-    renderIcon: null
+    renderIcon: function MuscleMoneyIcons() {
+      return (
+        <div className="flex gap-1 items-end justify-end w-32 h-32 max-h-36">
+          <div className="flex flex-col items-center w-full h-full border border-muted rounded-md bg-sage/10 pt-3">
+            <div className="flex gap-2 mt-auto mb-2">
+              <Muscle color="#8A382D" size={28} strokeWidth={2.2} />
+              <DollarSign color="#5475E7" size={28} strokeWidth={2.2} />
+            </div>
+          </div>
+        </div>
+      );
+    }
   },
   {
     title:
@@ -24,27 +35,11 @@ const ongoingProjects = [
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
     image: null,
     alt: "",
-    renderIcon: function EEGIcon() {
-      // Custom SVG EEG headcap with effort/reward badge - placeholder
+    renderIcon: function BrainIcon() {
       return (
         <div className="flex flex-col items-end justify-end w-32 h-32 max-h-36">
-          <div className="relative flex justify-center items-center w-full h-full bg-sage/10 border border-muted rounded-md">
-            {/* EEG Headcap */}
-            <svg width="50" height="60" viewBox="0 0 50 60" fill="none" className="absolute left-1/2 -translate-x-1/2 top-3">
-              <ellipse cx="25" cy="20" rx="20" ry="18" fill="#BAC39D" stroke="#8A382D" strokeWidth="2"/>
-              <ellipse cx="25" cy="32" rx="10" ry="5" fill="#CFA182"/>
-              {/* Simulate electrodes */}
-              <circle cx="15" cy="18" r="2" fill="#8A382D"/>
-              <circle cx="35" cy="18" r="2" fill="#8A382D"/>
-              <circle cx="25" cy="12" r="2" fill="#8A382D"/>
-              <circle cx="25" cy="28" r="2" fill="#8A382D"/>
-            </svg>
-            {/* Effort & Reward icons using Lucide */}
-            <MousePointerClick color="#5475E7" className="absolute bottom-3 left-4" size={23} />
-            <svg width="16" height="16" className="absolute bottom-3 right-5">
-              <circle cx="8" cy="8" r="7" fill="#FFD700" stroke="#B06419" strokeWidth="2"/>
-              <text x="8" y="10" textAnchor="middle" fill="#8A382D" fontSize="9" fontWeight="bold">R</text>
-            </svg>
+          <div className="flex items-center justify-center w-full h-full border border-muted rounded-md bg-sage/10">
+            <Brain color="#8A382D" size={52} strokeWidth={1.8} className="m-auto" />
           </div>
         </div>
       );
