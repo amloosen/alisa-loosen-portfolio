@@ -50,7 +50,7 @@ const ongoingProjects = [
   },
 ];
 
-// Research Projects
+// Selected Publications
 const projects = [
   {
     title: "Rule-shifting and Uncertainty in OCD",
@@ -190,9 +190,9 @@ const ProjectsPage = () => (
       </div>
     </motion.div>
 
-    {/* Research Projects Section */}
+    {/* Selected Publications Section */}
     <motion.div variants={item} className="mb-8">
-      <SectionTitle>Research Projects</SectionTitle>
+      <SectionTitle>Selected Publications</SectionTitle>
     </motion.div>
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
