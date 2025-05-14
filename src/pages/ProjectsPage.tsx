@@ -110,30 +110,34 @@ const ProjectsPage = () => (
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
           <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative bg-white flex flex-col">
-            {/* Header containing only title, journal/year, and authors */}
-            <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-2 sm:px-6 sm:pt-6 sm:pb-3">
-              <h3 className="text-xl font-serif font-semibold text-rust mb-0">{project.title}</h3>
-              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                {project.link ? (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="px-3 py-1 rounded bg-sage/20 hover:bg-sage/30 text-sage-800 inline-block transition-colors text-sm font-medium"
-                  >
-                    {project.journal} {project.year && `(${project.year})`}
-                  </a>
-                ) : (
-                  <span className="px-3 py-1 rounded bg-sage/20 text-sage-800 inline-block text-sm font-medium">
-                    {project.journal} {project.year && `(${project.year})`}
+            {/* HEADER: Title (left), Journal/Year (right), Authors below journal */}
+            <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
+                <h3 className="text-xl font-serif font-semibold text-rust mb-1 sm:mb-0">{project.title}</h3>
+                <div className="flex flex-col sm:items-end">
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 rounded bg-sage/20 hover:bg-sage/30 text-sage-800 inline-block transition-colors text-sm font-medium mb-1"
+                    >
+                      {project.journal} {project.year && `(${project.year})`}
+                    </a>
+                  ) : (
+                    <span className="px-3 py-1 rounded bg-sage/20 text-sage-800 inline-block text-sm font-medium mb-1">
+                      {project.journal} {project.year && `(${project.year})`}
+                    </span>
+                  )}
+                  <span className="text-xs text-muted-foreground">
+                    {project.authors}
                   </span>
-                )}
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-1">{project.authors}</p>
             </div>
-            {/* Card body: description and tags, with image aligned lower right and consistent spacing */}
+            {/* Card Body: description/tags (left), image (right, lower, with space at bottom) */}
             <div className="flex flex-row items-stretch justify-between gap-2 pl-0 pr-0 pt-0 bg-white">
-              <div className="flex-1 flex flex-col justify-center pl-4 pt-2 pb-4 sm:pb-6 sm:pt-4 sm:pl-6">
+              <div className="flex-1 flex flex-col justify-center pl-4 pt-2 pb-5 sm:pb-7 sm:pt-4 sm:pl-6">
                 <p className="mb-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -151,11 +155,11 @@ const ProjectsPage = () => (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2"
+                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-2"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
-                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2">
+                  <div className="w-36 h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs mt-2 mb-2">
                     No image available
                   </div>
                 )}
