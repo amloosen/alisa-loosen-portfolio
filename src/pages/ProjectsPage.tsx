@@ -212,16 +212,14 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title, authors, and logos */}
                 <div className="flex flex-col flex-1 min-w-0">
-                  {/* Match research card title font size and class */}
                   <h3 className="text-xl font-serif font-semibold text-blue mb-0 sm:text-xl">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
                     {project.authors}
                   </span>
-                  {/* Logos moved directly below authors */}
-                  <div className="mt-3">
-                    <span className="block text-xs text-muted-foreground mb-1 font-semibold">
+                  <div className="flex flex-col mt-2 items-start">
+                    <span className="block text-xs text-muted-foreground mb-1 font-semibold pl-[2px]">
                       Collaboration:
                     </span>
                     <InstLogos institutions={project.institutions} />
