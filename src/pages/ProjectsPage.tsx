@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 // List of projects and images as before
 const projects = [
@@ -110,62 +109,55 @@ const ProjectsPage = () => (
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
-          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative">
-            {/* Full-width header background */}
-            <div className="absolute top-0 left-0 w-full" style={{ zIndex: 1 }}>
-              <div className="w-full h-14 sm:h-16 bg-gradient-to-r from-sage/10 to-blue/5" />
-            </div>
-            <div className="flex flex-col-reverse sm:flex-row gap-4 sm:items-stretch relative" style={{ zIndex: 2 }}>
-              {/* Project content */}
-              <div className="flex-1 flex flex-col justify-center">
-                {/* Move header to top and ensure spacing */}
-                <div className="pt-4 pb-0 px-4 sm:pt-6 sm:pb-2 sm:px-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                    <CardTitle className="text-xl text-rust z-10">{project.title}</CardTitle>
-                    <div className="text-sm font-medium z-10">
-                      {project.link ? (
-                        <a 
-                          href={project.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="px-3 py-1 rounded bg-sage/20 hover:bg-sage/30 text-sage-800 inline-block transition-colors"
-                        >
-                          {project.journal} {project.year && `(${project.year})`}
-                        </a>
-                      ) : (
-                        <span className="px-3 py-1 rounded bg-sage/20 text-sage-800 inline-block">
-                          {project.journal} {project.year && `(${project.year})`}
-                        </span>
-                      )}
-                    </div>
+          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative bg-white">
+            {/* Full-width header background and all writing/citation inside */}
+            <div className="relative z-10 w-full">
+              <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+                <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+                  <h3 className="text-xl font-serif font-semibold text-rust">{project.title}</h3>
+                  <div>
+                    {project.link ? (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 rounded bg-sage/20 hover:bg-sage/30 text-sage-800 inline-block transition-colors text-sm font-medium"
+                      >
+                        {project.journal} {project.year && `(${project.year})`}
+                      </a>
+                    ) : (
+                      <span className="px-3 py-1 rounded bg-sage/20 text-sage-800 inline-block text-sm font-medium">
+                        {project.journal} {project.year && `(${project.year})`}
+                      </span>
+                    )}
                   </div>
                 </div>
-                <CardContent className="pt-3 pb-4 px-4 sm:pt-4 sm:pb-4 sm:px-6">
-                  <p className="text-sm text-muted-foreground mb-3">{project.authors}</p>
-                  <p className="mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-2 py-1 rounded-full bg-blue/10 text-blue"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
+                <p className="text-sm text-muted-foreground mt-2 mb-2">{project.authors}</p>
+                <p className="mb-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2 py-1 rounded-full bg-blue/10 text-blue"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              {/* Project image (right side on sm+) */}
-              <div className="sm:w-52 flex-shrink-0 flex items-end justify-center sm:justify-end p-4 pb-0 sm:pb-6">
+            </div>
+            {/* Project image aligned lower right, with consistent gap from the header */}
+            <div className="w-full flex justify-end">
+              <div className="sm:w-52 flex-shrink-0 flex items-start justify-center sm:justify-end p-4 pt-2">
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-full h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] self-end"
+                    className="object-contain w-full h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb]"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
-                  <div className="w-full h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs self-end">
+                  <div className="w-full h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs">
                     No image available
                   </div>
                 )}
@@ -179,4 +171,3 @@ const ProjectsPage = () => (
 );
 
 export default ProjectsPage;
-
