@@ -22,7 +22,7 @@ const ongoingProjects = [
   },
   {
     title:
-      "Decoding Neural Signatures of Reward and Effort Integration during Intracranial EEG in Decision-Making",
+      "Decoding Neural Signatures of Reward and Effort Integration using Intracranial EEG in Decision-Making",
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
