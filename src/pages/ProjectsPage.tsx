@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
-import { Cannabis, Brain, DollarSign } from "lucide-react";
+import { Cannabis, Brain, DollarSign, BicepsFlexed } from "lucide-react";
 
 // Ongoing Projects
 const ongoingProjects = [
@@ -11,28 +11,11 @@ const ongoingProjects = [
     authors: "Loosen, A.M., Hauser, T.U.*, & Gu, X.*",
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    renderMedia: function MuscleMoneyEmojis() {
-      // Emojis styled in a framed box matching the brain/cannabis icon cards
+    renderMedia: function MuscleIcon() {
+      // Single muscle icon in styled frame matching brain/cannabis
       return (
         <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10">
-          <span className="flex flex-row gap-1 items-end">
-            <span
-              aria-label="muscle"
-              role="img"
-              className="text-[2.5rem] sm:text-5xl drop-shadow-sm"
-              style={{ lineHeight: 1 }}
-            >
-              💪
-            </span>
-            <span
-              aria-label="money"
-              role="img"
-              className="text-[2.2rem] sm:text-4xl drop-shadow-sm"
-              style={{ lineHeight: 1 }}
-            >
-              💵
-            </span>
-          </span>
+          <BicepsFlexed color="#8A382D" size={48} strokeWidth={1.8} />
         </div>
       );
     }
