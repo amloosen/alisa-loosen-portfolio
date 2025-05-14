@@ -249,7 +249,7 @@ const ProjectsPage = () => (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] mt-2 mb-8"
+                    className="object-contain w-36 h-36 max-h-44 rounded-md border border-muted bg-white mt-2 mb-8"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
