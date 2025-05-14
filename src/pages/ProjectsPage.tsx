@@ -12,22 +12,26 @@ const ongoingProjects = [
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
     renderMedia: function MuscleMoneyEmojis() {
-      // Show large muscle and money emojis, visually prominent and horizontally aligned
+      // Emojis styled in a framed box matching the brain/cannabis icon cards
       return (
-        <div className="flex items-end space-x-2 w-24 h-20 justify-center pr-1">
-          <span
-            aria-label="muscle"
-            className="text-[2.75rem] sm:text-5xl"
-            role="img"
-          >
-            💪
-          </span>
-          <span
-            aria-label="money"
-            className="text-[2.5rem] sm:text-5xl"
-            role="img"
-          >
-            💵
+        <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10">
+          <span className="flex flex-row gap-1 items-end">
+            <span
+              aria-label="muscle"
+              role="img"
+              className="text-[2.5rem] sm:text-5xl drop-shadow-sm"
+              style={{ lineHeight: 1 }}
+            >
+              💪
+            </span>
+            <span
+              aria-label="money"
+              role="img"
+              className="text-[2.2rem] sm:text-4xl drop-shadow-sm"
+              style={{ lineHeight: 1 }}
+            >
+              💵
+            </span>
           </span>
         </div>
       );
