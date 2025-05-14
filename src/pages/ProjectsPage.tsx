@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -109,30 +110,19 @@ const ProjectsPage = () => (
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
-          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage">
-            {/* Main content-image flex, image on the right for sm+ */}
-            <div className="flex flex-col sm:flex-row-reverse gap-4 sm:items-stretch">
-              {/* Project image (right on desktop, below on mobile) */}
-              <div className="sm:w-48 flex-shrink-0 flex justify-center sm:justify-end items-center sm:items-center p-4">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={`${project.title} figure`}
-                    className="object-contain w-full h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb]"
-                    style={{ maxWidth: "180px" }}
-                  />
-                ) : (
-                  <div className="w-full h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs">
-                    No image available
-                  </div>
-                )}
-              </div>
+          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative">
+            {/* Full-width header background */}
+            <div className="absolute top-0 left-0 w-full" style={{ zIndex: 1 }}>
+              <div className="w-full h-14 sm:h-16 bg-gradient-to-r from-sage/10 to-blue/5" />
+            </div>
+            <div className="flex flex-col-reverse sm:flex-row gap-4 sm:items-stretch relative" style={{ zIndex: 2 }}>
               {/* Project content */}
               <div className="flex-1 flex flex-col justify-center">
-                <CardHeader className="bg-gradient-to-r from-sage/10 to-blue/5 pb-2">
+                {/* Move header to top and ensure spacing */}
+                <div className="pt-4 pb-0 px-4 sm:pt-6 sm:pb-2 sm:px-6">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                    <CardTitle className="text-xl text-rust">{project.title}</CardTitle>
-                    <div className="text-sm font-medium">
+                    <CardTitle className="text-xl text-rust z-10">{project.title}</CardTitle>
+                    <div className="text-sm font-medium z-10">
                       {project.link ? (
                         <a 
                           href={project.link} 
@@ -149,8 +139,8 @@ const ProjectsPage = () => (
                       )}
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent className="pt-4">
+                </div>
+                <CardContent className="pt-3 pb-4 px-4 sm:pt-4 sm:pb-4 sm:px-6">
                   <p className="text-sm text-muted-foreground mb-3">{project.authors}</p>
                   <p className="mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
@@ -165,6 +155,21 @@ const ProjectsPage = () => (
                   </div>
                 </CardContent>
               </div>
+              {/* Project image (right side on sm+) */}
+              <div className="sm:w-52 flex-shrink-0 flex items-end justify-center sm:justify-end p-4 pb-0 sm:pb-6">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} figure`}
+                    className="object-contain w-full h-36 max-h-44 rounded-md border border-muted bg-[#f9fafb] self-end"
+                    style={{ maxWidth: "180px" }}
+                  />
+                ) : (
+                  <div className="w-full h-36 bg-muted flex items-center justify-center rounded-md text-muted-foreground text-xs self-end">
+                    No image available
+                  </div>
+                )}
+              </div>
             </div>
           </Card>
         </motion.div>
@@ -174,3 +179,4 @@ const ProjectsPage = () => (
 );
 
 export default ProjectsPage;
+
