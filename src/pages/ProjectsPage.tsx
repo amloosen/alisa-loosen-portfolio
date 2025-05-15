@@ -11,35 +11,70 @@ const LOGOS = {
   "Tübingen": "/lovable-uploads/7120f1d4-d5ab-478e-bbc1-40247a598f6e.png",
 };
 
+// Add URL mapping for each university
+const LOGO_LINKS = {
+  "Aarhus University": "https://www.the-ecg.org/",
+  "Yale": "https://medicine.yale.edu/psychiatry/",
+  "Mount Sinai": "https://icahn.mssm.edu/research/center-for-computational-psychiatry",
+  "Tübingen": "https://devcompsy.org/",
+};
+
 // Logo placeholder component
 function InstLogos({ institutions }: { institutions: string[] }) {
   return (
     <div className="flex flex-row gap-2 mt-2 items-end justify-center">
-      {institutions.map((name) => (
-        <div
-          key={name}
-          className="bg-white border border-muted rounded-lg shadow-sm flex items-center justify-center"
-          style={{
-            minWidth: 56,
-            minHeight: 40,
-            height: 42,
-            padding: '2px 8px',
-            background: "#fff",
-          }}
-        >
-          <img
-            src={LOGOS[name]}
-            alt={name + " logo"}
-            className="object-contain"
+      {institutions.map((name) => {
+        const url = LOGO_LINKS[name];
+        // Wrap the logo in a link if a url is present
+        return (
+          <div
+            key={name}
+            className="bg-white border border-muted rounded-lg shadow-sm flex items-center justify-center"
             style={{
-              maxHeight: 36,
-              maxWidth: 90,
-              width: "auto",
-              height: "36px"
+              minWidth: 56,
+              minHeight: 40,
+              height: 42,
+              padding: '2px 8px',
+              background: "#fff",
             }}
-          />
-        </div>
-      ))}
+          >
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${name} department or lab`}
+                className="focus:outline-none focus:ring-2 focus:ring-blue-300 rounded"
+                tabIndex={0}
+              >
+                <img
+                  src={LOGOS[name]}
+                  alt={name + " logo"}
+                  className="object-contain"
+                  style={{
+                    maxHeight: 36,
+                    maxWidth: 90,
+                    width: "auto",
+                    height: "36px"
+                  }}
+                />
+              </a>
+            ) : (
+              <img
+                src={LOGOS[name]}
+                alt={name + " logo"}
+                className="object-contain"
+                style={{
+                  maxHeight: 36,
+                  maxWidth: 90,
+                  width: "auto",
+                  height: "36px"
+                }}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
