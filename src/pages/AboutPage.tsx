@@ -96,7 +96,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Computational Modeling</h3>
             </div>
             <p>
-              Developing and applying reinforcement learning and Bayesian models to gain deeper insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
+              I develop and apply neuroscientifically-plausible computational models (e.g., based on Reinforcement Learning and Bayes' Theorem) to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
             </p>
           </div>
           
@@ -106,7 +106,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Digital Assessment</h3>
             </div>
             <p>
-              Designing and implementing digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
+              I design and implement digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
             </p>
           </div>
           
@@ -116,7 +116,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Real-World Impact</h3>
             </div>
             <p>
-              From clinical samples to large-scale public datasets, turning research into accessible tools, including tracking psychiatric symptoms during global events like COVID-19.
+              Across clinical cohorts and large-scale public datasets, I translate research into intuitive tools and gamified mobile app games that make tracking behavior and psychiatric symptoms effortless.
             </p>
           </div>
         </div>
