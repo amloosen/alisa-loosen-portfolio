@@ -87,8 +87,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-medium">Neuroscience</h3>
             </div>
             <p>
-              I combine cognitive and basic neuroscience with patient-centered research to gain insight into how learning is supported by the brain, how we process uncertainty, and make decisions. For this, This includes leveraging intracranial recordings and addressing psychiatric conditions such as obsessive-compulsive disorder (OCD).
-            </p>
+              I integrate cognitive and fundamental neuroscience with patient-focused research to investigate how the brain supports learning, resolves uncertainty, and drives decision-making. My work leverages intracranial recordings and clinical studies, with a particular focus on obsessive-compulsive disorder (OCD).            </p>
           </div>
           
           <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
