@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
@@ -256,7 +257,6 @@ const CVPage = () => {
                 <h3 className="font-medium text-xl">{position.title}</h3>
                 <div className="text-muted-foreground text-sm">
                   {position.period} | {position.location}
-                  {position.note && <span className="ml-2 text-blue">{position.note}</span>}
                 </div>
               </div>
               <p className="text-blue font-medium mb-2">{position.organization}</p>
