@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import ProfileImage from "@/components/ProfileImage";
@@ -52,9 +53,9 @@ const AboutPage = () => {
               <span className="flex items-center gap-2">
                 Yale Department of Psychiatry, Yale University
                 <img 
-                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=32&h=32&fit=crop&crop=center" 
-                  alt="Yale University" 
-                  className="w-6 h-6 object-contain rounded"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Yale_University_Shield_1.svg/150px-Yale_University_Shield_1.svg.png" 
+                  alt="Yale University Logo" 
+                  className="w-6 h-6 object-contain"
                 />
               </span>
             </div>
