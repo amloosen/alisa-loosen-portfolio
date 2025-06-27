@@ -39,21 +39,20 @@ const CVPage = () => {
 
   const positionsData = [
     {
-      period: "07/2025",
+      period: "07/2025 – Present",
       location: "New Haven, USA",
       title: "Research Fellow",
       organization: "Yale Department of Psychiatry, Yale University",
       details: [],
-      note: "Starting 07/2025"
     },
     {
-      period: "06/2023 – Present",
+      period: "06/2023 – 06/2025",
       location: "New York City, USA",
       title: "Postdoctoral Researcher",
       organization: "Center for Computational Psychiatry, Icahn School of Medicine at Mount Sinai",
       details: [
         "PI: Prof. Xiaosi Gu",
-        "Investigating neurocomputational mechanisms of effort and reward learning",
+        "Investigated neurocomputational mechanisms of effort and reward learning",
         "Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling",
       ],
     },
@@ -108,25 +107,6 @@ const CVPage = () => {
         "Supported two research teams running experiments using pupillometry investigating the attentional blink",
       ],
     },
-    // {
-    //   period: "08/2016 – 02/2017",
-    //   location: "Munich & Cologne, DE",
-    //   title: "Junior Communication Consultant",
-    //   organization: "Gauly Advisors GmbH and Avantgarde Experts",
-    //   details: [
-    //     "Created innovative communication channels and gamification tools for phone-based data collection",
-    //     "Project manager for different communication and change-management processes",
-    //   ],
-    // },
-    // {
-    //   period: "12/2012 – 05/2013",
-    //   location: "Munich, DE",
-    //   title: "Mental Health Counselling Intern",
-    //   organization: "House for Mother and Child",
-    //   details: [
-    //     "Assisted in psychological counselling for women fleeing domestic violence and human trafficking",
-    //   ],
-    // },
   ];
 
   const awardsData = [
