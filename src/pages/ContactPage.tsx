@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import ContactInformation from "@/components/contact/ContactInformation";
-import ContactForm from "@/components/contact/ContactForm";
 
 const ContactPage = () => {
   const container = {
@@ -34,9 +33,8 @@ const ContactPage = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="max-w-2xl mx-auto">
         <ContactInformation variants={item} />
-        <ContactForm variants={item} />
       </div>
     </motion.div>
   );
