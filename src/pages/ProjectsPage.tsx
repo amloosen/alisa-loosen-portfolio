@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
-import { Cannabis, Brain, Dumbbell } from "lucide-react";
+import { Cannabis, Brain, Dumbbell, MessageCircle } from "lucide-react";
 
 // Institution logo full paths (keep order consistent with usage):
 const LOGOS = {
@@ -127,6 +127,23 @@ const ongoingProjects = [
         <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
           <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
             <Cannabis color="#BAC39D" size={48} strokeWidth={1.8} />
+          </div>
+        </div>
+      );
+    },
+  },
+  {
+    title:
+      "Towards A Computational Model of Excessive Reassurance Seeking in Obsessive-Compulsive Disorder: From Decision-Making Paradigms to Human–Chatbot Interactions",
+    authors: "Loosen, A.M.",
+    description:
+      "This project develops computational models to understand excessive reassurance seeking behaviors in OCD, bridging traditional decision-making paradigms with novel human-chatbot interaction frameworks to provide insights into compulsive information-seeking patterns.",
+    institutions: ["Yale"],
+    renderMedia: function ChatbotIcon() {
+      return (
+        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
+          <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
+            <MessageCircle color="#8A382D" size={48} strokeWidth={1.8} />
           </div>
         </div>
       );
