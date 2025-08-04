@@ -34,9 +34,10 @@ const ContactInformation = ({ variants }: { variants: any }) => {
               <div>
                 <h4 className="text-sm font-medium text-muted-foreground mb-1">Location</h4>
                 <p>
-                  Center for Computational Psychiatry<br />
-                  Icahn School of Medicine at Mount Sinai<br />
-                  New York City, USA
+                  Yale School of Medicine<br />
+                  Department of Psychiatry<br />
+                  40 Temple St<br />
+                  New Haven, CT 06510, USA
                 </p>
               </div>
             </div>
