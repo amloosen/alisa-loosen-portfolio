@@ -272,9 +272,12 @@ const ProjectsPage = () => (
                     {project.authors}
                   </span>
                   <div className="flex flex-col mt-2 items-start">
-                    <span className="block text-xs text-muted-foreground mb-1 font-semibold pl-[2px]">
-                      Collaboration:
-                    </span>
+                    {/* Only show "Collaboration:" label for projects other than the first one */}
+                    {i > 0 && (
+                      <span className="block text-xs text-muted-foreground mb-1 font-semibold pl-[2px]">
+                        Collaboration:
+                      </span>
+                    )}
                     <InstLogos institutions={project.institutions} />
                   </div>
                 </div>
