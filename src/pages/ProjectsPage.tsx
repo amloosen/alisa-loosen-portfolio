@@ -154,13 +154,13 @@ const ongoingProjects = [
 // Selected Publications
 const projects = [
   {
-    title: "Rule-shifting and Uncertainty in OCD",
-    journal: "In Preparation",
-    year: "",
+    title: "The metacognitive paradox of OCD: confidence is globally reduced but shows increased sensitivity to local evidence",
+    journal: "Research Square (Preprint)",
+    year: "2025",
     authors: "Loosen, A.M., Zaboski, B. A., Pushkarskaya, H., Moore, A., Bohner, C., Pittenger, C.*, & Hauser, T.U.*",
-    description: "Investigating how patients with OCD adapt to changing rules and handle uncertainty compared to healthy controls.",
+    description: "using a novel rule-shifting task we show that patients with OCD display persistently lowered confidence but update their confidence ratings more in line with decision evidence and nearer to Bayes-optimality",
     tags: ["Computational Modeling", "OCD", "Decision-making"],
-    link: "",
+    link: "https://www.researchsquare.com/article/rs-7609740/latest",
     image: "/lovable-uploads/fd6e0a68-413e-4958-8915-92f64241617f.png"
   },
   {
