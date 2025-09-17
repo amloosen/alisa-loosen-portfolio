@@ -155,7 +155,7 @@ const ongoingProjects = [
 const projects = [
   {
     title: "The metacognitive paradox of OCD: confidence is globally reduced but shows increased sensitivity to local evidence",
-    journal: "Research Square (Preprint)",
+    journal: "Research Square - Preprint",
     year: "2025",
     authors: "Loosen, A.M., Zaboski, B. A., Moore, A., Bohner, Pushkarskaya, H., C., Pittenger, C.*, & Hauser, T.U.*",
     description: "Using a novel rule-shifting task we show that patients with OCD display persistently lowered confidence but update their confidence ratings more in line with decision evidence and nearer to Bayes-optimality",
