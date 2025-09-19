@@ -174,7 +174,7 @@ const projects = [
     image: "/lovable-uploads/de21c4ef-14ed-4d5c-950f-9c5c8854f68f.png"
   },
   {
-    title: "Consistency within change: Evaluating the psychometric properties of a widely used predictive-inference task.",
+    title: "Consistency within change: Evaluating the psychometric properties of a widely used predictive-inference task",
     journal: "Behavior Research Methods",
     year: "2024",
     authors: "Loosen, A.M., Seow, T.X.F., & Hauser, T.U.",
