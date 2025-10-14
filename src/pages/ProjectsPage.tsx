@@ -228,7 +228,7 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title, authors, and logos */}
                 <div className="flex flex-col flex-1 min-w-0">
-                  <h3 className="text-xl font-light text-foreground mb-0 sm:text-xl">
+                  <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
@@ -271,7 +271,7 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title and authors */}
                 <div className="flex flex-col">
-                  <h3 className="text-xl font-light text-foreground mb-0">
+                  <h3 className="text-xl font-light text-blue mb-0">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
