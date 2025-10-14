@@ -246,12 +246,13 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Academic Positions</SectionTitle>
         <div className="space-y-8">
           {positionsData.map((position, index) => (
             <div
               key={index}
-              className="border-l border-foreground pl-6 py-2 transition-colors duration-300"
+              className="pl-6 py-2 transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{position.title}</h3>
@@ -271,12 +272,13 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Education</SectionTitle>
         <div className="space-y-8">
           {educationData.map((education, index) => (
             <div
               key={index}
-              className="border-l border-foreground pl-6 py-2 transition-colors duration-300"
+              className="pl-6 py-2 transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{education.degree}</h3>
@@ -294,6 +296,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Grants & Awards</SectionTitle>
         <div className="space-y-4">
           {awardsData.map((award, index) => (
@@ -309,6 +312,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Invited Talks & Reviews</SectionTitle>
         <div className="space-y-4">
           {invitedTalksData.map((talk, index) => (
@@ -328,6 +332,7 @@ const CVPage = () => {
       </motion.div>
       
       <motion.div variants={item} className="mb-12">
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Selected Teaching Experience</SectionTitle>
         <div className="space-y-4">
           {teachingData.map((item, index) => (
@@ -342,6 +347,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item}>
+        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Skills</SectionTitle>
         <div className="space-y-4">
           {skillsData.map((skill, index) => (
