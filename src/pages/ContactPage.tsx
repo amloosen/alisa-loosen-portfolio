@@ -33,9 +33,7 @@ const ContactPage = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-2xl mx-auto">
-        <ContactInformation variants={item} />
-      </div>
+      <ContactInformation variants={item} />
     </motion.div>
   );
 };

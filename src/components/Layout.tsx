@@ -27,6 +27,7 @@ const Layout = () => {
       <Navbar />
       <div className="border-t-[3px] border-foreground" />
       <div className="border-t border-foreground" />
+      <div className="border-t border-foreground" />
       <motion.main 
         className="flex-grow"
         key={pathname}

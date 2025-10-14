@@ -221,7 +221,7 @@ const ProjectsPage = () => (
         {ongoingProjects.map((project, i) => (
           <Card
             key={i}
-            className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-blue/20 hover:border-blue bg-white flex flex-col"
+            className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-foreground bg-white flex flex-col"
           >
             {/* CARD HEADER: mimic research card header layout */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
@@ -264,7 +264,7 @@ const ProjectsPage = () => (
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
-          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-sage/30 hover:border-sage relative bg-white flex flex-col">
+          <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-foreground relative bg-white flex flex-col">
             {/* HEADER: Title & Authors (left), Journal/Year (right) */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
