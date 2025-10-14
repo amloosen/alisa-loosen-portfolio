@@ -69,28 +69,28 @@ const AboutPage = () => {
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Research Focus</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 hover:bg-accent/30 transition-all">
+          <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Neuroscience</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
               I integrate cognitive and fundamental neuroscience with patient-focused research to investigate how the brain supports learning, resolves uncertainty, and drives decision-making. My work leverages intracranial recordings and clinical studies, with a particular focus on obsessive-compulsive disorder (OCD).
             </p>
           </div>
           
-          <div className="p-6 hover:bg-accent/30 transition-all">
+          <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Computational Modeling</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
               I develop and apply neuroscientifically-plausible computational models (e.g., based on Reinforcement Learning and Bayes' Theorem) to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
             </p>
           </div>
           
-          <div className="p-6 hover:bg-accent/30 transition-all">
+          <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Digital Assessment</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
               I design and implement digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
             </p>
           </div>
           
-          <div className="p-6 hover:bg-accent/30 transition-all">
+          <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Real-World Impact</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
               Across clinical cohorts and large-scale public datasets, I translate research into intuitive tools and gamified mobile app games that make tracking behavior and psychiatric symptoms effortless.
@@ -110,7 +110,7 @@ const AboutPage = () => {
             href="https://www.neurocpu.org/spice" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-6 hover:bg-accent/30 transition-all"
+            className="block p-6 shadow-lg hover:shadow-xl transition-all bg-white"
           >
             <h3 className="text-base font-light mb-3">SPICE Summer Program in Computational Education</h3>
             <p className="text-sm font-light text-foreground/60 leading-relaxed">
@@ -122,7 +122,7 @@ const AboutPage = () => {
             href="https://ocdandthebrain.com/en" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-6 hover:bg-accent/30 transition-all"
+            className="block p-6 shadow-lg hover:shadow-xl transition-all bg-white"
           >
             <h3 className="text-base font-light mb-3">OCD and the Brain</h3>
             <p className="text-sm font-light text-foreground/60 leading-relaxed">
