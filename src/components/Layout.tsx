@@ -26,7 +26,7 @@ const Layout = () => {
     <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
       <div className="border-t-[3px] border-foreground" />
-      <div className="h-[2px]" />
+      <div className="h-[6px]" />
       <div className="border-t border-foreground" />
       <motion.main 
         className="flex-grow"
