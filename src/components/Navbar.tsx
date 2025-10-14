@@ -38,12 +38,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="text-foreground hover:text-foreground/60 transition-colors">
           <motion.h1 
-            className="text-xl md:text-2xl font-medium uppercase tracking-widest"
+            className="text-sm md:text-base font-light tracking-wider"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {/* Name removed as requested */}
+            alisa loosen
           </motion.h1>
         </NavLink>
 

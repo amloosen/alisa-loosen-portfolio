@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 40 15% 88%;
+    --foreground: 30 10% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 40 15% 88%;
+    --card-foreground: 30 10% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 40 15% 88%;
+    --popover-foreground: 30 10% 25%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 30 10% 25%;
+    --primary-foreground: 40 15% 88%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 40 20% 80%;
+    --secondary-foreground: 30 10% 25%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 40 15% 85%;
+    --muted-foreground: 30 10% 45%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 40 20% 82%;
+    --accent-foreground: 30 10% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    --border: 30 10% 75%;
+    --input: 30 10% 75%;
+    --ring: 30 10% 25%;
 
     --radius: 0rem;
   }
@@ -46,12 +46,13 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-weight: 300;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans uppercase tracking-wider;
-    font-weight: 400;
+    @apply font-sans;
+    font-weight: 300;
+    letter-spacing: 0.02em;
   }
 
   p, a, li, span {
@@ -65,16 +66,18 @@
   }
   
   .section-title {
-    @apply text-2xl md:text-3xl uppercase tracking-widest mb-8 text-foreground font-light;
+    @apply text-xl md:text-2xl mb-12 text-foreground font-light;
+    letter-spacing: 0.02em;
   }
   
   .section {
-    @apply py-16 animate-fade-in;
+    @apply py-20 animate-fade-in;
   }
   
   .navigation-link {
-    @apply relative px-3 py-1 text-foreground hover:text-foreground/60 transition-colors duration-300 uppercase text-xs tracking-widest;
-    font-weight: 400;
+    @apply relative px-3 py-1 text-foreground hover:text-foreground/60 transition-colors duration-300 text-sm;
+    font-weight: 300;
+    letter-spacing: 0.05em;
   }
   
   .navigation-link::after {
