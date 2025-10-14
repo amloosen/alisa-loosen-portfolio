@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,13 +15,6 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex space-x-6">
-            <a
-              href="mailto:alisa.loosen@yale.edu"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
             <a
               href="https://www.linkedin.com/in/alisa-loosen-phd-4b7a4711b"
               target="_blank"
@@ -71,14 +64,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-6 text-center">
-          <nav className="flex justify-center space-x-4 text-sm text-muted-foreground">
-            <NavLink to="/" className="hover:text-foreground transition-colors">About</NavLink>
-            <span>•</span>
-            <NavLink to="/projects" className="hover:text-foreground transition-colors">Projects</NavLink>
-            <span>•</span>
-            <NavLink to="/contact" className="hover:text-foreground transition-colors">Contact</NavLink>
-            <span>•</span>
-            <NavLink to="/cv" className="hover:text-foreground transition-colors">CV</NavLink>
+          <nav className="flex justify-center space-x-4 text-sm">
+            <NavLink to="/" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`} end>About</NavLink>
+            <span className="text-muted-foreground">•</span>
+            <NavLink to="/projects" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>Projects</NavLink>
+            <span className="text-muted-foreground">•</span>
+            <NavLink to="/contact" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>Contact</NavLink>
+            <span className="text-muted-foreground">•</span>
+            <NavLink to="/cv" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>CV</NavLink>
           </nav>
         </div>
       </div>
