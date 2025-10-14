@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { Card } from "@/components/ui/card";
-import { Cannabis, Brain, Dumbbell, Bot } from "lucide-react";
 
 // Institution logo full paths (keep order consistent with usage):
 const LOGOS = {
@@ -88,15 +87,6 @@ const ongoingProjects = [
     description:
       "This project develops computational models to understand excessive reassurance seeking behaviors in OCD, bridging traditional decision-making paradigms with novel human-chatbot interaction frameworks to provide insights into compulsive information-seeking patterns.",
     institutions: ["Yale"],
-    renderMedia: function RobotIcon() {
-      return (
-        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
-          <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
-            <Bot color="#8A382D" size={48} strokeWidth={1.8} />
-          </div>
-        </div>
-      );
-    },
   },
   {
     title:
@@ -105,15 +95,6 @@ const ongoingProjects = [
     description:
       "A sophisticated, large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
     institutions: ["Mount Sinai", "Yale", "Tübingen"],
-    renderMedia: function DumbbellIcon() {
-      return (
-        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
-          <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
-            <Dumbbell color="#8A382D" size={45} strokeWidth={1.8} />
-          </div>
-        </div>
-      );
-    },
   },
   {
     title:
@@ -122,15 +103,6 @@ const ongoingProjects = [
     description:
       "This project aims to elucidate the unique and independent neural correlates underlying reward and effort-based learning by leveraging high-resolution intracranial EEG recordings during human decision-making.",
     institutions: ["Mount Sinai", "Yale", "Tübingen"],
-    renderMedia: function BrainIcon() {
-      return (
-        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
-          <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
-            <Brain color="#8A382D" size={48} strokeWidth={1.8} />
-          </div>
-        </div>
-      );
-    },
   },
   {
     title:
@@ -139,15 +111,6 @@ const ongoingProjects = [
     description:
       "A comprehensive investigation exploring how cannabis usage in the general population can shape the neural and behavioral mechanisms underpinning both reward- and effort-based learning.",
     institutions: ["Aarhus University", "Yale", "Tübingen"],
-    renderMedia: function NeutralCannabis() {
-      return (
-        <div className="flex flex-col items-center justify-center w-28 h-auto pt-1">
-          <div className="flex items-center justify-center w-20 h-20 border border-muted rounded-md bg-sage/10 mb-0">
-            <Cannabis color="#BAC39D" size={48} strokeWidth={1.8} />
-          </div>
-        </div>
-      );
-    },
   },
 ];
 
@@ -265,7 +228,7 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title, authors, and logos */}
                 <div className="flex flex-col flex-1 min-w-0">
-                  <h3 className="text-xl font-serif font-semibold text-blue mb-0 sm:text-xl">
+                  <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
@@ -280,10 +243,6 @@ const ProjectsPage = () => (
                     )}
                     <InstLogos institutions={project.institutions} />
                   </div>
-                </div>
-                {/* Right: image/icon/emojis */}
-                <div className="flex flex-col items-end justify-center min-w-[88px]">
-                  {project.renderMedia && project.renderMedia()}
                 </div>
               </div>
             </div>
@@ -311,7 +270,7 @@ const ProjectsPage = () => (
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title and authors */}
                 <div className="flex flex-col">
-                  <h3 className="text-xl font-serif font-semibold text-rust mb-0">
+                  <h3 className="text-xl font-light text-rust mb-0">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">

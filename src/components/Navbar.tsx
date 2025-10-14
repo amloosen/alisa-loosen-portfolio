@@ -43,7 +43,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            alisa loosen
+            Alisa Loosen
           </motion.h1>
         </NavLink>
 
