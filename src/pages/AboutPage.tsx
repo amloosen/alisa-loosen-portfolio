@@ -32,14 +32,16 @@ const AboutPage = () => {
       variants={container}
       className="max-w-4xl mx-auto"
     >
-      <motion.div variants={item} className="mb-12">
-        <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
-          <ProfileImage size="lg" />
-          <div>
-            <h1 className="text-2xl md:text-3xl font-light mb-4 text-foreground leading-tight tracking-wide">
+      <motion.div variants={item} className="mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-8">
+          <div className="md:col-span-1">
+            <ProfileImage size="lg" />
+          </div>
+          <div className="md:col-span-2 flex flex-col justify-center">
+            <h1 className="text-2xl md:text-4xl font-light mb-4 text-foreground leading-tight tracking-wide">
               Alisa M. Loosen, PhD
             </h1>
-            <p className="text-base md:text-lg text-foreground/70 mb-4 font-light">
+            <p className="text-base md:text-lg text-foreground/70 mb-4 font-light leading-relaxed">
               Researcher in Computational Psychiatry & Neuroscience
             </p>
             <div className="text-foreground/60 text-sm font-light">

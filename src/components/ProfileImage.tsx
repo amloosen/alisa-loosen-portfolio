@@ -1,5 +1,4 @@
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 
 interface ProfileImageProps {
@@ -9,25 +8,26 @@ interface ProfileImageProps {
 
 const ProfileImage = ({ size = "md", className = "" }: ProfileImageProps) => {
   const sizeClasses = {
-    sm: "h-20 w-20",
-    md: "h-32 w-32",
-    lg: "h-48 w-48",
-    xl: "h-64 w-64",
+    sm: "h-24 w-24",
+    md: "h-40 w-40",
+    lg: "h-64 w-full aspect-square",
+    xl: "h-80 w-full aspect-square",
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
       className={`${className}`}
     >
-      <Avatar className={`${sizeClasses[size]} rounded-none`}>
-        <AvatarImage src="/lovable-uploads/7bc31a5e-d1c5-4601-a6aa-fa0490edad61.png" alt="Alisa M. Loosen" />
-        <AvatarFallback className="bg-secondary text-foreground rounded-none">
-          A.L.
-        </AvatarFallback>
-      </Avatar>
+      <div className={`${sizeClasses[size]} overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-500`}>
+        <img 
+          src="/lovable-uploads/7bc31a5e-d1c5-4601-a6aa-fa0490edad61.png" 
+          alt="Alisa M. Loosen" 
+          className="w-full h-full object-cover"
+        />
+      </div>
     </motion.div>
   );
 };
