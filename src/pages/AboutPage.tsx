@@ -61,13 +61,13 @@ const AboutPage = () => {
             </div>
 
             <div className="mt-4 flex gap-3">
-              <Button asChild variant="outline" className="flex gap-2">
+              <Button asChild variant="outline" className="flex gap-2 rounded-none">
                 <Link to="/cv">
                   <FileText className="w-4 h-4" />
                   View CV
                 </Link>
               </Button>
-              <Button asChild variant="default" className="flex gap-2 bg-rust hover:bg-rust/80">
+              <Button asChild variant="default" className="flex gap-2 bg-rust hover:bg-rust/80 rounded-none">
                 <Link to="/contact">
                   <MessageSquare className="w-4 h-4" />
                   Contact Me
@@ -87,7 +87,7 @@ const AboutPage = () => {
       <motion.div variants={item} className="mb-12">
         <SectionTitle>Research Focus</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="border-l-2 border-rust p-6 hover:border-l-4 transition-all">
             <div className="flex items-center gap-3 mb-3">
               <Brain className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Neuroscience</h3>
@@ -96,7 +96,7 @@ const AboutPage = () => {
               I integrate cognitive and fundamental neuroscience with patient-focused research to investigate how the brain supports learning, resolves uncertainty, and drives decision-making. My work leverages intracranial recordings and clinical studies, with a particular focus on obsessive-compulsive disorder (OCD).            </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="border-l-2 border-rust p-6 hover:border-l-4 transition-all">
             <div className="flex items-center gap-3 mb-3">
               <Cog className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Computational Modeling</h3>
@@ -106,7 +106,7 @@ const AboutPage = () => {
             </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="border-l-2 border-rust p-6 hover:border-l-4 transition-all">
             <div className="flex items-center gap-3 mb-3">
               <Smartphone className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Digital Assessment</h3>
@@ -116,7 +116,7 @@ const AboutPage = () => {
             </p>
           </div>
           
-          <div className="bg-sand/10 p-6 rounded-lg hover:bg-sand/20 transition-colors">
+          <div className="border-l-2 border-rust p-6 hover:border-l-4 transition-all">
             <div className="flex items-center gap-3 mb-3">
               <Globe className="text-rust h-6 w-6" />
               <h3 className="text-xl font-medium">Real-World Impact</h3>
@@ -138,7 +138,7 @@ const AboutPage = () => {
             href="https://www.neurocpu.org/spice" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-5 bg-sage/10 rounded-lg hover:bg-sage/20 transition-all transform hover:-translate-y-1 duration-300"
+            className="block p-5 border-l-2 border-sage hover:border-l-4 transition-all"
           >
             <h3 className="text-xl font-medium mb-2">SPICE Summer Program in Computational Education</h3>
             <p className="text-muted-foreground">
@@ -150,7 +150,7 @@ const AboutPage = () => {
             href="https://ocdandthebrain.com/en" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block p-5 bg-sage/10 rounded-lg hover:bg-sage/20 transition-all transform hover:-translate-y-1 duration-300"
+            className="block p-5 border-l-2 border-sage hover:border-l-4 transition-all"
           >
             <h3 className="text-xl font-medium mb-2">OCD and the Brain</h3>
             <p className="text-muted-foreground">
