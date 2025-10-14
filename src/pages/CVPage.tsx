@@ -248,11 +248,11 @@ const CVPage = () => {
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Academic Positions</SectionTitle>
-        <div className="space-y-8">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-8">
           {positionsData.map((position, index) => (
             <div
               key={index}
-              className="pl-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6"
+              className="pl-6 py-2"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{position.title}</h3>
@@ -274,11 +274,11 @@ const CVPage = () => {
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Education</SectionTitle>
-        <div className="space-y-8">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-8">
           {educationData.map((education, index) => (
             <div
               key={index}
-              className="pl-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6"
+              className="pl-6 py-2"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{education.degree}</h3>
@@ -298,9 +298,9 @@ const CVPage = () => {
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Grants & Awards</SectionTitle>
-        <div className="space-y-4">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-4">
           {awardsData.map((award, index) => (
-            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6">
+            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4">
               <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{award.period}</div>
               <div className="sm:w-3/4">
                 <h4 className="font-light tracking-wide">{award.title}</h4>
@@ -314,9 +314,9 @@ const CVPage = () => {
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Invited Talks & Reviews</SectionTitle>
-        <div className="space-y-4">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-4">
           {invitedTalksData.map((talk, index) => (
-            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6">
+            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4">
               <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{talk.period}</div>
               <div className="sm:w-3/4">
                 <h4 className="font-light tracking-wide">{talk.title}</h4>
@@ -324,7 +324,7 @@ const CVPage = () => {
               </div>
             </div>
           ))}
-          <div className="pt-4 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6">
+          <div className="pt-4 pb-4">
             <h4 className="font-light tracking-wide mb-2">Reviewed for:</h4>
             <p className="text-muted-foreground font-light">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
           </div>
@@ -334,9 +334,9 @@ const CVPage = () => {
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Selected Teaching Experience</SectionTitle>
-        <div className="space-y-4">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-4">
           {teachingData.map((item, index) => (
-            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6">
+            <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4">
               <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{item.period}</div>
               <div className="sm:w-3/4">
                 <p className="text-muted-foreground font-light">{item.description}</p>
@@ -349,9 +349,9 @@ const CVPage = () => {
       <motion.div variants={item}>
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Skills</SectionTitle>
-        <div className="space-y-4">
+        <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-4">
           {skillsData.map((skill, index) => (
-            <div key={index} className="flex flex-col sm:flex-row gap-2 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6">
+            <div key={index} className="flex flex-col sm:flex-row gap-2 pb-4">
               <div className="sm:w-1/4 font-light tracking-wide">{skill.category}</div>
               <div className="sm:w-3/4 text-muted-foreground font-light">{skill.skills}</div>
             </div>
