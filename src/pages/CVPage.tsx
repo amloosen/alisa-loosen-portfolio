@@ -246,7 +246,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Academic Positions</SectionTitle>
         <div className="space-y-8">
           {positionsData.map((position, index) => (
@@ -272,7 +272,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Education</SectionTitle>
         <div className="space-y-8">
           {educationData.map((education, index) => (
@@ -296,7 +296,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Grants & Awards</SectionTitle>
         <div className="space-y-4">
           {awardsData.map((award, index) => (
@@ -312,7 +312,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-12">
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Invited Talks & Reviews</SectionTitle>
         <div className="space-y-4">
           {invitedTalksData.map((talk, index) => (
@@ -332,7 +332,7 @@ const CVPage = () => {
       </motion.div>
       
       <motion.div variants={item} className="mb-12">
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Selected Teaching Experience</SectionTitle>
         <div className="space-y-4">
           {teachingData.map((item, index) => (
@@ -347,7 +347,7 @@ const CVPage = () => {
       </motion.div>
 
       <motion.div variants={item}>
-        <div className="w-[96%] mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Skills</SectionTitle>
         <div className="space-y-4">
           {skillsData.map((skill, index) => (
