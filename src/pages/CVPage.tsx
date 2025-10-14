@@ -254,12 +254,12 @@ const CVPage = () => {
               className="border-l-4 border-blue pl-6 py-2 hover:border-sage transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="font-medium text-xl">{position.title}</h3>
-                <div className="text-muted-foreground text-sm">
+                <h3 className="font-light text-lg tracking-wide">{position.title}</h3>
+                <div className="text-muted-foreground text-sm font-light">
                   {position.period} | {position.location}
                 </div>
               </div>
-              <p className="text-blue font-medium mb-2">{position.organization}</p>
+              <p className="text-blue font-light mb-2">{position.organization}</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {position.details.map((detail, idx) => (
                   <li key={idx}>{detail}</li>
@@ -279,10 +279,10 @@ const CVPage = () => {
               className="border-l-4 border-blue pl-6 py-2 hover:border-sage transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="font-medium text-xl">{education.degree}</h3>
-                <div className="text-muted-foreground text-sm">{education.period} | {education.location}</div>
+                <h3 className="font-light text-lg tracking-wide">{education.degree}</h3>
+                <div className="text-muted-foreground text-sm font-light">{education.period} | {education.location}</div>
               </div>
-              <p className="text-blue font-medium mb-2">{education.institution}</p>
+              <p className="text-blue font-light mb-2">{education.institution}</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {education.details.map((detail, idx) => (
                   <li key={idx}>{detail}</li>
@@ -298,10 +298,10 @@ const CVPage = () => {
         <div className="space-y-4">
           {awardsData.map((award, index) => (
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{award.period}</div>
+              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{award.period}</div>
               <div className="sm:w-3/4">
-                <h4 className="font-medium">{award.title}</h4>
-                {award.details && <p className="text-muted-foreground">{award.details}</p>}
+                <h4 className="font-light tracking-wide">{award.title}</h4>
+                {award.details && <p className="text-muted-foreground font-light">{award.details}</p>}
               </div>
             </div>
           ))}
@@ -313,16 +313,16 @@ const CVPage = () => {
         <div className="space-y-4">
           {invitedTalksData.map((talk, index) => (
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{talk.period}</div>
+              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{talk.period}</div>
               <div className="sm:w-3/4">
-                <h4 className="font-medium">{talk.title}</h4>
-                <p className="text-muted-foreground">{talk.organization}</p>
+                <h4 className="font-light tracking-wide">{talk.title}</h4>
+                <p className="text-muted-foreground font-light">{talk.organization}</p>
               </div>
             </div>
           ))}
           <div className="pt-4 border-b border-muted pb-4">
-            <h4 className="font-medium mb-2">Reviewed for:</h4>
-            <p className="text-muted-foreground">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
+            <h4 className="font-light tracking-wide mb-2">Reviewed for:</h4>
+            <p className="text-muted-foreground font-light">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
           </div>
         </div>
       </motion.div>
@@ -332,9 +332,9 @@ const CVPage = () => {
         <div className="space-y-4">
           {teachingData.map((item, index) => (
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 border-b border-muted pb-4">
-              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4">{item.period}</div>
+              <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{item.period}</div>
               <div className="sm:w-3/4">
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-muted-foreground font-light">{item.description}</p>
               </div>
             </div>
           ))}
@@ -346,8 +346,8 @@ const CVPage = () => {
         <div className="space-y-4">
           {skillsData.map((skill, index) => (
             <div key={index} className="flex flex-col sm:flex-row gap-2 border-b border-muted pb-4">
-              <div className="sm:w-1/4 font-medium">{skill.category}</div>
-              <div className="sm:w-3/4 text-muted-foreground">{skill.skills}</div>
+              <div className="sm:w-1/4 font-light tracking-wide">{skill.category}</div>
+              <div className="sm:w-3/4 text-muted-foreground font-light">{skill.skills}</div>
             </div>
           ))}
         </div>
