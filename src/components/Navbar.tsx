@@ -31,7 +31,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-cream/90 backdrop-blur-md shadow-sm py-3"
+          ? "bg-background/90 backdrop-blur-md border-b border-border py-3"
           : "bg-transparent py-6"
       }`}
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.nav
-          className="md:hidden bg-cream/95 backdrop-blur-md"
+          className="md:hidden bg-background/95 backdrop-blur-md border-b border-border"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
