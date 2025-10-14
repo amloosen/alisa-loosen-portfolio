@@ -28,7 +28,7 @@ function InstLogos({ institutions }: { institutions: string[] }) {
         return (
           <div
             key={name}
-            className="bg-white flex items-center justify-center"
+            className="bg-white shadow-md hover:shadow-lg transition-shadow duration-200 flex items-center justify-center"
             style={{
               minWidth: 56,
               minHeight: 40,
@@ -221,7 +221,7 @@ const ProjectsPage = () => (
         {ongoingProjects.map((project, i) => (
           <Card
             key={i}
-            className="overflow-hidden border-0 shadow-none bg-white flex flex-col"
+            className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col"
           >
             {/* CARD HEADER: mimic research card header layout */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
@@ -264,7 +264,7 @@ const ProjectsPage = () => (
     <motion.div variants={container} className="grid gap-6">
       {sortedProjects.map((project, index) => (
         <motion.div key={index} variants={item}>
-          <Card className="overflow-hidden border-0 shadow-none relative bg-white flex flex-col">
+          <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 relative bg-white flex flex-col">
             {/* HEADER: Title & Authors (left), Journal/Year (right) */}
             <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
@@ -316,7 +316,7 @@ const ProjectsPage = () => (
                   <img
                     src={project.image}
                     alt={`${project.title} figure`}
-                    className="object-contain w-36 h-36 max-h-44 bg-white mt-2 mb-8"
+                    className="object-contain w-36 h-36 max-h-44 shadow-md bg-white mt-2 mb-8"
                     style={{ maxWidth: "180px" }}
                   />
                 ) : (
