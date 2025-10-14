@@ -6,32 +6,32 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 20 10% 20%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 20%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 20%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 8 52% 38%;
-    --primary-foreground: 45 100% 98%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 28 36% 66%;
-    --secondary-foreground: 20 10% 20%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 60 18% 70%;
-    --muted-foreground: 20 6% 40%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 87 15% 72%;
-    --accent-foreground: 20 10% 20%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 100% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 8 52% 38%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 10%;
 
     --radius: 0rem;
   }
@@ -45,10 +45,13 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-weight: 300;
+    letter-spacing: 0.02em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans uppercase tracking-wider;
+    font-weight: 400;
   }
 
   p, a, li, span {
@@ -62,19 +65,20 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-serif font-semibold mb-6 text-rust;
+    @apply text-2xl md:text-3xl uppercase tracking-widest mb-8 text-foreground font-light;
   }
   
   .section {
-    @apply py-12 animate-fade-in;
+    @apply py-16 animate-fade-in;
   }
   
   .navigation-link {
-    @apply relative px-2 py-1 text-foreground hover:text-rust transition-colors duration-200;
+    @apply relative px-3 py-1 text-foreground hover:text-foreground/60 transition-colors duration-300 uppercase text-xs tracking-widest;
+    font-weight: 400;
   }
   
   .navigation-link::after {
-    @apply content-[''] absolute w-0 h-0.5 bg-rust bottom-0 left-0 transition-all duration-300 ease-in-out;
+    @apply content-[''] absolute w-0 h-px bg-foreground bottom-0 left-0 transition-all duration-300 ease-in-out;
   }
   
   .navigation-link:hover::after {
@@ -82,7 +86,7 @@
   }
   
   .navigation-link.active {
-    @apply text-rust font-medium;
+    @apply text-foreground;
   }
   
   .navigation-link.active::after {

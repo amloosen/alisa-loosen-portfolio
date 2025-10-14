@@ -20,8 +20,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        serif: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+      },
+      letterSpacing: {
+        widest: '0.15em',
       },
       colors: {
         border: "hsl(var(--border))",
