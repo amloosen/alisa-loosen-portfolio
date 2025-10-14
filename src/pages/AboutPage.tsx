@@ -83,7 +83,7 @@ const AboutPage = () => {
       </motion.div>
 
       <motion.div variants={item} className="mb-16">
-        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-11/12 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Research Focus</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 hover:bg-accent/30 transition-all">
@@ -117,7 +117,7 @@ const AboutPage = () => {
       </motion.div>
 
       <motion.div variants={item}>
-        <div className="w-3/5 mx-auto border-t border-foreground mb-8"></div>
+        <div className="w-11/12 mx-auto border-t border-foreground mb-8"></div>
         <SectionTitle>Outreach & Science Communication</SectionTitle>
         <p className="mb-8 text-base font-light leading-relaxed text-foreground/70">
           I believe science should be fun and accessible! I am passionate about demystifying neuroscientific and mental health research and empowering people with information.

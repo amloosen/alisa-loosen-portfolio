@@ -25,8 +25,8 @@ const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
-      <div className="border-t-[3px] border-foreground" />
-      <div className="h-[8px]" />
+      <div className="border-t-[2px] border-foreground" />
+      <div className="h-[16px]" />
       <div className="border-t border-foreground" />
       <motion.main 
         className="flex-grow"
@@ -41,7 +41,7 @@ const Layout = () => {
         </div>
       </motion.main>
       <Footer />
-      <div className="border-t-[4px] border-foreground" />
+      <div className="border-t-[2px] border-foreground" />
     </div>
   );
 };
