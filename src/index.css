@@ -5,32 +5,32 @@
 
 @layer base {
   :root {
-    --background: 40 20% 94%;
+    --background: 35 25% 90%;
     --foreground: 30 10% 20%;
 
-    --card: 40 20% 94%;
+    --card: 35 25% 90%;
     --card-foreground: 30 10% 20%;
 
-    --popover: 40 20% 94%;
+    --popover: 35 25% 90%;
     --popover-foreground: 30 10% 20%;
 
     --primary: 30 10% 20%;
-    --primary-foreground: 40 20% 94%;
+    --primary-foreground: 35 25% 90%;
 
-    --secondary: 40 15% 88%;
+    --secondary: 35 20% 84%;
     --secondary-foreground: 30 10% 20%;
 
-    --muted: 40 15% 90%;
+    --muted: 35 20% 86%;
     --muted-foreground: 30 10% 40%;
 
-    --accent: 40 15% 86%;
+    --accent: 35 20% 82%;
     --accent-foreground: 30 10% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 10% 85%;
-    --input: 30 10% 85%;
+    --border: 30 12% 78%;
+    --input: 30 12% 78%;
     --ring: 30 10% 20%;
 
     --radius: 0rem;
@@ -71,7 +71,7 @@
   }
   
   .section {
-    @apply py-20 animate-fade-in border-t border-border/40;
+    @apply py-20 animate-fade-in border-t border-border/60;
   }
   
   .navigation-link {
