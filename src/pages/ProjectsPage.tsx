@@ -224,11 +224,11 @@ const ProjectsPage = () => (
             className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col"
           >
             {/* CARD HEADER: mimic research card header layout */}
-            <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+            <div className="w-full px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title, authors, and logos */}
                 <div className="flex flex-col flex-1 min-w-0">
-                  <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
+                  <h3 className="text-xl font-light text-foreground mb-0 sm:text-xl">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
@@ -267,11 +267,11 @@ const ProjectsPage = () => (
         <motion.div key={index} variants={item}>
           <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 relative bg-white flex flex-col">
             {/* HEADER: Title & Authors (left), Journal/Year (right) */}
-            <div className="w-full bg-gradient-to-r from-sage/10 to-blue/5 px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+            <div className="w-full px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
                 {/* Left: title and authors */}
                 <div className="flex flex-col">
-                  <h3 className="text-xl font-light text-rust mb-0">
+                  <h3 className="text-xl font-light text-foreground mb-0">
                     {project.title}
                   </h3>
                   <span className="text-xs text-muted-foreground mt-1">
