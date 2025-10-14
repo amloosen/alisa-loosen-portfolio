@@ -63,17 +63,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="mt-6 text-center">
-          <nav className="flex justify-center space-x-4 text-sm">
-            <NavLink to="/" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`} end>About</NavLink>
-            <span className="text-muted-foreground">•</span>
-            <NavLink to="/projects" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>Projects</NavLink>
-            <span className="text-muted-foreground">•</span>
-            <NavLink to="/contact" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>Contact</NavLink>
-            <span className="text-muted-foreground">•</span>
-            <NavLink to="/cv" className={({ isActive }) => `navigation-link ${isActive ? "active" : ""}`}>CV</NavLink>
-          </nav>
-        </div>
       </div>
     </footer>
   );
