@@ -24,9 +24,9 @@ const Layout = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <Navbar />
       <div className="border-t-[3px] border-foreground" />
       <div className="border-t border-foreground" />
-      <Navbar />
       <motion.main 
         className="flex-grow"
         key={pathname}
@@ -40,7 +40,7 @@ const Layout = () => {
         </div>
       </motion.main>
       <Footer />
-      <div className="border-t-[3px] border-foreground" />
+      <div className="border-t-[4px] border-foreground" />
     </div>
   );
 };
