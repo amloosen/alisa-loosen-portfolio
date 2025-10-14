@@ -21,7 +21,7 @@ const ProfileImage = ({ size = "md", className = "" }: ProfileImageProps) => {
       transition={{ duration: 0.7 }}
       className={`${className}`}
     >
-      <div className={`${sizeClasses[size]} overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-500`}>
+      <div className={`${sizeClasses[size]} overflow-hidden`}>
         <img 
           src="/lovable-uploads/7bc31a5e-d1c5-4601-a6aa-fa0490edad61.png" 
           alt="Alisa M. Loosen" 

@@ -58,27 +58,10 @@ const AboutPage = () => {
               </span>
             </div>
 
-            <div className="mt-6 flex gap-3">
-              <Button asChild variant="outline" className="flex gap-2 rounded-none font-light">
-                <Link to="/cv">
-                  <FileText className="w-4 h-4" />
-                  View CV
-                </Link>
-              </Button>
-              <Button asChild variant="default" className="flex gap-2 rounded-none font-light">
-                <Link to="/contact">
-                  <MessageSquare className="w-4 h-4" />
-                  Contact
-                </Link>
-              </Button>
-            </div>
+            <p className="text-base md:text-lg mb-6 font-light leading-relaxed mt-6">
+              I am a researcher investigating cognition and mental health with neuroscientific, computational and digital tools.
+            </p>
           </div>
-        </div>
-        
-        <div className="prose max-w-none">
-          <p className="text-base md:text-lg mb-6 font-light leading-relaxed">
-            I am a researcher investigating cognition and mental health with neuroscientific, computational and digital tools.
-          </p>
         </div>
       </motion.div>
 
