@@ -22,9 +22,9 @@ const ProfileImage = ({ size = "md", className = "" }: ProfileImageProps) => {
       transition={{ duration: 0.5 }}
       className={`${className}`}
     >
-      <Avatar className={`${sizeClasses[size]} rounded-full border-4 border-sage/30`}>
+      <Avatar className={`${sizeClasses[size]} rounded-full border border-foreground/20`}>
         <AvatarImage src="/lovable-uploads/7bc31a5e-d1c5-4601-a6aa-fa0490edad61.png" alt="Alisa M. Loosen" />
-        <AvatarFallback className="bg-sand/30 text-rust font-serif">
+        <AvatarFallback className="bg-secondary text-foreground">
           A.L.
         </AvatarFallback>
       </Avatar>

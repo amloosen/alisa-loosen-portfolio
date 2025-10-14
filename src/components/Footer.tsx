@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex space-x-6">
             <a
               href="mailto:alisa.loosen@yale.edu"
-              className="text-muted-foreground hover:text-rust transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -26,7 +26,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/alisa-loosen-phd-4b7a4711b"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-rust transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
@@ -35,7 +35,7 @@ const Footer = () => {
               href="https://bsky.app/profile/alisaloosen.bsky.social"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-rust transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Bluesky"
             >
               <img 
@@ -48,7 +48,7 @@ const Footer = () => {
               href="https://github.com/amloosen"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-rust transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="GitHub"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -60,7 +60,7 @@ const Footer = () => {
               href="https://scholar.google.co.uk/citations?user=GiyLYCgAAAAJ&hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-rust transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Google Scholar"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -72,13 +72,13 @@ const Footer = () => {
         </div>
         <div className="mt-6 text-center">
           <nav className="flex justify-center space-x-4 text-sm text-muted-foreground">
-            <NavLink to="/" className="hover:text-rust transition-colors">About</NavLink>
+            <NavLink to="/" className="hover:text-foreground transition-colors">About</NavLink>
             <span>•</span>
-            <NavLink to="/projects" className="hover:text-rust transition-colors">Projects</NavLink>
+            <NavLink to="/projects" className="hover:text-foreground transition-colors">Projects</NavLink>
             <span>•</span>
-            <NavLink to="/contact" className="hover:text-rust transition-colors">Contact</NavLink>
+            <NavLink to="/contact" className="hover:text-foreground transition-colors">Contact</NavLink>
             <span>•</span>
-            <NavLink to="/cv" className="hover:text-rust transition-colors">CV</NavLink>
+            <NavLink to="/cv" className="hover:text-foreground transition-colors">CV</NavLink>
           </nav>
         </div>
       </div>

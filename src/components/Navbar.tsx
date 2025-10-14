@@ -36,9 +36,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <NavLink to="/" className="text-rust hover:text-rust/80 transition-colors">
+        <NavLink to="/" className="text-foreground hover:text-foreground/60 transition-colors">
           <motion.h1 
-            className="font-serif text-xl md:text-2xl font-medium"
+            className="text-xl md:text-2xl font-medium uppercase tracking-widest"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-foreground hover:text-rust transition-colors"
+          className="md:hidden text-foreground hover:text-foreground/60 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
