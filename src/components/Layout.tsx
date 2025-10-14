@@ -23,7 +23,7 @@ const Layout = () => {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-cream">
+    <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
       <motion.main 
         className="flex-grow"
