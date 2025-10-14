@@ -259,6 +259,7 @@ const ProjectsPage = () => (
 
     {/* Selected Publications Section */}
     <motion.div variants={item} className="mb-8">
+      <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
       <SectionTitle>Selected Publications</SectionTitle>
     </motion.div>
     <motion.div variants={container} className="grid gap-6">

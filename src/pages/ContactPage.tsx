@@ -28,6 +28,7 @@ const ContactPage = () => {
     >
       <motion.div variants={item} className="mb-8">
         <SectionTitle>Contact Me</SectionTitle>
+        <div className="w-[99%] mx-auto border-t border-foreground mb-8 mt-4"></div>
         <p className="text-lg font-serif mb-6">
           Feel free to reach out if you have questions about my research or collaboration opportunities.
         </p>
