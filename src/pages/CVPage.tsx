@@ -251,7 +251,7 @@ const CVPage = () => {
           {positionsData.map((position, index) => (
             <div
               key={index}
-              className="border-l-4 border-foreground pl-6 py-2 transition-colors duration-300"
+              className="border-l border-foreground pl-6 py-2 transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{position.title}</h3>
@@ -276,7 +276,7 @@ const CVPage = () => {
           {educationData.map((education, index) => (
             <div
               key={index}
-              className="border-l-4 border-foreground pl-6 py-2 transition-colors duration-300"
+              className="border-l border-foreground pl-6 py-2 transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{education.degree}</h3>
