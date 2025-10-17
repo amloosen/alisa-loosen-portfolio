@@ -42,7 +42,7 @@ const CVPage = () => {
     {
       period: "07/2025 – Present",
       location: "New Haven, USA",
-      title: "Research Fellow",
+      title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
       details: [
         "PI: Prof. Xiaosi Gu",
