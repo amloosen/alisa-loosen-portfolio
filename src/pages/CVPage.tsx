@@ -328,7 +328,7 @@ const CVPage = () => {
           ))}
           <div className="pt-4 pb-4">
             <h4 className="font-light tracking-wide mb-2">Reviewed for:</h4>
-            <p className="text-muted-foreground font-light">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Translational Psychiatry, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
+            <p className="text-muted-foreground font-light">Proceedings of the National Academy of Sciences of the United States of America (PNAS), Nature Scientific Reports, BMC Psychiatry, Translational Psychiatry, PLOS Computational Biology, Journal of Anxiety Disorders, Journal of Clinical Psychiatry, Mental Health Review Journal; Computational Psychiatry Conference</p>
           </div>
         </div>
       </motion.div>
