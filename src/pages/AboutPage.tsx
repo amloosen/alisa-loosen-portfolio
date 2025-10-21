@@ -52,9 +52,9 @@ const AboutPage = () => {
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
-                  Yale Department of Psychiatry
+                  Yale School of Medicine
                 </a>
-                , Yale Medical School, Yale University
+                , Yale Department of Psychiatry
               </span>
             </div>
 
