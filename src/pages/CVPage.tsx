@@ -40,8 +40,10 @@ const CVPage = () => {
 
   const positionsData = [
     {
-      period: "07/2025 – Present; 06/2023 – 06/2025",
-      location: "New Haven, USA; New York City, USA",
+      periods: [
+        { period: "07/2025 – Present", location: "New Haven, USA" },
+        { period: "06/2023 – 06/2025", location: "New York City, USA" }
+      ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
       details: [
@@ -236,10 +238,16 @@ const CVPage = () => {
               key={index}
               className="pl-6 py-2"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <div className="flex flex-col md:flex-row md:items-start justify-between mb-2">
                 <h3 className="font-light text-lg tracking-wide">{position.title}</h3>
-                <div className="text-muted-foreground text-sm font-light">
-                  {position.period} | {position.location}
+                <div className="text-muted-foreground text-sm font-light md:text-right">
+                  {position.periods ? (
+                    position.periods.map((p, idx) => (
+                      <div key={idx}>{p.period} | {p.location}</div>
+                    ))
+                  ) : (
+                    <div>{position.period} | {position.location}</div>
+                  )}
                 </div>
               </div>
               <p className="text-blue font-light mb-2">{position.organization}</p>
