@@ -46,28 +46,9 @@ const CVPage = () => {
       organization: "Yale Department of Psychiatry, Yale University",
       details: [
         "PI: Prof. Xiaosi Gu",
-      ],
-    },
-    {
-      period: "06/2023 – 06/2025",
-      location: "New York City, USA",
-      title: "Postdoctoral Researcher",
-      organization: "Center for Computational Psychiatry, Icahn School of Medicine at Mount Sinai",
-      details: [
-        "PI: Prof. Xiaosi Gu",
+        "06/2023 – 06/2025 | New York City, USA",
         "Investigated neurocomputational mechanisms of effort and reward learning",
         "Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling",
-      ],
-    },
-    {
-      period: "01/2023 – 06/2023",
-      location: "Tübingen, DE",
-      title: "Postdoctoral Researcher",
-      organization: "University of Tübingen & Max Planck Institute for Biological Cybernetics",
-      details: [
-        "PI: Prof. Tobias Hauser",
-        "Researched neurocomputational mechanisms underlying obsessive-compulsive disorder (OCD)",
-        "Methods and data formats: Analyzed patient and control data using Bayesian modeling methods",
       ],
     },
     {
@@ -81,7 +62,7 @@ const CVPage = () => {
       ],
     },
     {
-      period: "12/2018 – 12/2022",
+      period: "12/2018 – 06/2023",
       location: "London, UK",
       title: "Postgraduate Researcher",
       organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
