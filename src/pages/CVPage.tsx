@@ -40,15 +40,24 @@ const CVPage = () => {
 
   const positionsData = [
     {
-      period: "07/2025 – Present",
-      location: "New Haven, USA",
+      period: "07/2025 – Present; 06/2023 – 06/2025",
+      location: "New Haven, USA; New York City, USA",
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
       details: [
         "PI: Prof. Xiaosi Gu",
-        "06/2023 – 06/2025 | New York City, USA",
         "Investigated neurocomputational mechanisms of effort and reward learning",
         "Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling",
+      ],
+    },
+    {
+      period: "12/2018 – 06/2023",
+      location: "London, UK",
+      title: "PhD Researcher",
+      organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
+      details: [
+        "PI: Prof. Tobias Hauser",
+        "Designed, ran and analyzed large-scale cognitive studies with the general public",
       ],
     },
     {
@@ -62,19 +71,9 @@ const CVPage = () => {
       ],
     },
     {
-      period: "12/2018 – 06/2023",
-      location: "London, UK",
-      title: "Postgraduate Researcher",
-      organization: "Max Planck UCL Centre for Computational Psychiatry and Ageing Research & Wellcome Centre for Human Neuroimaging, UCL",
-      details: [
-        "PI: Prof. Tobias Hauser",
-        "Designed, ran and analyzed large-scale cognitive studies with the general public",
-      ],
-    },
-    {
       period: "11/2017 – 08/2018",
       location: "London, UK",
-      title: "Graduate Student Researcher",
+      title: "Postgraduate Researcher",
       organization: "Wellcome Centre for Human Neuroimaging, UCL",
       details: [
         "PI: Prof. Stephen Fleming",
