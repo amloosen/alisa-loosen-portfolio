@@ -82,14 +82,6 @@ function InstLogos({ institutions }: { institutions: string[] }) {
 const ongoingProjects = [
   {
     title:
-      "Towards A Computational Model of Excessive Reassurance Seeking in Obsessive-Compulsive Disorder: From Decision-Making Paradigms to Human–Chatbot Interactions",
-    authors: "",
-    description:
-      "This project develops computational models to understand excessive reassurance seeking behaviors in OCD, bridging traditional decision-making paradigms with novel human-chatbot interaction frameworks to provide insights into compulsive information-seeking patterns.",
-    institutions: ["Yale"],
-  },
-  {
-    title:
       "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia versus Apathy",
     authors: "Loosen, A.M., Gu, X.* & Hauser, T.U.*",
     description:
@@ -117,7 +109,7 @@ const ongoingProjects = [
 // Selected Publications
 const projects = [
   {
-    title: "The metacognitive paradox of OCD: confidence is globally reduced but shows increased sensitivity to local evidence",
+    title: "The Metacognitive Paradox of OCD: Confidence is Globally Reduced but Shows Increased Sensitivity to Local Evidence",
     journal: "Research Square - Preprint",
     year: "2025",
     authors: "Loosen, A.M., Zaboski, B. A., Moore, A., Bohner, Pushkarskaya, H., C., Pittenger, C.*, & Hauser, T.U.*",
@@ -127,7 +119,7 @@ const projects = [
     image: "/lovable-uploads/fd6e0a68-413e-4958-8915-92f64241617f.png"
   },
   {
-    title: "Revisiting the role of computational neuroimaging in the era of integrative neuroscience",
+    title: "Revisiting the Role of Computational Neuroimaging in the Era of Integrative Neuroscience",
     journal: "Neuropsychopharmacology",
     year: "2024",
     authors: "Loosen, A.M.*, Kato, A.*, & Gu, X.",
@@ -137,7 +129,7 @@ const projects = [
     image: "/lovable-uploads/de21c4ef-14ed-4d5c-950f-9c5c8854f68f.png"
   },
   {
-    title: "Consistency within change: Evaluating the psychometric properties of a widely used predictive-inference task",
+    title: "Consistency Within Change: Evaluating the Psychometric Properties of a Widely used Predictive-Inference Task",
     journal: "Behavior Research Methods",
     year: "2024",
     authors: "Loosen, A.M., Seow, T.X.F., & Hauser, T.U.",
@@ -157,7 +149,7 @@ const projects = [
     image: "/lovable-uploads/88e2f5b0-ff15-48e7-ac29-988db8aadc57.png"
   },
   {
-    title: "Towards a computational psychiatry of juvenile obsessive-compulsive disorder",
+    title: "Towards a Computational Psychiatry of Juvenile Obsessive-Compulsive Disorder",
     journal: "Neuroscience & Biobehavioral Reviews",
     year: "2020",
     authors: "Loosen, A.M., & Hauser, T.U.",
@@ -167,7 +159,7 @@ const projects = [
     image: "/lovable-uploads/f4d0b0a4-1d4f-4ed7-bdc9-18e00ec64f6f.png"
   },
   {
-    title: "Confidence drives a neural confirmation bias",
+    title: "Confidence Drives a Neural Confirmation Bias",
     journal: "Nature Communications",
     year: "2020",
     authors: "Rollwage, M., Loosen, A.M., Hauser, T.U., Moran, R., Dolan, R.J., & Fleming, S.M.",
