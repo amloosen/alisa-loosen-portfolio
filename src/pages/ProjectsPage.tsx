@@ -82,7 +82,7 @@ function InstLogos({ institutions }: { institutions: string[] }) {
 const ongoingProjects = [
   {
     title:
-      "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia versus Apathy",
+      "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia Versus Apathy",
     authors: "Loosen, A.M., Gu, X.* & Hauser, T.U.*",
     description:
       "A large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
