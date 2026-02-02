@@ -42,10 +42,11 @@ const CVPage = () => {
     {
       periods: [
         { period: "07/2025 – Present", location: "New Haven, CT, USA" },
-        { period: "06/2023 – 06/2025", location: "New York, NY, USA", sublocation: "(Icahn School of Medicine at Mount Sinai)" }
+        { period: "06/2023 – 06/2025", location: "New York, NY, USA" }
       ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
+      suborganizations: ["Centre for Computational Psychiatry, Icahn School of Medicine at Mount Sinai"],
       details: [
         "PI: Prof. Xiaosi Gu",
         "Investigated neurocomputational mechanisms of effort and reward learning",
@@ -247,10 +248,7 @@ const CVPage = () => {
                 <div className="text-muted-foreground text-sm font-light md:text-right">
                   {position.periods ? (
                     position.periods.map((p, idx) => (
-                      <div key={idx}>
-                        <div>{p.period} | {p.location}</div>
-                        {p.sublocation && <div>{p.sublocation}</div>}
-                      </div>
+                      <div key={idx}>{p.period} | {p.location}</div>
                     ))
                   ) : (
                     <div>{position.period} | {position.location}</div>
@@ -258,6 +256,9 @@ const CVPage = () => {
                 </div>
               </div>
               <p className="text-blue font-light mb-2">{position.organization}</p>
+              {position.suborganizations && position.suborganizations.map((sub, idx) => (
+                <p key={idx} className="text-blue font-light mb-2">{sub}</p>
+              ))}
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {position.details.map((detail, idx) => (
                   <li key={idx}>{detail}</li>
