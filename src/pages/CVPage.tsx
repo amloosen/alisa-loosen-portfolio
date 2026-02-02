@@ -167,6 +167,11 @@ const CVPage = () => {
 
   const teachingData = [
     {
+      period: "01/2026 - Present",
+      description: "Organiser of the Mentorship in Academia and Practice (MAP) program, Yale Department of Psychiatry",
+      link: "https://medicine.yale.edu/psychiatry/education/programs-and-initiatives/map/"
+    },
+    {
       period: "04/2023 - Present",
       description: "Acted as the co-director of the Summer Program in Computational Education (SPICE), Icahn School of Medicine at Mount Sinai. This program focuses on providing early computational training for students from groups underrepresented in STEM."
     },
@@ -329,7 +334,14 @@ const CVPage = () => {
             <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4">
               <div className="text-muted-foreground text-sm whitespace-nowrap sm:w-1/4 font-light">{item.period}</div>
               <div className="sm:w-3/4">
-                <p className="text-muted-foreground font-light">{item.description}</p>
+                <p className="text-muted-foreground font-light">
+                  {item.description}
+                  {item.link && (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="ml-1 text-blue hover:underline">
+                      [Link]
+                    </a>
+                  )}
+                </p>
               </div>
             </div>
           ))}
