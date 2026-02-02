@@ -42,7 +42,7 @@ const CVPage = () => {
     {
       periods: [
         { period: "07/2025 – Present", location: "New Haven, USA" },
-        { period: "06/2023 – 06/2025", location: "New York, USA (Mount Sinai)" }
+        { period: "06/2023 – 06/2025", location: "New York, USA (Icahn School of Medicine at Mount Sinai)" }
       ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
