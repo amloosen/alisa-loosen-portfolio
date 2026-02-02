@@ -41,8 +41,8 @@ const CVPage = () => {
   const positionsData = [
     {
       periods: [
-        { period: "07/2025 – Present", location: "New Haven, USA" },
-        { period: "06/2023 – 06/2025", location: "New York, USA (Icahn School of Medicine at Mount Sinai)" }
+        { period: "07/2025 – Present", location: "New Haven, CT, USA" },
+        { period: "06/2023 – 06/2025", location: "New York, NY, USA", sublocation: "(Icahn School of Medicine at Mount Sinai)" }
       ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
@@ -64,7 +64,7 @@ const CVPage = () => {
     },
     {
       period: "10/2021 – 01/2023",
-      location: "New Haven, USA",
+      location: "New Haven, CT, USA",
       title: "PhD Researcher",
       organization: "Yale OCD Research Clinic, Yale School of Medicine",
       details: [
@@ -247,7 +247,10 @@ const CVPage = () => {
                 <div className="text-muted-foreground text-sm font-light md:text-right">
                   {position.periods ? (
                     position.periods.map((p, idx) => (
-                      <div key={idx}>{p.period} | {p.location}</div>
+                      <div key={idx}>
+                        <div>{p.period} | {p.location}</div>
+                        {p.sublocation && <div>{p.sublocation}</div>}
+                      </div>
                     ))
                   ) : (
                     <div>{position.period} | {position.location}</div>
