@@ -46,7 +46,7 @@ const CVPage = () => {
       ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
-      suborganizations: ["prev: Centre for Computational Psychiatry, Icahn School of Medicine at Mount Sinai"],
+      suborganizations: ["Previously: Centre for Computational Psychiatry, Icahn School of Medicine at Mount Sinai"],
       details: [
         "PI: Prof. Xiaosi Gu",
         "Investigated neurocomputational mechanisms of effort and reward learning",
@@ -257,7 +257,7 @@ const CVPage = () => {
               </div>
               <p className="text-blue font-light mb-2">{position.organization}</p>
               {position.suborganizations && position.suborganizations.map((sub, idx) => (
-                <p key={idx} className="text-blue font-light mb-2">{sub}</p>
+                <p key={idx} className="text-muted-foreground italic font-light text-sm mb-2">{sub}</p>
               ))}
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {position.details.map((detail, idx) => (
