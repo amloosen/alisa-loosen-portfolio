@@ -168,7 +168,7 @@ const CVPage = () => {
   const teachingData = [
     {
       period: "01/2026 - Present",
-      description: <>Organiser of <a href="https://medicine.yale.edu/psychiatry/education/programs-and-initiatives/map/" target="_blank" rel="noopener noreferrer" className="text-blue hover:underline">MAPs: Methods And Primers for Computational Psychiatry and Neuroeconomics</a>, Yale Department of Psychiatry</>
+      description: <>Co-organiser of <a href="https://medicine.yale.edu/psychiatry/education/programs-and-initiatives/map/" target="_blank" rel="noopener noreferrer" className="text-blue hover:underline">MAPs: Methods And Primers for Computational Psychiatry and Neuroeconomics</a>, Yale Department of Psychiatry</>
     },
     {
       period: "04/2023 - Present",
