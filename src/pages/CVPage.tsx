@@ -171,7 +171,7 @@ const CVPage = () => {
       description: <>Co-organiser of <a href="https://medicine.yale.edu/psychiatry/education/programs-and-initiatives/map/" target="_blank" rel="noopener noreferrer" className="text-blue hover:underline">MAPs: Methods And Primers for Computational Psychiatry and Neuroeconomics</a>, Yale Department of Psychiatry</>
     },
     {
-      period: "04/2023 - Present",
+      period: "04/2023 - 06/2025",
       description: "Acted as the co-director of the Summer Program in Computational Education (SPICE), Icahn School of Medicine at Mount Sinai. This program focuses on providing early computational training for students from groups underrepresented in STEM."
     },
     {
