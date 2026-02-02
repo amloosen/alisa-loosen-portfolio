@@ -247,9 +247,12 @@ const CVPage = () => {
                 <div className="text-muted-foreground text-sm font-light md:text-right">
                   {position.periods ? (
                     position.periods.map((p, idx) => (
-                      <div key={idx}>
-                        <div>{p.period} | {p.location}</div>
-                        {p.sublocation && <div>{p.sublocation}</div>}
+                      <div key={idx} className="flex">
+                        <span>{p.period} |&nbsp;</span>
+                        <span className="flex flex-col">
+                          <span>{p.location}</span>
+                          {p.sublocation && <span>{p.sublocation}</span>}
+                        </span>
                       </div>
                     ))
                   ) : (
