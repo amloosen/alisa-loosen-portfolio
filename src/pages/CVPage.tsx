@@ -46,7 +46,7 @@ const CVPage = () => {
       ],
       title: "Postdoctoral Researcher",
       organization: "Yale Department of Psychiatry, Yale University",
-      suborganizations: ["Centre for Computational Psychiatry, Icahn School of Medicine at Mount Sinai"],
+      suborganizations: ["prev: Centre for Computational Psychiatry, Icahn School of Medicine at Mount Sinai"],
       details: [
         "PI: Prof. Xiaosi Gu",
         "Investigated neurocomputational mechanisms of effort and reward learning",
