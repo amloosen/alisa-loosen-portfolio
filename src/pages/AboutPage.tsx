@@ -42,7 +42,7 @@ const AboutPage = () => {
               Alisa M. Loosen, PhD
             </h1>
             <p className="text-base md:text-lg text-foreground/70 mb-4 font-light leading-relaxed">
-              Researcher in Computational Psychiatry & Neuroscience
+              Researcher in Computational Psychiatry & Developmental Neuroscience
             </p>
             <div className="text-foreground/60 text-sm font-light">
               <span>
@@ -58,8 +58,11 @@ const AboutPage = () => {
               </span>
             </div>
 
-            <p className="text-base md:text-lg mb-6 font-light leading-relaxed mt-6">
-              I am a researcher investigating cognition and mental health with neuroscientific, computational and digital tools.
+            <p className="text-base md:text-lg mb-4 font-light leading-relaxed mt-6">
+              I am a researcher investigating how decision-making under uncertainty shapes mental health across development — with a focus on human–AI interaction, reassurance-seeking in OCD, and the safety implications of AI chatbots for vulnerable and developing populations.
+            </p>
+            <p className="text-base md:text-lg mb-6 font-light leading-relaxed">
+              My work draws on developmental psychopathology, computational modelling, and clinical assessment across ages to understand how digital environments affect cognition and mental health in children, adolescents, and adults.
             </p>
           </div>
         </div>
@@ -84,9 +87,9 @@ const AboutPage = () => {
           </div>
           
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
-            <h3 className="text-lg font-light mb-4">Digital Assessment</h3>
+            <h3 className="text-lg font-light mb-4">Human–AI Interaction & Digital Assessment</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I design and implement digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
+              I investigate how human–chatbot interactions shape cognition and mental health, design digital cognitive tasks and app-based assessments, and study the safety implications of AI systems for vulnerable and developing populations.
             </p>
           </div>
           
