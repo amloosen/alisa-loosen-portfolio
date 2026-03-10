@@ -87,9 +87,9 @@ const AboutPage = () => {
           </div>
           
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
-            <h3 className="text-lg font-light mb-4">Digital Assessment</h3>
+            <h3 className="text-lg font-light mb-4">Human–AI Interaction & Digital Assessment</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I design and implement digital cognitive tasks and web/mobile app assessments to capture decision-making, learning, and mental health symptom patterns.
+              I investigate how human–chatbot interactions shape cognition and mental health, design digital cognitive tasks and app-based assessments, and study the safety implications of AI systems for vulnerable and developing populations.
             </p>
           </div>
           
