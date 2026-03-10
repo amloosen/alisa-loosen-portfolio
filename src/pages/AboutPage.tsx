@@ -59,10 +59,10 @@ const AboutPage = () => {
             </div>
 
             <p className="text-base md:text-lg mb-4 font-light leading-relaxed mt-6">
-              I am a researcher investigating how decision-making under uncertainty shapes mental health across development — with a focus on human–AI interaction, reassurance-seeking in OCD, and the safety implications of AI chatbots for vulnerable and developing populations.
+              I study how decision-making under uncertainty shapes mental health across development. Much of my current work focuses on human–AI interaction, reassurance-seeking in OCD, and the safety of AI chatbots for vulnerable and developing populations.
             </p>
             <p className="text-base md:text-lg mb-6 font-light leading-relaxed">
-              My work draws on developmental psychopathology, computational modelling, and clinical assessment across ages to understand how digital environments affect cognition and mental health in children, adolescents, and adults.
+              I draw on developmental psychopathology, computational modelling, and clinical assessment across ages to understand how digital environments affect cognition and mental health in children, adolescents, and adults.
             </p>
           </div>
         </div>
@@ -82,14 +82,14 @@ const AboutPage = () => {
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Computational Modeling</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I develop and apply neuroscientifically-plausible computational models (e.g., based on Reinforcement Learning and Bayes' Theorem) to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
+              I develop and apply neuroscientifically-plausible computational models based on Reinforcement Learning and Bayes' Theorem to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
             </p>
           </div>
           
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Human–AI Interaction & Digital Assessment</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I investigate how human–chatbot interactions shape cognition and mental health, design digital cognitive tasks and app-based assessments, and study the safety implications of AI systems for vulnerable and developing populations.
+              I investigate how human–chatbot interactions shape cognition and mental health. I also design digital cognitive tasks and app-based assessments, and study the safety of AI systems for vulnerable and developing populations.
             </p>
           </div>
           

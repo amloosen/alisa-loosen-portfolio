@@ -85,7 +85,7 @@ const ongoingProjects = [
       "Human–Chatbot Interactions and Maladaptive Reassurance-Seeking in OCD",
     authors: "Loosen, A.M., Gu, X.",
     description:
-      "Investigating how human–chatbot interactions reinforce maladaptive reassurance-seeking patterns, using computational modelling and NLP to characterise AI dependency in clinical and sub-clinical populations. This work examines OCD as a developmental disorder — how uncertainty processing and reassurance-seeking emerge in adolescence and are reinforced by digital environments, including AI chatbots.",
+      "We study how human–chatbot interactions reinforce maladaptive reassurance-seeking patterns, using computational modelling and NLP to characterise AI dependency in clinical and sub-clinical populations. This work examines OCD as a developmental disorder and asks how uncertainty processing and reassurance-seeking emerge in adolescence and get reinforced by digital environments, including AI chatbots.",
     institutions: ["Yale"],
   },
   {
@@ -93,7 +93,7 @@ const ongoingProjects = [
       "Effects of Chatbot Interactions on Psychiatric Symptoms in Inpatient Populations with Psychosis",
     authors: "Loosen, A.M., Gu, X.",
     description:
-      "Examining the effects of chatbot interactions on psychiatric symptoms in inpatient populations with psychosis, with implications for AI safety and the responsible deployment of conversational AI in clinical settings.",
+      "We examine how chatbot interactions affect psychiatric symptoms in inpatient populations with psychosis. This project has direct implications for AI safety and the responsible deployment of conversational AI in clinical settings.",
     institutions: ["Yale"],
   },
   {
@@ -222,7 +222,7 @@ const ProjectsPage = () => (
       <SectionTitle>Ongoing Projects</SectionTitle>
       <p className="text-lg mb-8">
         My research combines computational approaches with clinical and developmental neuroscience to understand
-        decision-making, uncertainty processing, and learning — with growing focus on human–AI interaction
+        decision-making, uncertainty processing, and learning. A growing part of my work focuses on human–AI interaction
         and its implications for mental health across development.
       </p>
       <div className="grid gap-6">
