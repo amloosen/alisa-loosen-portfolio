@@ -82,7 +82,7 @@ const AboutPage = () => {
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Computational Modeling</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I develop and apply neuroscientifically-plausible computational models (e.g., based on Reinforcement Learning and Bayes' Theorem) to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
+              I develop and apply neuroscientifically-plausible computational models based on Reinforcement Learning and Bayes' Theorem to gain better insights into cognitive processes and behavior, and to make sense of complex neuroscientific data.
             </p>
           </div>
           
