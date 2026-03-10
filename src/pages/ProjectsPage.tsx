@@ -85,7 +85,7 @@ const ongoingProjects = [
       "Human–Chatbot Interactions and Maladaptive Reassurance-Seeking in OCD",
     authors: "Loosen, A.M., Gu, X.",
     description:
-      "Investigating how human–chatbot interactions reinforce maladaptive reassurance-seeking patterns, using computational modelling and NLP to characterise AI dependency in clinical and sub-clinical populations. This work examines OCD as a developmental disorder — how uncertainty processing and reassurance-seeking emerge in adolescence and are reinforced by digital environments, including AI chatbots.",
+      "We study how human–chatbot interactions reinforce maladaptive reassurance-seeking patterns, using computational modelling and NLP to characterise AI dependency in clinical and sub-clinical populations. This work examines OCD as a developmental disorder and asks how uncertainty processing and reassurance-seeking emerge in adolescence and get reinforced by digital environments, including AI chatbots.",
     institutions: ["Yale"],
   },
   {
