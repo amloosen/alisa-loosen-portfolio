@@ -90,14 +90,6 @@ const ongoingProjects = [
   },
   {
     title:
-      "Effects of Chatbot Interactions on Psychiatric Symptoms in Inpatient Populations with Psychosis",
-    authors: "Loosen, A.M., Gu, X.",
-    description:
-      "We examine how chatbot interactions affect psychiatric symptoms in inpatient populations with psychosis. This project has direct implications for AI safety and the responsible deployment of conversational AI in clinical settings.",
-    institutions: ["Yale"],
-  },
-  {
-    title:
       "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia Versus Apathy",
     authors: "Loosen, A.M., Gu, X.* & Hauser, T.U.*",
     description:
@@ -221,9 +213,11 @@ const ProjectsPage = () => (
     <motion.div variants={item} className="mb-12">
       <SectionTitle>Ongoing Projects</SectionTitle>
       <p className="text-lg mb-8">
-        My research combines computational approaches with clinical and developmental neuroscience to understand
-        decision-making, uncertainty processing, and learning. A growing part of my work focuses on human–AI interaction
-        and its implications for mental health across development.
+        My research combines computational approaches with social, clinical, and developmental neuroscience to understand
+        decision-making, uncertainty processing, and learning. I investigate neurocomputational mechanisms of effort and reward learning, and study how human–chatbot interactions shape OCD and anxiety.
+      </p>
+      <p className="text-sm text-foreground/60 mb-8 font-light">
+        Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling.
       </p>
       <div className="grid gap-6">
         {ongoingProjects.map((project, i) => (
