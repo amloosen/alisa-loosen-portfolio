@@ -59,7 +59,7 @@ const AboutPage = () => {
             </div>
 
             <p className="text-base md:text-lg mb-4 font-light leading-relaxed mt-6">
-              I study how decision-making under uncertainty shapes mental health across development. My work spans information seeking and processing, effort and reward learning across psychiatric symptoms, reassurance-seeking in OCD, and intracranial investigations of human decision-making. With a focus on real-world impact, I study human–AI interaction and the safety of AI chatbots for patient populations and minors.
+              I study how decision-making under uncertainty shapes mental health across development. My work spans information seeking and processing, effort and reward learning across psychiatric symptoms, reassurance-seeking in OCD, and intracranial investigations of human decision-making.
             </p>
             <p className="text-base md:text-lg mb-6 font-light leading-relaxed">
               I draw on social and computational psychiatry, developmental psychopathology, and clinical assessment across ages to understand how digital environments affect cognition and mental health in children, adolescents, and adults.
