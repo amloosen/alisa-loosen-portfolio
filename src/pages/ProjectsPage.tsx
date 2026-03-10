@@ -221,9 +221,9 @@ const ProjectsPage = () => (
     <motion.div variants={item} className="mb-12">
       <SectionTitle>Ongoing Projects</SectionTitle>
       <p className="text-lg mb-8">
-        My research focuses on computational approaches to understanding psychiatric disorders,
-        particularly obsessive-compulsive disorder (OCD), with a focus on decision-making,
-        uncertainty processing, and learning mechanisms.
+        My research combines computational approaches with clinical and developmental neuroscience to understand
+        decision-making, uncertainty processing, and learning — with growing focus on human–AI interaction
+        and its implications for mental health across development.
       </p>
       <div className="grid gap-6">
         {ongoingProjects.map((project, i) => (
