@@ -59,7 +59,7 @@ const AboutPage = () => {
             </div>
 
             <p className="text-base md:text-lg mb-4 font-light leading-relaxed mt-6">
-              I study how decision-making under uncertainty shapes mental health across development. My work spans information seeking and processing, effort and reward learning across psychiatric symptoms, reassurance-seeking in OCD, and intracranial investigations of human decision-making. I also study human–AI interaction and the safety of AI chatbots for people with mental health disorders and minors.
+              I study how decision-making under uncertainty shapes mental health across development. My work spans information seeking and processing, effort and reward learning across psychiatric symptoms, reassurance-seeking in OCD, and intracranial investigations of human decision-making. With a focus on real-world impact, I study human–AI interaction and the safety of AI chatbots for patient populations and minors.
             </p>
             <p className="text-base md:text-lg mb-6 font-light leading-relaxed">
               I draw on social and computational psychiatry, developmental psychopathology, and clinical assessment across ages to understand how digital environments affect cognition and mental health in children, adolescents, and adults.
@@ -89,7 +89,7 @@ const AboutPage = () => {
           <div className="p-6 shadow-lg hover:shadow-xl transition-all bg-white">
             <h3 className="text-lg font-light mb-4">Human–AI Interaction & Digital Assessment</h3>
             <p className="text-sm font-light leading-relaxed text-foreground/70">
-              I investigate how human–chatbot interactions shape cognition and mental health. I also design digital cognitive tasks and app-based assessments, and study the safety of AI systems for vulnerable and developing populations.
+              I investigate how human–chatbot interactions shape cognition and mental health. I also design digital cognitive tasks and app-based assessments, and study the safety of AI systems for people with mental health disorders and minors.
             </p>
           </div>
           
