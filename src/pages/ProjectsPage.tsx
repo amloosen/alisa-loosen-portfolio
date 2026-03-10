@@ -222,7 +222,7 @@ const ProjectsPage = () => (
       <SectionTitle>Ongoing Projects</SectionTitle>
       <p className="text-lg mb-8">
         My research combines computational approaches with clinical and developmental neuroscience to understand
-        decision-making, uncertainty processing, and learning — with growing focus on human–AI interaction
+        decision-making, uncertainty processing, and learning. A growing part of my work focuses on human–AI interaction
         and its implications for mental health across development.
       </p>
       <div className="grid gap-6">
