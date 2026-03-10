@@ -90,14 +90,6 @@ const ongoingProjects = [
   },
   {
     title:
-      "Effects of Chatbot Interactions on Psychiatric Symptoms in Inpatient Populations with Psychosis",
-    authors: "Loosen, A.M., Gu, X.",
-    description:
-      "We examine how chatbot interactions affect psychiatric symptoms in inpatient populations with psychosis. This project has direct implications for AI safety and the responsible deployment of conversational AI in clinical settings.",
-    institutions: ["Yale"],
-  },
-  {
-    title:
       "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia Versus Apathy",
     authors: "Loosen, A.M., Gu, X.* & Hauser, T.U.*",
     description:
