@@ -42,7 +42,7 @@ const AboutPage = () => {
               Alisa M. Loosen, PhD
             </h1>
             <p className="text-base md:text-lg text-foreground/70 mb-4 font-light leading-relaxed">
-              Researcher in Computational Psychiatry & Neuroscience
+              Researcher in Computational Psychiatry & Developmental Neuroscience
             </p>
             <div className="text-foreground/60 text-sm font-light">
               <span>
