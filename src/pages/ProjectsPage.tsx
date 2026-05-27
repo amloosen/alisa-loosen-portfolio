@@ -262,6 +262,61 @@ const ProjectsPage = () => (
     {/* Selected Publications Section */}
     <motion.div variants={item} className="mb-8">
       <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
+      <SectionTitle>In Preparation</SectionTitle>
+    </motion.div>
+    <motion.div variants={container} className="grid gap-6 mb-12">
+      {[
+        {
+          title:
+            "A developmental framework for AI's impact on child and adolescent mental health",
+          summary:
+            "Children are growing up in AI-saturated environments without guardrails or child-specific design, at the same developmental window in which many psychiatric disorders first emerge. This article presents a disorder-specific developmental framework mapping how AI interaction intersects cognitive systems under development at each stage of childhood, with OCD and ASD as case illustrations. It provides screening prompts and adaptations to evidence-based treatments for clinicians.",
+          tags: [
+            "Developmental psychopathology",
+            "AI & mental health",
+            "OCD",
+            "ASD",
+            "Clinical assessment",
+          ],
+        },
+      ].map((item, i) => (
+        <motion.div key={i} variants={item as any}>
+          <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col">
+            <div className="w-full px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
+              <div className="flex flex-row justify-between items-start w-full gap-3">
+                <div className="flex flex-col flex-1 min-w-0">
+                  <span className="text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">
+                    In preparation
+                  </span>
+                  <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col pl-4 pr-4 pt-2 pb-5 sm:pb-7 sm:pt-4 sm:pl-6 sm:pr-6">
+              <p className="mb-3">{item.summary}</p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {item.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2 py-1 rounded-full bg-blue/10 text-blue"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground font-light">
+                Manuscript in preparation. Details may change before submission.
+              </p>
+            </div>
+          </Card>
+        </motion.div>
+      ))}
+    </motion.div>
+
+    <motion.div variants={item} className="mb-8">
+      <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
       <SectionTitle>Selected Publications</SectionTitle>
     </motion.div>
     <motion.div variants={container} className="grid gap-6">
