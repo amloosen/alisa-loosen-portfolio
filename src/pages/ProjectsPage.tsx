@@ -272,6 +272,18 @@ const ProjectsPage = () => (
             "Clinical assessment",
           ],
         },
+        {
+          title:
+            "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia Versus Apathy",
+          summary:
+            "A large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
+          tags: [
+            "Anhedonia",
+            "Apathy",
+            "Reinforcement learning",
+            "Computational modeling",
+          ],
+        },
       ].map((wip, i) => (
         <motion.div key={i} variants={item}>
           <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col">
