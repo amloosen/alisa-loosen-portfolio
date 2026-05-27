@@ -89,14 +89,6 @@ const ongoingProjects = [
   },
   {
     title:
-      "Distinct Alterations of Reward- and Effort-Based Learning in Anhedonia Versus Apathy",
-    authors: "Loosen, A.M., Gu, X.* & Hauser, T.U.*",
-    description:
-      "A large-scale investigation into how anhedonia and apathy differentially modulate reward- and effort-based neural learning pathways, revealing their unique and intertwined impact on behavior.",
-    institutions: ["Mount Sinai", "Yale", "Tübingen"],
-  },
-  {
-    title:
       "Decoding Neural Signatures of Reward- and Effort-Based Learning Using Intracranial EEG",
     authors: "Loosen, A.M., Saez, I., Hauser, T.U.*, & Gu, X.*",
     description:
