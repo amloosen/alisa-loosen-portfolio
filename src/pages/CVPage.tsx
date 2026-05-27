@@ -97,6 +97,11 @@ const CVPage = () => {
 
   const awardsData = [
     {
+      period: "09/2026 – 08/2028",
+      title: "Walter Benjamin Fellowship",
+      details: "Deutsche Forschungsgemeinschaft (DFG), Yale University School of Medicine (~$60,000/year)"
+    },
+    {
       period: "08/2024",
       title: "Dana Foundation Funding",
       details: "Secured ~$40,000 for the Summer Program in Computational Education, Icahn School of Medicine at Mount Sinai"
