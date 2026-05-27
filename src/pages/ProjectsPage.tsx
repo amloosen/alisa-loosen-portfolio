@@ -279,8 +279,8 @@ const ProjectsPage = () => (
             "Clinical assessment",
           ],
         },
-      ].map((item, i) => (
-        <motion.div key={i} variants={item as any}>
+      ].map((wip, i) => (
+        <motion.div key={i} variants={item}>
           <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col">
             <div className="w-full px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
               <div className="flex flex-row justify-between items-start w-full gap-3">
@@ -289,15 +289,15 @@ const ProjectsPage = () => (
                     In preparation
                   </span>
                   <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
-                    {item.title}
+                    {wip.title}
                   </h3>
                 </div>
               </div>
             </div>
             <div className="flex flex-col pl-4 pr-4 pt-2 pb-5 sm:pb-7 sm:pt-4 sm:pl-6 sm:pr-6">
-              <p className="mb-3">{item.summary}</p>
+              <p className="mb-3">{wip.summary}</p>
               <div className="flex flex-wrap gap-2 mb-3">
-                {item.tags.map((tag) => (
+                {wip.tags.map((tag) => (
                   <span
                     key={tag}
                     className="text-xs px-2 py-1 rounded-full bg-blue/10 text-blue"
