@@ -232,9 +232,11 @@ const ProjectsPage = () => (
                   <h3 className="text-xl font-light text-blue mb-0 sm:text-xl">
                     {project.title}
                   </h3>
-                  <span className="text-xs text-muted-foreground mt-1">
-                    {project.authors}
-                  </span>
+                  {project.authors && (
+                    <span className="text-xs text-muted-foreground mt-1">
+                      {project.authors}
+                    </span>
+                  )}
                   <div className="flex flex-col mt-2 items-start">
                     {/* Only show "Collaboration:" label for projects other than the first one */}
                     {i > 0 && (
