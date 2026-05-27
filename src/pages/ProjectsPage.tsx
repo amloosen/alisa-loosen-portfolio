@@ -213,7 +213,7 @@ const ProjectsPage = () => (
       <SectionTitle>Ongoing Projects</SectionTitle>
       <p className="text-lg mb-8">
         My research combines computational approaches with social, clinical, and developmental neuroscience to understand
-        decision-making, uncertainty processing, and learning. I investigate neurocomputational mechanisms of effort and reward learning, and study how human–chatbot interactions shape OCD and anxiety.
+        decision-making, uncertainty processing, and learning. I investigate neurocomputational mechanisms of effort and reward learning, and study how human–chatbot interactions shape mental health transdiagnostically, with a focus on OCD, anxiety, and psychosis.
       </p>
       <p className="text-sm text-foreground/60 mb-8 font-light">
         Methods and data formats: Intracranial recordings, large-scale online testing, and reinforcement learning–based modeling.
