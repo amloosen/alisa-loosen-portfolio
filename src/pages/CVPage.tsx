@@ -97,9 +97,9 @@ const CVPage = () => {
 
   const awardsData = [
     {
-      period: "09/2026 – 08/2028",
+      period: "2026",
       title: "Walter Benjamin Fellowship",
-      details: "Deutsche Forschungsgemeinschaft (DFG), Yale University School of Medicine (~$60,000/year)"
+      details: "German Research Foundation (DFG). 24-month postdoctoral fellowship at Yale School of Medicine on human–AI interaction and OCD, beginning September 2026."
     },
     {
       period: "08/2024",
@@ -241,7 +241,7 @@ const CVPage = () => {
 
       <motion.div variants={item} className="mb-12">
         <div className="w-[99%] mx-auto border-t border-foreground mb-8"></div>
-        <SectionTitle>Academic Positions</SectionTitle>
+        <SectionTitle>Experience</SectionTitle>
         <div className="shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-6 space-y-8">
           {positionsData.map((position, index) => (
             <div
