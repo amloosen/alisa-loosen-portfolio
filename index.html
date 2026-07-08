@@ -19,6 +19,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+    <script>
+      // Restore the deep-link path saved by public/404.html on GitHub Pages.
+      (function () {
+        var q = window.location.search;
+        var m = q.match(/[?&]p=([^&]+)/);
+        if (m) {
+          var path = decodeURIComponent(m[1]);
+          history.replaceState(null, '', path + window.location.hash);
+        }
+      })();
+    </script>
   </head>
 
   <body>
