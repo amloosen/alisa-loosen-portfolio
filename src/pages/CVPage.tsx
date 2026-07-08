@@ -40,6 +40,15 @@ const CVPage = () => {
 
   const positionsData = [
     {
+      period: "07/2026 – Present",
+      location: "New York, NY, USA",
+      title: "Researcher (Contract)",
+      organization: "Google DeepMind",
+      details: [
+        "AI Ethics & Safety Consultant",
+      ],
+    },
+    {
       periods: [
         { period: "07/2025 – Present", location: "New Haven, CT, USA" },
         { period: "06/2023 – 06/2025", location: "New York, NY, USA" }
